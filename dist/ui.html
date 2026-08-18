@@ -145,6 +145,198 @@
 			</div>
 		</section>
 
+		<!-- ==================== ИКОНКИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Иконки</h2>
+			<p class="typography-small text-txt max-w-150">
+				SVG-спрайт по образцу kripten: один файл <code>assets/img/svg/sprite.svg</code>, иконки — символы,
+				пути внутри — <code>currentColor</code>. Сама иконка не задаёт себе цвет — он берётся из
+				<code>color</code> элемента (или родителя, если цвет не переопределён на самой svg).
+				Поэтому размер иконки задаём через <code>width</code>/<code>height</code> (или Tailwind-класс), а цвет
+				— через <code>text-*</code>.
+			</p>
+
+			<div class="flex flex-wrap items-center gap-6 rounded-2xl bg-bg p-5">
+				<div class="flex flex-col items-center gap-2">
+					<svg width="24" height="24" class="text-black"><use href="assets/img/svg/sprite.svg#icon-tick-circle"></use></svg>
+					<p class="typography-small text-txt">text-black</p>
+				</div>
+				<div class="flex flex-col items-center gap-2">
+					<svg width="24" height="24" class="text-green"><use href="assets/img/svg/sprite.svg#icon-tick-circle"></use></svg>
+					<p class="typography-small text-txt">text-green</p>
+				</div>
+				<div class="flex flex-col items-center gap-2">
+					<svg width="24" height="24" class="text-red"><use href="assets/img/svg/sprite.svg#icon-tick-circle"></use></svg>
+					<p class="typography-small text-txt">text-red</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 text-orange">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-tick-circle"></use></svg>
+					<p class="typography-small text-txt">цвет с родителя (div)</p>
+				</div>
+				<div class="flex flex-col items-center gap-2">
+					<svg width="40" height="40" class="text-dark-green"><use href="assets/img/svg/sprite.svg#icon-tick-circle"></use></svg>
+					<p class="typography-small text-txt">40×40</p>
+				</div>
+			</div>
+
+			<p class="typography-small-medium">Одна и та же иконка — один <code>#id</code></p>
+			<div class="grid grid-cols-4 gap-3.75 sm:grid-cols-6 md:grid-cols-8">
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-location"></use></svg>
+					<p class="typography-small text-txt">location</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-tick-circle"></use></svg>
+					<p class="typography-small text-txt">tick-circle</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-arrow-right"></use></svg>
+					<p class="typography-small text-txt">arrow-right</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-arrow-down"></use></svg>
+					<p class="typography-small text-txt">arrow-down</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-chevron-down"></use></svg>
+					<p class="typography-small text-txt">chevron-down</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-chevron-up"></use></svg>
+					<p class="typography-small text-txt">chevron-up</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-chevron-right"></use></svg>
+					<p class="typography-small text-txt">chevron-right</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-video-circle"></use></svg>
+					<p class="typography-small text-txt">video-circle</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-box"></use></svg>
+					<p class="typography-small text-txt">box</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-people"></use></svg>
+					<p class="typography-small text-txt">people</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-user"></use></svg>
+					<p class="typography-small text-txt">user</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-forbidden"></use></svg>
+					<p class="typography-small text-txt">forbidden</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-lungs"></use></svg>
+					<p class="typography-small text-txt">lungs</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-add"></use></svg>
+					<p class="typography-small text-txt">add</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-minus"></use></svg>
+					<p class="typography-small text-txt">minus</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-close"></use></svg>
+					<p class="typography-small text-txt">close</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-book"></use></svg>
+					<p class="typography-small text-txt">book</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-home"></use></svg>
+					<p class="typography-small text-txt">home</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-water-drop"></use></svg>
+					<p class="typography-small text-txt">water-drop</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-energy"></use></svg>
+					<p class="typography-small text-txt">energy</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-history"></use></svg>
+					<p class="typography-small text-txt">history</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-import"></use></svg>
+					<p class="typography-small text-txt">import</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-clipboard-text"></use></svg>
+					<p class="typography-small text-txt">clipboard-text</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-car"></use></svg>
+					<p class="typography-small text-txt">car</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-danger"></use></svg>
+					<p class="typography-small text-txt">danger</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-shield-tick"></use></svg>
+					<p class="typography-small text-txt">shield-tick</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-flame"></use></svg>
+					<p class="typography-small text-txt">flame</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-share"></use></svg>
+					<p class="typography-small text-txt">share</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-flash"></use></svg>
+					<p class="typography-small text-txt">flash</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24"><use href="assets/img/svg/sprite.svg#icon-flash-down"></use></svg>
+					<p class="typography-small text-txt">flash-down</p>
+				</div>
+			</div>
+
+			<p class="typography-small-medium">Сложные многослойные — вставлены как есть, требуют ручной доводки</p>
+			<p class="typography-small text-txt max-w-150">
+				6 многослойных иконок из фрейма Figma (<code>node-id=14-2787</code>) — пути вставлены в
+				<code>sprite.svg</code> без ручной сборки (просто отфильтрован мусор от Figma-масок), могут быть
+				неточности в форме/пропорциях. Пунктирная рамка — как метка «требует проверки».
+			</p>
+			<div class="grid grid-cols-4 gap-3.75 sm:grid-cols-6 md:grid-cols-8">
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-stroke-white p-3">
+					<svg width="24" height="24" class="text-txt"><use href="assets/img/svg/sprite.svg#icon-leaves"></use></svg>
+					<p class="typography-small text-txt">leaves</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-stroke-white p-3">
+					<svg width="24" height="24" class="text-txt"><use href="assets/img/svg/sprite.svg#icon-wind"></use></svg>
+					<p class="typography-small text-txt">wind</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-stroke-white p-3">
+					<svg width="24" height="24" class="text-txt"><use href="assets/img/svg/sprite.svg#icon-antibacterial"></use></svg>
+					<p class="typography-small text-txt">antibacterial</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-stroke-white p-3">
+					<svg width="24" height="24" class="text-txt"><use href="assets/img/svg/sprite.svg#icon-virus"></use></svg>
+					<p class="typography-small text-txt">virus</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-stroke-white p-3">
+					<svg width="24" height="24" class="text-txt"><use href="assets/img/svg/sprite.svg#icon-target"></use></svg>
+					<p class="typography-small text-txt">target</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-stroke-white p-3">
+					<svg width="24" height="24" class="text-txt"><use href="assets/img/svg/sprite.svg#icon-smile"></use></svg>
+					<p class="typography-small text-txt">smile</p>
+				</div>
+			</div>
+		</section>
+
 
 	</main>
 
