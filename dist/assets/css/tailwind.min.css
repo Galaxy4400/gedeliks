@@ -742,93 +742,31 @@
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-    min-height: calc(var(--spacing) * 12.5);
+    min-height: 70px;
     text-align: center;
     @media (width >= 48rem) {
-      min-height: calc(var(--spacing) * 16);
+      min-height: 50px;
     }
     border-radius: calc(infinity * 1px);
-    padding-inline: calc(var(--spacing) * 7.5);
-    padding-block: calc(var(--spacing) * 4);
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: calc(var(--spacing) * 2.5);
-    &:disabled {
-      pointer-events: none;
-    }
-    &:disabled {
-      border-style: var(--tw-border-style);
-      border-width: 1px;
-    }
-    &:disabled {
-      border-color: var(--stroke-white);
-    }
-    &:disabled {
-      background-color: transparent;
-    }
-    &:disabled {
-      color: var(--stroke-white);
-    }
-    &[aria-disabled="true"] {
-      pointer-events: none;
-    }
-    &[aria-disabled="true"] {
-      border-style: var(--tw-border-style);
-      border-width: 1px;
-    }
-    &[aria-disabled="true"] {
-      border-color: var(--stroke-white);
-    }
-    &[aria-disabled="true"] {
-      background-color: transparent;
-    }
-    &[aria-disabled="true"] {
-      color: var(--stroke-white);
-    }
   }
   .btn svg {
     flex-shrink: 0;
   }
-  .btn-blue {
-    background-color: var(--green);
-    color: var(--white);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--dark-green);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
-      }
-    }
-  }
   .btn-white {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--white);
     background-color: var(--white);
     color: var(--green);
     &:hover {
       @media (hover: hover) {
-        background-color: var(--dark-green);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
-      }
-    }
-  }
-  .btn-gray {
-    background-color: var(--bg);
-    color: var(--black);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--dark-green);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
+        border-color: var(--green);
       }
     }
   }
@@ -857,53 +795,16 @@
       }
     }
   }
-  .btn-glass {
-    background-color: var(--white);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--white) 10%, transparent);
-    }
-    color: var(--white);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--dark-green);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
-      }
-    }
-  }
-  .btn-outline {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: var(--green);
-    background-color: transparent;
-    color: var(--green);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--green);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
-      }
-    }
-  }
   .btn-icon {
     aspect-ratio: 1 / 1;
     border-radius: var(--radius-xl);
     padding: calc(var(--spacing) * 2.5);
   }
-  .btn-big {
+  .btn-small {
+    min-height: 55px;
     font-size: var(--text-psm);
     line-height: var(--leading-psm);
     font-weight: var(--font-psm);
-    min-height: calc(var(--spacing) * 19.25);
-    border-radius: var(--radius-2xl);
-    padding-inline: calc(var(--spacing) * 6);
-    padding-block: calc(var(--spacing) * 4);
   }
   .btn-burger {
     display: inline-flex;

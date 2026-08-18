@@ -2,30 +2,27 @@
   /* buttons */
   .btn {
     @apply typography-small-m cursor-pointer transition-all;
-    @apply min-h-12.5 text-center md:min-h-16;
-    @apply rounded-full px-7.5 py-4;
+    @apply min-h-[70px] text-center md:min-h-[50px];
+    @apply rounded-full px-5 py-2;
     @apply inline-flex items-center justify-center gap-2.5;
-    @apply disabled:border-stroke-white disabled:text-stroke-white disabled:pointer-events-none disabled:border disabled:bg-transparent;
-    @apply aria-disabled:border-stroke-white aria-disabled:text-stroke-white aria-disabled:pointer-events-none aria-disabled:border aria-disabled:bg-transparent;
   }
   .btn svg {
     @apply shrink-0;
   }
 
   /* type */
-  .btn-blue {
-    @apply bg-green text-white;
-    @apply hover:bg-dark-green hover:text-white;
-  }
-
   .btn-white {
-    @apply text-green bg-white;
-    @apply hover:bg-dark-green hover:text-white;
+    @apply text-green border border-white bg-white;
+    @apply hover:border-green;
   }
 
-  .btn-gray {
-    @apply bg-bg text-black;
-    @apply hover:bg-dark-green hover:text-white;
+  .btn-green {
+  }
+
+  .btn-light {
+  }
+
+  .btn-dark {
   }
 
   .btn-transparent {
@@ -33,25 +30,16 @@
     @apply hover:bg-dark-green hover:border-dark-green hover:text-white;
   }
 
-  .btn-glass {
-    @apply bg-white/10 text-white;
-    @apply hover:bg-dark-green hover:text-white;
-  }
-
-  .btn-outline {
-    @apply border-green text-green border bg-transparent;
-    @apply hover:bg-green hover:text-white;
-  }
-
   /* mod */
   .btn-icon {
     @apply aspect-square rounded-xl p-2.5;
   }
 
-  .btn-big {
-    @apply typography-psm;
-    @apply min-h-19.25;
-    @apply rounded-2xl px-6 py-4;
+  .btn-small {
+    @apply typography-psm min-h-[55px];
+  }
+
+  .btn-little {
   }
 
   /* burger */
