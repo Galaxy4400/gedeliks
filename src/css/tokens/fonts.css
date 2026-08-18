@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --font-sans: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Mobile (base) */
+@theme {
+  --text-h1: 40px;
+  --leading-h1: 1.1;
+  --font-h1: 500;
+
+  --text-h2: 30px;
+  --leading-h2: 1.1;
+  --font-h2: 500;
+
+  --text-h3: 26px;
+  --leading-h3: 1.3;
+  --font-h3: 500;
+
+  --text-h4: 22px;
+  --leading-h4: 1.3;
+  --font-h4: 500;
+
+  --text-h5: 20px;
+  --leading-h5: 1.3;
+  --font-h5: 500;
+
+  --text-h6: 18px;
+  --leading-h6: 1.3;
+  --font-h6: 500;
+
+  --text-big-r: 16px;
+  --leading-big-r: 1.5;
+  --font-big-r: 400;
+
+  --text-big-sm: 16px;
+  --leading-big-sm: 1.5;
+  --font-big-sm: 600;
+
+  --text-p-r: 14px;
+  --leading-p-r: 1.5;
+  --font-p-r: 400;
+
+  --text-p-sm: 14px;
+  --leading-p-sm: 1.5;
+  --font-p-sm: 600;
+
+  --text-tag-m: 12px;
+  --leading-tag-m: 1.4;
+  --font-tag-m: 500;
+
+  --text-tag-r: 12px;
+  --leading-tag-r: 1.4;
+  --font-tag-r: 400;
+}
+
+/* Desktop */
+@media (width >= theme(--breakpoint-md)) {
+  :root {
+    --text-h1: 60px;
+    --leading-h1: 1.1;
+    --font-h1: 500;
+
+    --text-h2: 42px;
+    --leading-h2: 1.1;
+    --font-h2: 500;
+
+    --text-h3: 32px;
+    --leading-h3: 1.3;
+    --font-h3: 500;
+
+    --text-h4: 28px;
+    --leading-h4: 1.3;
+    --font-h4: 500;
+
+    --text-h5: 24px;
+    --leading-h5: 1.3;
+    --font-h5: 500;
+
+    --text-h6: 20px;
+    --leading-h6: 1.3;
+    --font-h6: 500;
+
+    --text-big-r: 18px;
+    --leading-big-r: 1.5;
+    --font-big-r: 400;
+
+    --text-big-sm: 18px;
+    --leading-big-sm: 1.5;
+    --font-big-sm: 600;
+
+    --text-p-r: 16px;
+    --leading-p-r: 1.5;
+    --font-p-r: 400;
+
+    --text-p-sm: 16px;
+    --leading-p-sm: 1.5;
+    --font-p-sm: 600;
+
+    --text-tag-m: 14px;
+    --leading-tag-m: 1.4;
+    --font-tag-m: 500;
+
+    --text-tag-r: 14px;
+    --leading-tag-r: 1.4;
+    --font-tag-r: 400;
+  }
+}

@@ -1,0 +1,9 @@
+@layer components {
+  .container-base {
+    @apply max-w-container px-responsive-horizontal mx-auto box-content;
+  }
+
+  .container-narrow {
+    @apply max-w-container-narrow px-responsive-horizontal mx-auto box-content;
+  }
+}

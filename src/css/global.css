@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@source '../../dist/**/*.html';
+@source '../../dist/**/*.js';
+
+@import './tokens/index.css';
+@import './components/index.css';

@@ -1,0 +1,29 @@
+@theme inline {
+  --spacing-container: 1800px;
+  --spacing-container-narrow: 1194px;
+}
+
+/* Mobile (base) */
+@theme {
+  /* Frame */
+  --spacing-responsive-horizontal: 16px;
+  --spacing-responsive-vertical: 32px;
+}
+
+/* Tablet */
+@media (width >= theme(--breakpoint-md)) {
+  :root {
+    /* Frame */
+    --spacing-responsive-horizontal: 26px;
+    --spacing-responsive-vertical: 40px;
+  }
+}
+
+/* Desktop */
+@media (width >= theme(--breakpoint-lg)) {
+  :root {
+    /* Frame */
+    --spacing-responsive-horizontal: 32px;
+    --spacing-responsive-vertical: 50px;
+  }
+}

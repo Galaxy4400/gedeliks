@@ -1,0 +1,35 @@
+@utility gradient-blue-dark {
+  background-image:
+    linear-gradient(90deg, var(--color-blue-dark) 0%, rgba(0, 46, 109, 0.00) 131.61%),
+    linear-gradient(180deg, var(--color-blue-dark) 0%, rgba(0, 46, 109, 0.00) 124.39%);
+}
+
+@utility custom-radial-bg {
+  background:
+    conic-gradient(
+      from 189deg at 58.33% 50%,
+      #a8c0dc 0deg,
+      #c7d5f8 14.537971168756485deg,
+      #64f3f7 41.674983501434326deg,
+      #dfe3f9 52.790449261665344deg,
+      #afb7e7 65.62500178813934deg,
+      #c6b1c0 98.15431237220764deg,
+      #9585bc 123.20458889007568deg,
+      #028eda 138.7748658657074deg,
+      #88619a 149.42747354507446deg,
+      #f8f085 158.7177550792694deg,
+      #3f739d 169.35728430747986deg,
+      #35436c 181.63365840911865deg,
+      #795fa7 194.72846031188965deg,
+      #c377bc 204.5941400527954deg,
+      #f096c3 211.09695196151733deg,
+      #f0ddb2 217.64435291290283deg,
+      #fff 223.4753680229187deg,
+      #b3a7d1 229.88473176956177deg,
+      #b0b8e7 256.1103415489197deg,
+      #bb93c4 296.30109786987305deg,
+      #fffffa 331.98325395584106deg,
+      #aabfdf 344.6348261833191deg
+    ),
+    #d9d9d9;
+}

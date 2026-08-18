@@ -1,0 +1,23 @@
+@layer base {
+  body[data-modal-lock] {
+    @apply overflow-hidden;
+    padding-right: var(--scrollbar-width, 0px);
+  }
+}
+
+@layer components {
+  .modal {
+    @apply pointer-events-none fixed inset-0 z-100 opacity-0;
+    @apply grid items-center justify-center overflow-y-auto bg-black/80 p-5 md:p-10;
+    @apply transition-opacity;
+    @apply data-active:pointer-events-auto data-active:opacity-100;
+  }
+
+  .modal-close {
+    @apply bg-white text-blue-dark hover:bg-blue-hover fixed top-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors md:top-7.5 md:right-7.5;
+  }
+
+  .modal-content {
+    @apply relative m-auto max-h-full max-w-full;
+  }
+}

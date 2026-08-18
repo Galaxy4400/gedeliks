@@ -1,0 +1,66 @@
+@layer components {
+  .link {
+    @apply typography-pr;
+    @apply cursor-pointer;
+    @apply text-black;
+    @apply inline-flex items-center gap-2.5;
+    @apply hover:text-blue-dark;
+    @apply disabled:pointer-events-none disabled:opacity-40;
+    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
+  }
+  .link svg {
+    @apply shrink-0;
+  }
+
+  .link-blue {
+    @apply text-blue-dark;
+    @apply hover:text-blue-hover;
+  }
+
+  .link-white {
+    @apply text-white;
+    @apply hover:text-blue-hover;
+  }
+
+  .link-blue-light {
+    @apply text-blue-hover;
+    @apply hover:text-blue-dark;
+  }
+
+  .link-glass {
+    @apply text-white/50;
+    @apply hover:text-white;
+  }
+
+  .link-underline {
+    @apply underline underline-offset-4;
+  }
+
+  .link-big {
+    @apply typography-psm;
+    @apply text-blue-dark;
+    @apply hover:text-blue-hover;
+  }
+
+  .link-small {
+    @apply typography-tagm;
+    @apply text-gray-text;
+    @apply hover:text-blue-dark;
+  }
+
+  .link-tag {
+    @apply typography-tagm;
+    @apply text-blue-dark;
+    @apply hover:text-blue-hover;
+    @apply rounded-full;
+    @apply bg-white;
+    @apply px-4 py-[5px];
+    @apply min-h-8;
+  }
+
+  .prod-link {
+    @apply typography-psm md:typography-h6 border-blue-dark/20 block border-b py-[15px] last:border-none md:py-5;
+    @apply md:group-hover:border-white/20 md:group-hover:text-white;
+    @apply hover:border-blue-hover hover:text-blue-hover;
+  }
+}

@@ -1,0 +1,33 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply typography-btr;
+    @apply relative;
+    @apply bg-white text-black;
+    @apply flex min-h-screen flex-col;
+  }
+
+  main {
+    @apply flex grow flex-col overflow-hidden;
+  }
+
+  picture img {
+    @apply relative w-full;
+  }
+
+  svg {
+    @apply max-h-full max-w-full;
+  }
+
+  button {
+    @apply cursor-pointer;
+    @apply hover:text-blue-dark;
+  }
+
+  a {
+    @apply hover:text-blue-dark transition-colors;
+  }
+}

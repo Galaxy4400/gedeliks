@@ -1,0 +1,16 @@
+@layer components {
+  .breadcrumbs {
+    @apply flex flex-wrap items-center gap-3.5;
+  }
+
+  .breadcrumb-item {
+    @apply text-gray-text typography-pr;
+    @apply inline-flex items-center;
+    @apply gap-3.5;
+    @apply not-last:pr-0;
+    @apply after:inline-block after:h-2.5 after:w-1.5 after:shrink-0 after:bg-current after:content-[''];
+    @apply after:mask-[url(../img/svg/to-right.svg)] after:mask-contain after:mask-center after:mask-no-repeat;
+    @apply hover:text-blue-hover hover:underline-offset-4;
+    @apply last:text-gray-element last:pointer-events-none last:after:hidden;
+  }
+}

@@ -1,0 +1,101 @@
+@utility typography-h1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  font-weight: var(--font-h1);
+}
+
+@utility typography-h2 {
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  font-weight: var(--font-h2);
+}
+
+@utility typography-h3 {
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  font-weight: var(--font-h3);
+}
+
+@utility typography-h4 {
+  font-size: var(--text-h4);
+  line-height: var(--leading-h4);
+  font-weight: var(--font-h4);
+}
+
+@utility typography-h5 {
+  font-size: var(--text-h5);
+  line-height: var(--leading-h5);
+  font-weight: var(--font-h5);
+}
+
+@utility typography-h6 {
+  font-size: var(--text-h6);
+  line-height: var(--leading-h6);
+  font-weight: var(--font-h6);
+}
+
+@utility typography-btr {
+  font-size: var(--text-big-r);
+  line-height: var(--leading-big-r);
+  font-weight: var(--font-big-r);
+}
+
+@utility typography-btsm {
+  font-size: var(--text-big-sm);
+  line-height: var(--leading-big-sm);
+  font-weight: var(--font-big-sm);
+}
+
+@utility typography-pr {
+  font-size: var(--text-p-r);
+  line-height: var(--leading-p-r);
+  font-weight: var(--font-p-r);
+}
+
+@utility typography-psm {
+  font-size: var(--text-p-sm);
+  line-height: var(--leading-p-sm);
+  font-weight: var(--font-p-sm);
+}
+
+@utility typography-tagm {
+  font-size: var(--text-tag-m);
+  line-height: var(--leading-tag-m);
+  font-weight: var(--font-tag-m);
+}
+
+@utility typography-tagr {
+  font-size: var(--text-tag-r);
+  line-height: var(--leading-tag-r);
+  font-weight: var(--font-tag-r);
+}
+
+@layer base {
+  h1 {
+    @apply typography-h1;
+  }
+
+  h2 {
+    @apply typography-h2;
+  }
+
+  h3 {
+    @apply typography-h3;
+  }
+
+  h4 {
+    @apply typography-h4;
+  }
+
+  h5 {
+    @apply typography-h5;
+  }
+
+  h6 {
+    @apply typography-h6;
+  }
+
+  p {
+    @apply typography-btr;
+  }
+}

@@ -1,0 +1,29 @@
+:root {
+  --blue-dark: #002e6d;
+  --blue-light: #0f3a76;
+  --blue-hover: #91bffe;
+  --gray-text: #6f6f6f;
+  --gray-element: #b4b4b4;
+  --gray-bg: #f4f3f3;
+  --stroke-in-bg: #dbdada;
+  --white: #ffffff;
+  --black: #282828;
+  --white-glass: #ffffff1a;
+  --error: #cf0404;
+}
+
+@theme inline {
+  --color-*: initial;
+
+  --color-blue-dark: var(--blue-dark);
+  --color-blue-light: var(--blue-light);
+  --color-blue-hover: var(--blue-hover);
+  --color-gray-text: var(--gray-text);
+  --color-gray-element: var(--gray-element);
+  --color-gray-bg: var(--gray-bg);
+  --color-stroke-in-bg: var(--stroke-in-bg);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-white-glass: var(--white-glass);
+  --color-error: var(--error);
+}

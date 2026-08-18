@@ -1,0 +1,9 @@
+/* Базовые стили слайдеров */
+[data-slider-container] {
+  @apply flex min-w-0;
+  @apply touch-pan-y touch-pinch-zoom;
+}
+
+[data-slider-item] {
+  @apply min-w-0 shrink-0 grow-0;
+}

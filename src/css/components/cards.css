@@ -1,0 +1,33 @@
+@layer components {
+  .card {
+    @apply bg-gray-bg rounded-2xl p-5;
+  }
+
+  /* card new */
+  .card-new {
+    @apply block;
+    @apply bg-gray-bg rounded-2xl p-5 md:p-7.5;
+    @apply flex flex-col gap-4;
+  }
+  .card-new-content {
+    @apply grow;
+  }
+  .card-new-date {
+    @apply flex items-center justify-between gap-4;
+    @apply typography-btr pt-5 md:pt-7.5;
+    @apply border-stroke-in-bg border-t;
+    @apply after:bg-gray-element after:h-1.5 after:w-1.5;
+    @apply group-hover/new-card:text-blue-hover group-hover/new-card:border-blue-hover group-hover/new-card:after:bg-blue-hover;
+    @apply transition-colors;
+  }
+
+  /* card main slider link */
+  .card-slider-link {
+    @apply relative overflow-hidden;
+    @apply min-h-[146px] md:min-h-[170px];
+    @apply p-5 md:px-7.5 md:py-6;
+    @apply rounded-2xl;
+    @apply bg-blue-dark;
+    @apply hover:bg-white;
+  }
+}

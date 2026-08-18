@@ -1,0 +1,68 @@
+@layer components {
+  .input-wrapper {
+    @apply relative;
+  }
+
+  .input {
+    @apply bg-gray-bg typography-pr ring-stroke-in-bg min-h-[55px] w-full rounded-sm pt-7.5 pr-14 pb-2.5 pl-5 focus:ring md:min-h-16;
+  }
+
+  .input-label {
+    @apply typography-tagr text-gray-text pointer-events-none absolute top-2 left-5 transition-all;
+  }
+
+  .input:placeholder-shown:not(:focus) ~ .input-label {
+    @apply typography-pr top-5;
+  }
+
+  .input:-webkit-autofill ~ .input-label,
+  [data-custom-input][data-active] .input-label {
+    @apply typography-tagr top-2;
+  }
+
+  .input-label span {
+    @apply text-error;
+  }
+
+  .input-icon {
+    @apply typography-pr text-gray-element absolute top-5 right-5 h-[18px] w-[18px];
+  }
+
+  .input-wrapper:has(.input:not(:placeholder-shown)) .input-icon,
+  .input-wrapper:has(.input:-webkit-autofill) .input-icon,
+  [data-custom-input][data-active] .input-icon {
+    @apply text-blue-hover;
+  }
+
+  /* file */
+  .file-input {
+    @apply border-blue-dark flex min-h-16 w-full cursor-pointer items-center justify-between rounded-full border-2 border-dashed px-7.5 py-2.5 transition-colors;
+  }
+
+  .file-input:hover {
+    @apply border-blue-hover;
+  }
+
+  .file-input:hover .file-text,
+  .file-input:hover .file-icon {
+    @apply text-blue-hover;
+  }
+
+  .file-text {
+    @apply typography-psm text-blue-dark transition-colors;
+  }
+
+  .file-icon {
+    @apply text-blue-dark shrink-0 transition-colors;
+  }
+
+  /* checkbox */
+  .form-checkbox-wrapper {
+    @apply flex cursor-pointer gap-3.75;
+  }
+
+  .form-checkbox {
+    @apply border-blue-dark h-5 w-5 shrink-0 translate-y-0.5 cursor-pointer appearance-none rounded-[5px] border-2 bg-white;
+    @apply checked:bg-blue-dark checked:border-blue-dark checked:bg-check checked:bg-center checked:bg-no-repeat;
+  }
+}

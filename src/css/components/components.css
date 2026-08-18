@@ -1,0 +1,41 @@
+@layer components {
+  .custom-list {
+    @apply list-none;
+  }
+
+  .custom-list li {
+    @apply relative pl-4;
+  }
+
+  .custom-list li::before {
+    @apply custom-radial-bg absolute top-3.5 left-0 h-1.5 w-1.5 -translate-y-1/2 rounded-full content-[''];
+  }
+
+  .tag {
+    @apply text-tag-m bg-blue-dark inline-flex min-h-10 items-center justify-center rounded-full px-4.5 py-2 text-white;
+  }
+
+  .quote {
+    @apply typography-h6 text-gray-text;
+    @apply bg-gray-bg text-big-r relative flex items-center justify-center overflow-hidden rounded-2xl px-10 py-7 text-center md:px-20 md:py-10;
+    @apply bg-[url(/assets/img/quote-pattern.png)];
+  }
+
+  .quote::before,
+  .quote::after {
+    @apply content-[''];
+    @apply absolute top-1/2 shrink-0 -translate-y-1/2;
+    @apply h-5.5 w-6.5;
+    @apply bg-contain bg-no-repeat;
+  }
+
+  .quote::before {
+    @apply left-1.5 md:left-[50px];
+    @apply bg-[url(/assets/img/svg/quote-left.svg)];
+  }
+
+  .quote::after {
+    @apply right-1.5 md:right-[50px];
+    @apply bg-[url(/assets/img/svg/quote-right.svg)];
+  }
+}

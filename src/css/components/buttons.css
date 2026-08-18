@@ -1,0 +1,71 @@
+@layer components {
+  /* buttons */
+  .btn {
+    @apply typography-psm cursor-pointer transition-all;
+    @apply min-h-12.5 text-center md:min-h-16;
+    @apply rounded-full px-7.5 py-4;
+    @apply inline-flex items-center justify-center gap-2.5;
+    @apply disabled:border-stroke-in-bg disabled:text-stroke-in-bg disabled:pointer-events-none disabled:border disabled:bg-transparent;
+    @apply aria-disabled:border-stroke-in-bg aria-disabled:text-stroke-in-bg aria-disabled:pointer-events-none aria-disabled:border aria-disabled:bg-transparent;
+  }
+  .btn svg {
+    @apply shrink-0;
+  }
+
+  /* type */
+  .btn-blue {
+    @apply bg-blue-dark text-white;
+    @apply hover:bg-blue-hover hover:text-blue-dark;
+  }
+
+  .btn-white {
+    @apply text-blue-dark bg-white;
+    @apply hover:bg-blue-hover hover:text-blue-dark;
+  }
+
+  .btn-gray {
+    @apply bg-gray-bg text-black;
+    @apply hover:bg-blue-hover hover:text-blue-dark;
+  }
+
+  .btn-transparent {
+    @apply border-white-glass border bg-transparent text-white;
+    @apply hover:bg-blue-hover hover:text-blue-dark hover:border-blue-hover;
+  }
+
+  .btn-glass {
+    @apply bg-white-glass text-white;
+    @apply hover:bg-blue-hover hover:text-blue-dark;
+  }
+
+  .btn-outline {
+    @apply border-blue-dark text-blue-dark border bg-transparent;
+    @apply hover:bg-blue-dark hover:text-white;
+  }
+
+  /* mod */
+  .btn-icon {
+    @apply aspect-square rounded-xl p-2.5;
+  }
+
+  .btn-big {
+    @apply typography-btsm;
+    @apply min-h-19.25;
+    @apply rounded-2xl px-6 py-4;
+  }
+
+  /* burger */
+  .btn-burger {
+    @apply bg-blue-dark hover:bg-blue-hover hover:text-blue-dark inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all 2xl:hidden;
+  }
+
+  /* search */
+  .btn-search {
+    @apply max-2xl:bg-gray-bg max-2xl:hover:bg-blue-hover max-2xl:hover:text-blue-dark inline-flex h-10 w-10 items-center justify-center rounded-full transition-all;
+  }
+
+  /* menu-icon */
+  .btn-menu {
+    @apply hover:bg-blue-hover hover:text-blue-dark inline-flex h-10 w-10 items-center justify-center rounded-full bg-white transition-all;
+  }
+}

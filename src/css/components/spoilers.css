@@ -1,0 +1,4 @@
+/* Базовые стили слайдеров */
+[data-spoiler-content] {
+  @apply max-h-0 overflow-hidden;
+}
