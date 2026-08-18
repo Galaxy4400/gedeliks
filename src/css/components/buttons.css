@@ -49,7 +49,7 @@
   }
 
   .btn-big {
-    @apply typography-p-semibold;
+    @apply typography-psm;
     @apply min-h-19.25;
     @apply rounded-2xl px-6 py-4;
   }

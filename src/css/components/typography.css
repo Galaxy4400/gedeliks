@@ -46,10 +46,10 @@
   font-weight: var(--font-p);
 }
 
-@utility typography-p-semibold {
-  font-size: var(--text-p-semibold);
-  line-height: var(--leading-p-semibold);
-  font-weight: var(--font-p-semibold);
+@utility typography-psm {
+  font-size: var(--text-psm);
+  line-height: var(--leading-psm);
+  font-weight: var(--font-psm);
 }
 
 @utility typography-small {

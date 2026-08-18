@@ -90,9 +90,9 @@
   --leading-p: 1.6;
   --font-p: 400;
 
-  --text-p-semibold: 15px;
-  --leading-p-semibold: 1.6;
-  --font-p-semibold: 600;
+  --text-psm: 15px;
+  --leading-psm: 1.6;
+  --font-psm: 600;
 
   --text-small: 13px;
   --leading-small: 1.5;
@@ -138,9 +138,9 @@
     --leading-p: 1.6;
     --font-p: 400;
 
-    --text-p-semibold: 20px;
-    --leading-p-semibold: 1.6;
-    --font-p-semibold: 600;
+    --text-psm: 20px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
 
     --text-small: 18px;
     --leading-small: 1.5;

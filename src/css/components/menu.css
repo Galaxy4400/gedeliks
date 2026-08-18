@@ -8,7 +8,7 @@
   }
 
   .menu-item {
-    @apply typography-p-semibold;
+    @apply typography-psm;
     @apply text-txt relative inline-flex items-center gap-2;
     @apply min-h-11.5 md:min-h-17;
     @apply py-6 pr-5 pl-4;

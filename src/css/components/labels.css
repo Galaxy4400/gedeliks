@@ -27,7 +27,7 @@
     @apply grid justify-start gap-2;
   }
   .sub-label {
-    @apply typography-p-semibold;
+    @apply typography-psm;
     @apply inline-flex items-center gap-2 text-black;
   }
   .sub-label svg {

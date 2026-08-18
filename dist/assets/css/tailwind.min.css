@@ -41,9 +41,9 @@
     --text-p: 15px;
     --leading-p: 1.6;
     --font-p: 400;
-    --text-p-semibold: 15px;
-    --leading-p-semibold: 1.6;
-    --font-p-semibold: 600;
+    --text-psm: 15px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
     --text-small: 13px;
     --leading-small: 1.5;
     --font-small: 400;
@@ -443,10 +443,10 @@
     line-height: var(--leading-p);
     font-weight: var(--font-p);
   }
-  .typography-p-semibold {
-    font-size: var(--text-p-semibold);
-    line-height: var(--leading-p-semibold);
-    font-weight: var(--font-p-semibold);
+  .typography-psm {
+    font-size: var(--text-psm);
+    line-height: var(--leading-psm);
+    font-weight: var(--font-psm);
   }
   .typography-small {
     font-size: var(--text-small);
@@ -651,9 +651,9 @@
     --text-p: 20px;
     --leading-p: 1.6;
     --font-p: 400;
-    --text-p-semibold: 20px;
-    --leading-p-semibold: 1.6;
-    --font-p-semibold: 600;
+    --text-psm: 20px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
     --text-small: 18px;
     --leading-small: 1.5;
     --font-small: 400;
@@ -900,9 +900,9 @@
     padding: calc(var(--spacing) * 2.5);
   }
   .btn-big {
-    font-size: var(--text-p-semibold);
-    line-height: var(--leading-p-semibold);
-    font-weight: var(--font-p-semibold);
+    font-size: var(--text-psm);
+    line-height: var(--leading-psm);
+    font-weight: var(--font-psm);
     min-height: calc(var(--spacing) * 19.25);
     border-radius: var(--radius-2xl);
     padding-inline: calc(var(--spacing) * 6);
@@ -1158,9 +1158,9 @@
     overflow-y: auto;
   }
   .menu-item {
-    font-size: var(--text-p-semibold);
-    line-height: var(--leading-p-semibold);
-    font-weight: var(--font-p-semibold);
+    font-size: var(--text-psm);
+    line-height: var(--leading-psm);
+    font-weight: var(--font-psm);
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -1609,9 +1609,9 @@
     gap: calc(var(--spacing) * 2);
   }
   .sub-label {
-    font-size: var(--text-p-semibold);
-    line-height: var(--leading-p-semibold);
-    font-weight: var(--font-p-semibold);
+    font-size: var(--text-psm);
+    line-height: var(--leading-psm);
+    font-weight: var(--font-psm);
     display: inline-flex;
     align-items: center;
     gap: calc(var(--spacing) * 2);
