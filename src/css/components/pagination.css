@@ -1,23 +1,23 @@
 @layer components {
   .pagination {
-    /* @apply gap-4 flex flex-wrap items-center; */
+    @apply flex flex-wrap items-center gap-4;
   }
 
   .pagination-items {
-    /* @apply gap-3 flex flex-wrap items-center; */
+    @apply flex flex-wrap items-center gap-3;
   }
 
   .pagination-item {
-    /* @apply inline-flex aspect-square shrink-0 items-center justify-center rounded-full; */
-    /* @apply b2; */
-    /* @apply h-10 md:h-11.25; */
-    /* @apply p-3; */
-    /* @apply bg-button-card-default; */
-    /* @apply hover:bg-button-card-hover; */
-    /* @apply active:bg-button-card-press; */
-    /* @apply disabled:pointer-events-none disabled:opacity-40; */
-    /* @apply aria-disabled:pointer-events-none aria-disabled:opacity-40; */
-    /* @apply aria-selected:bg-button-teritary aria-selected:text-on-button-primary; */
+    @apply inline-flex aspect-square shrink-0 items-center justify-center rounded-full;
+    @apply b2;
+    @apply h-10 md:h-11.25;
+    @apply p-3;
+    @apply bg-button-card-default;
+    @apply hover:bg-button-card-hover;
+    @apply active:bg-button-card-press;
+    @apply disabled:pointer-events-none disabled:opacity-40;
+    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
+    @apply aria-selected:bg-button-teritary aria-selected:text-on-button-primary;
   }
 
   .scroll {
