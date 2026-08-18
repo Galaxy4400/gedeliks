@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Геделикс — UI Kit</title>
+
+	<link rel="preload" href="assets/fonts/Inter-Variable-cyrillic.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="assets/css/tailwind.min.css" />
+</head>
+
+<body>
+	<main class="container-base flex flex-col gap-15 py-15 lg:gap-25 lg:py-25">
+		<header class="flex flex-col gap-2.5 border-b border-stroke-white pb-7.5">
+			<p class="typography-small-medium text-txt uppercase">Служебная страница — не часть сайта</p>
+			<h1>UI Kit</h1>
+			<p class="max-w-150 text-txt">
+				Витрина компонентов по фрейму <code>node-id=14-2846</code> из Figma. Источник правды для токенов и классов
+				— используем дальше по коду секций сайта.
+			</p>
+		</header>
+
+		<!-- ==================== ЦВЕТА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Цвета</h2>
+			<div class="grid grid-cols-2 gap-3.75 md:grid-cols-3 lg:grid-cols-5">
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl border border-stroke-white bg-white"></div>
+					<p class="typography-small text-txt">white · #FFFFFF</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-bg"></div>
+					<p class="typography-small text-txt">bg · #F2F9EE</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-green"></div>
+					<p class="typography-small text-txt">green · #24820A</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-dark-green"></div>
+					<p class="typography-small text-txt">dark-green · #17400C</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-black"></div>
+					<p class="typography-small text-txt">black · #07260B</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-txt"></div>
+					<p class="typography-small text-txt">txt · #767676</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-stroke-white"></div>
+					<p class="typography-small text-txt">stroke-white · #E6E6E6</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-stroke-green"></div>
+					<p class="typography-small text-txt">stroke-green · #D6DFD1</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-orange"></div>
+					<p class="typography-small text-txt">orange · #FC9A08</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-red"></div>
+					<p class="typography-small text-txt">red · #F64F19</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== ТИПОГРАФИКА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Типографика</h2>
+			<p class="typography-small text-txt">
+				Ресайзните окно ниже 1024px — большинство стилей адаптивные (mobile-first, часть ещё ждёт мобильный
+				hero-фрейм для уточнения, помечено ниже).
+			</p>
+			<div class="flex flex-col gap-3.75">
+				<p class="typography-h1">H1 / typography-h1 <span class="typography-small text-txt">— 70px, пока не адаптивный</span></p>
+				<p class="typography-h2">H2 / typography-h2 <span class="typography-small text-txt">— 60px, пока не адаптивный</span></p>
+				<p class="typography-h3">H3 / typography-h3 <span class="typography-small text-txt">— 50px, пока не адаптивный</span></p>
+				<p class="typography-h4">H4 / typography-h4 <span class="typography-small text-txt">— 43px, пока не адаптивный</span></p>
+				<p class="typography-h5">H5 / typography-h5 <span class="typography-small text-txt">— 33px, пока не адаптивный</span></p>
+				<p class="typography-h6">H6 / typography-h6 <span class="typography-small text-txt">— 18→26px ✓ адаптивный</span></p>
+				<p class="typography-display">Display</p>
+				<p class="typography-p">P / typography-p — 15→20px ✓ адаптивный</p>
+				<p class="typography-p-semibold">P SM / typography-p-semibold — 15→20px ✓ адаптивный</p>
+				<p class="typography-small">Small R / typography-small — 13→18px ✓ адаптивный</p>
+				<p class="typography-small-medium">Small M / typography-small-medium — 13→18px ✓ адаптивный</p>
+				<p class="typography-small-medium text-txt uppercase">Small M CAPS — тот же токен + uppercase</p>
+			</div>
+		</section>
+
+		<!-- ==================== КНОПКИ: большая пилюля ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Кнопки — большая пилюля (Bttn 1–2, шапка)</h2>
+			<p class="typography-small text-txt">
+				Высота/паддинги не зашиты в класс — в Figma отличаются по месту (55–70px), задаём на месте использования.
+				Наведи курсор — второе состояние из кита это hover, а не отдельная кнопка.
+			</p>
+			<div class="flex flex-wrap items-center gap-3.75">
+				<button type="button" class="btn btn-white h-13.75">Для врачей</button>
+				<button type="button" class="btn btn-green h-13.75">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+					Где купить
+				</button>
+				<button type="button" class="btn btn-outline h-16.25">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+					Где купить
+				</button>
+				<a href="#" class="btn-badge h-17.5 gap-3.75 pl-7 pr-px">
+					Выбрать препарат
+					<span class="btn-badge-icon size-17">
+						<svg class="size-6">
+							<use href="/assets/img/svg/sprite.svg#icon-arrow-right"></use>
+						</svg>
+					</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- ==================== КНОПКИ: средняя пилюля ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Кнопки — средняя пилюля (Bttn 3–5)</h2>
+			<p class="typography-small text-txt">
+				Small M 18/500 — отдельная от большой пилюли шкала, а не responsive-пара. Bttn3 (белый фон) и Bttn5
+				(фон BG) — два разных компонента для разного фона секции, каждый со своим hover.
+			</p>
+			<div class="flex flex-wrap items-center gap-3.75">
+				<button type="button" class="btn-sm btn-sm-white">Для врачей</button>
+				<button type="button" class="btn-sm btn-sm-bg">Для врачей</button>
+				<button type="button" class="btn-sm btn-sm-green">Где купить</button>
+			</div>
+		</section>
+
+		<!-- ==================== СЕЛЕКТОР ОБЪЁМА (Bttn 6) ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Селектор объёма (Bttn 6)</h2>
+			<div class="flex flex-wrap items-center gap-2.5 rounded-[30px] bg-bg p-2.5">
+				<button type="button" class="size-pill size-pill-selected">100 мл</button>
+				<button type="button" class="size-pill size-pill-disabled">100 мл</button>
+				<button type="button" class="size-pill size-pill-available">100 мл</button>
+			</div>
+		</section>
+
+		<!-- ==================== СТРЕЛКИ СЛАЙДЕРА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Стрелки слайдера</h2>
+			<div class="flex items-center gap-3.75">
+				<button type="button" class="slider-btn" aria-label="Предыдущий слайд">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-arrow-right"></use>
+					</svg>
+				</button>
+				<button type="button" class="slider-btn" aria-label="Следующий слайд">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-arrow-right"></use>
+					</svg>
+				</button>
+			</div>
+		</section>
+
+		<!-- ==================== ТЕГИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Теги</h2>
+			<div class="flex flex-wrap items-center gap-3.75">
+				<span class="tag tag-default">с 2 лет</span>
+				<span class="tag tag-green">Выгодный объём</span>
+				<span class="tag tag-icon">
+					<span class="tag-icon-badge bg-red">
+						<svg class="size-6">
+							<use href="/assets/img/svg/sprite.svg#icon-danger"></use>
+						</svg>
+					</span>
+					<span class="typography-small-medium text-black uppercase">с 2 лет</span>
+				</span>
+			</div>
+		</section>
+
+		<!-- ==================== ССЫЛКИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Ссылки</h2>
+			<div class="flex flex-col items-start gap-3.75">
+				<a href="#" class="footer-legal-link">Пользовательское соглашение</a>
+				<a href="#" class="footer-nav-link">Статьи</a>
+				<a href="#" class="nav-dropdown-link">Геделикс<span class="reg-mark"></span> Сироп 100 мл</a>
+			</div>
+		</section>
+
+		<!-- ==================== ЧЕК-ЛИСТЫ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Чек-лист (List 1 / List 2)</h2>
+			<div class="flex flex-col gap-2.5">
+				<div class="check-list-item">
+					<svg class="check-list-icon text-green">
+						<use href="/assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="check-list-text">Без спирта — безопасен для детей</p>
+				</div>
+				<div class="check-list-item">
+					<svg class="check-list-icon text-green">
+						<use href="/assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="check-list-text-accent">Без спирта — безопасен для детей</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== FAQ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>FAQ-аккордеон</h2>
+			<div class="flex flex-col gap-2.5" data-spoiler="faq">
+				<div class="faq-item" data-spoiler-item>
+					<button type="button" class="faq-toggle" data-spoiler-button>
+						<p class="faq-question">С какого возраста можно давать Геделикс<span class="reg-mark"></span> Сироп?</p>
+						<span class="faq-icon-badge">
+							<svg class="faq-icon-add size-4.5 lg:size-7">
+								<use href="/assets/img/svg/sprite.svg#icon-add"></use>
+							</svg>
+							<svg class="faq-icon-minus size-4.5 lg:size-7">
+								<use href="/assets/img/svg/sprite.svg#icon-minus"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="faq-answer" data-spoiler-content>
+						<p class="faq-answer-inner">
+							Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно
+							инструкции. Детям до 2 лет препарат не рекомендуется.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== КАРТОЧКА СТАТЬИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Карточка статьи</h2>
+			<div class="grid gap-7.5 md:grid-cols-2">
+				<article class="article-card">
+					<div class="article-card-image"></div>
+					<div class="flex w-full flex-col items-start gap-3.75">
+						<p class="article-card-title">Виды кашля: как правильно определить тип и выбрать лечение</p>
+						<p class="article-card-excerpt">
+							Кашель — знакомая проблема, поражающая взрослых и детей, особенно в холодные сезоны.
+						</p>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- ==================== КАРТОЧКА ПРОДУКТА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Карточка продукта</h2>
+			<div class="max-w-125">
+				<div class="product-card">
+					<div class="flex w-full flex-col items-start gap-7.5">
+						<span class="tag tag-default">Хит продаж</span>
+						<div class="flex flex-col items-start gap-5">
+							<p class="product-card-title">Геделикс<span class="reg-mark"></span> Сироп</p>
+							<p class="product-card-volume">100 МЛ</p>
+						</div>
+					</div>
+					<div class="product-card-image"></div>
+					<div class="product-card-features">
+						<div class="check-list-item">
+							<svg class="check-list-icon text-green">
+								<use href="/assets/img/svg/sprite.svg#icon-tick-circle"></use>
+							</svg>
+							<p class="check-list-text">Подходит при сахарном диабете</p>
+						</div>
+						<div class="check-list-item">
+							<svg class="check-list-icon text-green">
+								<use href="/assets/img/svg/sprite.svg#icon-tick-circle"></use>
+							</svg>
+							<p class="check-list-text">Мерная ложка в комплекте</p>
+						</div>
+					</div>
+					<div class="product-card-actions">
+						<a href="#" class="btn-badge gap-3.75 pl-7">
+							Где купить
+							<span class="btn-badge-icon size-17">
+								<svg class="size-6">
+									<use href="/assets/img/svg/sprite.svg#icon-location"></use>
+								</svg>
+							</span>
+						</a>
+						<a href="#" class="btn btn-outline justify-center">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== КАРТОЧКА ПРЕИМУЩЕСТВА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Карточка преимущества (Frame 61)</h2>
+			<div class="benefit-card">
+				<div class="benefit-card-body">
+					<div class="flex flex-col items-start gap-2.5">
+						<span class="tag-icon text-green">
+							<span class="tag-icon-badge">
+								<svg class="size-6">
+									<use href="/assets/img/svg/sprite.svg#icon-home-2"></use>
+								</svg>
+							</span>
+							<span class="typography-p-semibold uppercase">Семейный формат</span>
+						</span>
+					</div>
+					<div class="flex flex-col items-start gap-3.75">
+						<p class="typography-h4 text-black">Геделикс<span class="reg-mark"></span> Сироп</p>
+						<p class="typography-h6 text-green">200 МЛ</p>
+					</div>
+					<a href="#" class="btn btn-outline h-17.5 w-48.5">Подробнее</a>
+				</div>
+				<div class="benefit-card-image"></div>
+			</div>
+		</section>
+
+		<!-- ==================== ИКОНКИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Иконки</h2>
+			<p class="typography-small text-txt max-w-150">
+				Полный набор в Figma — 36 иконок, часть из них сложные многослойные иллюстрации (лёгкие, плющ, вирус,
+				антибактериальный эффект и т.п.). В спрайт добавляем по мере того, как иконка реально используется в
+				конкретной секции — сейчас в спрайте только те, что уже пригодились или простые line-иконки из кита.
+			</p>
+			<div class="flex flex-wrap gap-3.75">
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-arrow-right"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-arrow-down"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-add"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-minus"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-book"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-home-2"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-box"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-clipboard-text"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-car"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-danger"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-shield-tick"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-import"></use>
+					</svg>
+				</div>
+				<div class="flex size-15 items-center justify-center rounded-2xl border border-stroke-white text-black">
+					<svg class="size-6">
+						<use href="/assets/img/svg/sprite.svg#icon-forbidden"></use>
+					</svg>
+				</div>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>

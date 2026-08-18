@@ -1,12 +1,12 @@
 @layer components {
   .label {
     @apply inline-flex items-center justify-center;
-    @apply border-on-surface-inactive text-on-surface-inactive rounded-full border;
+    @apply border-txt text-txt rounded-full border;
   }
 
   /* type */
   .label-primary {
-    @apply sh2;
+    @apply typography-small-m;
     @apply px-3 py-2;
   }
 
@@ -20,15 +20,15 @@
   }
 
   .label-big {
-    @apply b2;
+    @apply typography-small-r;
     @apply min-w-56.25;
     @apply rounded-[30px];
     @apply px-6 py-4;
     @apply grid justify-start gap-2;
   }
   .sub-label {
-    @apply sh1;
-    @apply text-on-surface-primary inline-flex items-center gap-2;
+    @apply typography-p-sm;
+    @apply text-black inline-flex items-center gap-2;
   }
   .sub-label svg {
     @apply h-6 w-6 shrink-0 md:h-8 md:w-6;
@@ -36,29 +36,29 @@
 
   /* mode */
   .label-small {
-    @apply b3;
+    @apply typography-tag-r;
     @apply min-h-6;
     @apply px-3 py-1;
   }
 
   .label-error {
-    @apply text-on-surface-error bg-surface-error border-none;
+    @apply text-red bg-red/10 border-none;
   }
 
   .label-success {
-    @apply text-on-surface-success bg-surface-success border-none;
+    @apply text-green bg-green/10 border-none;
   }
 
   /* state */
   .label-glass {
-    @apply bg-glass;
-    @apply sh2;
+    @apply bg-white/10;
+    @apply typography-small-m;
     @apply inline-flex items-center gap-2 border border-transparent px-3 py-2 backdrop-blur-md;
-    @apply text-on-surface-tertiary;
+    @apply text-white;
   }
 
   .label-glass svg {
-    @apply text-on-surface-tertiary h-3 w-3 shrink-0 md:h-4 md:w-4;
+    @apply text-white h-3 w-3 shrink-0 md:h-4 md:w-4;
   }
 
   .label-top {

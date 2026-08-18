@@ -78,3 +78,46 @@
 `--text-p-r`→`--text-small-r` и т.д.). Обновлены все места использования:
 `breadcrumbs.css`, `links.css`, `buttons.css`, `forms.css`, `cards.css`, `base.css`.
 h1-h6 не трогал — они уже совпадали с Figma один в один.
+
+### Починка `npm run dev` (18.08.2026, после переименования)
+
+Сборка падала намертво — Tailwind v4 останавливается на первом же `@apply` с
+несуществующей утилитой. Почти все файлы `src/css/components/*` (buttons, links,
+forms, cards, labels, menu, pagination, modal, breadcrumbs, components) —
+нетронутые копии из kripten с другой, более сложной цветовой системой
+(`blue-dark/blue-hover`, `gray-text/gray-bg/gray-element`, `stroke-in-bg`,
+`on-surface-*`, `button-teritary`, `on-button-primary`, `button-card-*`,
+`sh1/sh2/b2/b3`, `cta`, `glass/white-glass`, `surface-error/success`), которых
+нет в `tokens/colors.css` (там только 10 токенов Gedeliks: white/dark-green/
+green/black/bg/txt/stroke-white/stroke-green/orange/red).
+
+Сделал **механический проход** — заменил везде на ближайшие существующие токены,
+чтобы сборка компилировалась:
+- `blue-dark→green`, `blue-hover→dark-green`
+- `gray-bg→bg`, `gray-text/gray-element→txt`, `stroke-in-bg→stroke-white`
+- `on-surface-primary→black`, `on-surface-secondary/inactive→txt`,
+  `on-surface-tertiary→white`, `on-surface-error→red`, `on-surface-success→green`
+- `surface-error→red/10`, `surface-success→green/10`
+- `white-glass/glass→white/10` (border-вариант → `white/20`)
+- `button-teritary→green`, `on-button-primary→white`,
+  `button-card-default/hover/press→bg/stroke-green/green`
+- `cta→typography-p-sm`, `sh1→typography-p-sm`, `sh2→typography-small-m`,
+  `b2→typography-small-r`, `b3→typography-tag-r` (эти 4 — неопознанные классы
+  из ещё какого-то стороннего проекта, никогда не были определены; выбор
+  ближайшего типографического токена — предположение, не сверено с Figma)
+- `custom-radial-bg→bg-green`, `text-big-r→text-p` (забытая после переименования
+  bare-утилита Tailwind)
+
+**Важно:** это только чтобы сборка не падала. Цвета по каждому конкретному
+компоненту (hover-состояния кнопок/лейблов и т.п.) ещё НЕ сверены с Figma —
+будем уточнять по ходу пошаговой работы над UI-китом, как делали со шрифтами.
+
+Заодно 2 отдельных бага из исходника:
+- в `layout.css` не хватало токена `--spacing-container-narrow` — вернул
+  значение kripten (`1194px`) с пометкой TODO, не проверено по Figma;
+- в `menu.css` опечатка `before:` без утилиты (потерялось `content-['']`) —
+  исправлено.
+
+`links.css` в момент починки редактировался вручную (часть `blue-dark` уже
+была закомментирована) — не трогал закомментированные строки, поправил
+только то, что реально ломало сборку.

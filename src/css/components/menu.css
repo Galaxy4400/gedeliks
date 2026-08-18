@@ -8,14 +8,14 @@
   }
 
   .menu-item {
-    @apply cta;
-    @apply text-on-surface-secondary relative inline-flex items-center gap-2;
+    @apply typography-p-sm;
+    @apply text-txt relative inline-flex items-center gap-2;
     @apply min-h-11.5 md:min-h-17;
     @apply py-6 pr-5 pl-4;
-    @apply before:bg-on-surface-primary before: before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;
-    @apply aria-selected:text-on-surface-primary aria-selected:before:opacity-100;
-    @apply hover:text-button-teritary hover:before:bg-button-teritary;
-    @apply active:text-on-surface-primary active:before:text-on-surface-primary;
+    @apply before:bg-black before:content-[''] before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;
+    @apply aria-selected:text-black aria-selected:before:opacity-100;
+    @apply hover:text-green hover:before:bg-green;
+    @apply active:text-black active:before:text-black;
     @apply disabled:pointer-events-none disabled:opacity-40;
     @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
   }
@@ -24,13 +24,13 @@
   }
 
   .lang-item {
-    @apply sh2;
-    @apply text-on-surface-secondary relative inline-flex items-center;
+    @apply typography-small-m;
+    @apply text-txt relative inline-flex items-center;
     @apply gap-1 py-1;
-    @apply before:bg-on-surface-primary before: before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;
-    @apply aria-selected:text-on-surface-primary aria-selected:before:opacity-100;
-    @apply hover:text-button-teritary hover:before:bg-button-teritary;
-    @apply active:text-on-surface-primary active:before:text-on-surface-primary;
+    @apply before:bg-black before:content-[''] before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;
+    @apply aria-selected:text-black aria-selected:before:opacity-100;
+    @apply hover:text-green hover:before:bg-green;
+    @apply active:text-black active:before:text-black;
     @apply disabled:pointer-events-none disabled:opacity-40;
     @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
   }

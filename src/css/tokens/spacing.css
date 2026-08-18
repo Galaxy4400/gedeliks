@@ -1,5 +1,6 @@
 @theme inline {
   --spacing-container: 1700px;
+  --spacing-container-narrow: 1194px; /* TODO: значение унаследовано от kripten as-is, не проверено по Figma-фреймам Gedeliks */
 }
 
 /* Mobile (base) */

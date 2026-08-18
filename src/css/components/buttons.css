@@ -5,8 +5,8 @@
     @apply min-h-12.5 text-center md:min-h-16;
     @apply rounded-full px-7.5 py-4;
     @apply inline-flex items-center justify-center gap-2.5;
-    @apply disabled:border-stroke-in-bg disabled:text-stroke-in-bg disabled:pointer-events-none disabled:border disabled:bg-transparent;
-    @apply aria-disabled:border-stroke-in-bg aria-disabled:text-stroke-in-bg aria-disabled:pointer-events-none aria-disabled:border aria-disabled:bg-transparent;
+    @apply disabled:border-stroke-white disabled:text-stroke-white disabled:pointer-events-none disabled:border disabled:bg-transparent;
+    @apply aria-disabled:border-stroke-white aria-disabled:text-stroke-white aria-disabled:pointer-events-none aria-disabled:border aria-disabled:bg-transparent;
   }
   .btn svg {
     @apply shrink-0;
@@ -14,33 +14,33 @@
 
   /* type */
   .btn-blue {
-    @apply bg-blue-dark text-white;
-    @apply hover:bg-blue-hover hover:text-blue-dark;
+    @apply bg-green text-white;
+    @apply hover:bg-dark-green hover:text-white;
   }
 
   .btn-white {
-    @apply text-blue-dark bg-white;
-    @apply hover:bg-blue-hover hover:text-blue-dark;
+    @apply text-green bg-white;
+    @apply hover:bg-dark-green hover:text-white;
   }
 
   .btn-gray {
-    @apply bg-gray-bg text-black;
-    @apply hover:bg-blue-hover hover:text-blue-dark;
+    @apply bg-bg text-black;
+    @apply hover:bg-dark-green hover:text-white;
   }
 
   .btn-transparent {
-    @apply border-white-glass border bg-transparent text-white;
-    @apply hover:bg-blue-hover hover:text-blue-dark hover:border-blue-hover;
+    @apply border-white/20 border bg-transparent text-white;
+    @apply hover:bg-dark-green hover:text-white hover:border-dark-green;
   }
 
   .btn-glass {
-    @apply bg-white-glass text-white;
-    @apply hover:bg-blue-hover hover:text-blue-dark;
+    @apply bg-white/10 text-white;
+    @apply hover:bg-dark-green hover:text-white;
   }
 
   .btn-outline {
-    @apply border-blue-dark text-blue-dark border bg-transparent;
-    @apply hover:bg-blue-dark hover:text-white;
+    @apply border-green text-green border bg-transparent;
+    @apply hover:bg-green hover:text-white;
   }
 
   /* mod */
@@ -56,16 +56,16 @@
 
   /* burger */
   .btn-burger {
-    @apply bg-blue-dark hover:bg-blue-hover hover:text-blue-dark inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all 2xl:hidden;
+    @apply bg-green hover:bg-dark-green hover:text-white inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all 2xl:hidden;
   }
 
   /* search */
   .btn-search {
-    @apply max-2xl:bg-gray-bg max-2xl:hover:bg-blue-hover max-2xl:hover:text-blue-dark inline-flex h-10 w-10 items-center justify-center rounded-full transition-all;
+    @apply max-2xl:bg-bg max-2xl:hover:bg-dark-green max-2xl:hover:text-white inline-flex h-10 w-10 items-center justify-center rounded-full transition-all;
   }
 
   /* menu-icon */
   .btn-menu {
-    @apply hover:bg-blue-hover hover:text-blue-dark inline-flex h-10 w-10 items-center justify-center rounded-full bg-white transition-all;
+    @apply hover:bg-dark-green hover:text-white inline-flex h-10 w-10 items-center justify-center rounded-full bg-white transition-all;
   }
 }

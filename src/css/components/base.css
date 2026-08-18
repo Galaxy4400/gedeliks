@@ -24,10 +24,10 @@
 
   button {
     @apply cursor-pointer;
-    @apply hover:text-blue-dark;
+    @apply hover:text-green;
   }
 
   a {
-    @apply hover:text-blue-dark transition-colors;
+    @apply hover:text-green transition-colors;
   }
 }

@@ -1,12 +1,12 @@
 @layer components {
   .card {
-    @apply bg-gray-bg rounded-2xl p-5;
+    @apply bg-bg rounded-2xl p-5;
   }
 
   /* card new */
   .card-new {
     @apply block;
-    @apply bg-gray-bg rounded-2xl p-5 md:p-7.5;
+    @apply bg-bg rounded-2xl p-5 md:p-7.5;
     @apply flex flex-col gap-4;
   }
   .card-new-content {
@@ -15,9 +15,9 @@
   .card-new-date {
     @apply flex items-center justify-between gap-4;
     @apply typography-p pt-5 md:pt-7.5;
-    @apply border-stroke-in-bg border-t;
-    @apply after:bg-gray-element after:h-1.5 after:w-1.5;
-    @apply group-hover/new-card:text-blue-hover group-hover/new-card:border-blue-hover group-hover/new-card:after:bg-blue-hover;
+    @apply border-stroke-white border-t;
+    @apply after:bg-txt after:h-1.5 after:w-1.5;
+    @apply group-hover/new-card:text-dark-green group-hover/new-card:border-dark-green group-hover/new-card:after:bg-dark-green;
     @apply transition-colors;
   }
 
@@ -27,7 +27,7 @@
     @apply min-h-[146px] md:min-h-[170px];
     @apply p-5 md:px-7.5 md:py-6;
     @apply rounded-2xl;
-    @apply bg-blue-dark;
+    @apply bg-green;
     @apply hover:bg-white;
   }
 }
