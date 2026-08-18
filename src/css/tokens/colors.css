@@ -1,6 +1,6 @@
 :root {
   --white: #ffffff;
-  --dark-green: #17400c;
+  --green-dark: #17400c;
   --green: #24820a;
   --orange: #fc9a08;
   --red: #f64f19;
@@ -15,7 +15,7 @@
   --color-*: initial;
 
   --color-white: var(--white);
-  --color-dark-green: var(--dark-green);
+  --color-green-dark: var(--green-dark);
   --color-green: var(--green);
   --color-orange: var(--orange);
   --color-red: var(--red);

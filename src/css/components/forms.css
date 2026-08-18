@@ -31,7 +31,7 @@
   .input-wrapper:has(.input:not(:placeholder-shown)) .input-icon,
   .input-wrapper:has(.input:-webkit-autofill) .input-icon,
   [data-custom-input][data-active] .input-icon {
-    @apply text-dark-green;
+    @apply text-green-dark;
   }
 
   /* file */
@@ -40,12 +40,12 @@
   }
 
   .file-input:hover {
-    @apply border-dark-green;
+    @apply border-green-dark;
   }
 
   .file-input:hover .file-text,
   .file-input:hover .file-icon {
-    @apply text-dark-green;
+    @apply text-green-dark;
   }
 
   .file-text {

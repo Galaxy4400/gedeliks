@@ -17,6 +17,8 @@
   }
 
   .btn-green {
+    @apply bg-green text-white;
+    @apply hover:border-green-dark;
   }
 
   .btn-light {
@@ -27,7 +29,7 @@
 
   .btn-transparent {
     @apply border border-white/20 bg-transparent text-white;
-    @apply hover:bg-dark-green hover:border-dark-green hover:text-white;
+    @apply hover:bg-green-dark hover:border-green-dark hover:text-white;
   }
 
   /* mod */
@@ -44,16 +46,16 @@
 
   /* burger */
   .btn-burger {
-    @apply bg-green hover:bg-dark-green inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:text-white 2xl:hidden;
+    @apply bg-green hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:text-white 2xl:hidden;
   }
 
   /* search */
   .btn-search {
-    @apply max-2xl:bg-bg max-2xl:hover:bg-dark-green inline-flex h-10 w-10 items-center justify-center rounded-full transition-all max-2xl:hover:text-white;
+    @apply max-2xl:bg-bg max-2xl:hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full transition-all max-2xl:hover:text-white;
   }
 
   /* menu-icon */
   .btn-menu {
-    @apply hover:bg-dark-green inline-flex h-10 w-10 items-center justify-center rounded-full bg-white transition-all hover:text-white;
+    @apply hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full bg-white transition-all hover:text-white;
   }
 }

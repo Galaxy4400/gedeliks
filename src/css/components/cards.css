@@ -17,7 +17,7 @@
     @apply typography-p pt-5 md:pt-7.5;
     @apply border-stroke-white border-t;
     @apply after:bg-gray after:h-1.5 after:w-1.5;
-    @apply group-hover/new-card:text-dark-green group-hover/new-card:border-dark-green group-hover/new-card:after:bg-dark-green;
+    @apply group-hover/new-card:text-green-dark group-hover/new-card:border-green-dark group-hover/new-card:after:bg-green-dark;
     @apply transition-colors;
   }
 
