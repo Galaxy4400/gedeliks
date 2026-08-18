@@ -44,9 +44,9 @@
     --text-psm: 15px;
     --leading-psm: 1.6;
     --font-psm: 600;
-    --text-small: 13px;
-    --leading-small: 1.5;
-    --font-small: 400;
+    --text-small-r: 13px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
     --text-small-m: 13px;
     --leading-small-m: 1.5;
     --font-small-m: 500;
@@ -448,15 +448,15 @@
     line-height: var(--leading-psm);
     font-weight: var(--font-psm);
   }
-  .typography-small {
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
-  }
   .typography-small-m {
     font-size: var(--text-small-m);
     line-height: var(--leading-small-m);
     font-weight: var(--font-small-m);
+  }
+  .typography-small-r {
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -654,9 +654,9 @@
     --text-psm: 20px;
     --leading-psm: 1.6;
     --font-psm: 600;
-    --text-small: 18px;
-    --leading-small: 1.5;
-    --font-small: 400;
+    --text-small-r: 18px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
     --text-small-m: 18px;
     --leading-small-m: 1.5;
     --font-small-m: 500;
@@ -987,9 +987,9 @@
 }
 @layer components {
   .link {
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     cursor: pointer;
     color: var(--black);
     display: inline-flex;
@@ -1357,9 +1357,9 @@
     gap: calc(var(--spacing) * 3.5);
   }
   .breadcrumb-item {
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     color: var(--txt);
     display: inline-flex;
     align-items: center;
@@ -1451,9 +1451,9 @@
     align-items: center;
     justify-content: center;
     border-radius: calc(infinity * 1px);
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     height: calc(var(--spacing) * 10);
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 11.25);
@@ -1597,9 +1597,9 @@
     }
   }
   .label-big {
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     min-width: calc(var(--spacing) * 56.25);
     border-radius: 30px;
     padding-inline: calc(var(--spacing) * 6);
@@ -1629,9 +1629,9 @@
     }
   }
   .label-small {
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     min-height: calc(var(--spacing) * 6);
     padding-inline: calc(var(--spacing) * 3);
     padding-block: calc(var(--spacing) * 1);
@@ -1814,9 +1814,9 @@
     padding-right: calc(var(--spacing) * 14);
     padding-bottom: calc(var(--spacing) * 2.5);
     padding-left: calc(var(--spacing) * 5);
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     --tw-ring-color: var(--stroke-white);
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -1831,9 +1831,9 @@
     position: absolute;
     top: calc(var(--spacing) * 2);
     left: calc(var(--spacing) * 5);
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     color: var(--txt);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1841,15 +1841,15 @@
   }
   .input:placeholder-shown:not(:focus) ~ .input-label {
     top: calc(var(--spacing) * 5);
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
   }
   .input:-webkit-autofill ~ .input-label, [data-custom-input][data-active] .input-label {
     top: calc(var(--spacing) * 2);
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
   }
   .input-label span {
     color: var(--red);
@@ -1860,9 +1860,9 @@
     right: calc(var(--spacing) * 5);
     height: 18px;
     width: 18px;
-    font-size: var(--text-small);
-    line-height: var(--leading-small);
-    font-weight: var(--font-small);
+    font-size: var(--text-small-r);
+    line-height: var(--leading-small-r);
+    font-weight: var(--font-small-r);
     color: var(--txt);
   }
   .input-wrapper:has(.input:not(:placeholder-shown)) .input-icon, .input-wrapper:has(.input:-webkit-autofill) .input-icon, [data-custom-input][data-active] .input-icon {

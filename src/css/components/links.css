@@ -1,6 +1,6 @@
 @layer components {
   .link {
-    @apply typography-small;
+    @apply typography-small-r;
     @apply cursor-pointer;
     @apply text-black;
     @apply inline-flex items-center gap-2.5;

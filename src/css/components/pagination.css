@@ -9,7 +9,7 @@
 
   .pagination-item {
     @apply inline-flex aspect-square shrink-0 items-center justify-center rounded-full;
-    @apply typography-small;
+    @apply typography-small-r;
     @apply h-10 md:h-11.25;
     @apply p-3;
     @apply bg-bg;

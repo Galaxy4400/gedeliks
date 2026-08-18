@@ -94,9 +94,9 @@
   --leading-psm: 1.6;
   --font-psm: 600;
 
-  --text-small: 13px;
-  --leading-small: 1.5;
-  --font-small: 400;
+  --text-small-r: 13px;
+  --leading-small-r: 1.5;
+  --font-small-r: 400;
 
   --text-small-m: 13px;
   --leading-small-m: 1.5;
@@ -142,9 +142,9 @@
     --leading-psm: 1.6;
     --font-psm: 600;
 
-    --text-small: 18px;
-    --leading-small: 1.5;
-    --font-small: 400;
+    --text-small-r: 18px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
 
     --text-small-m: 18px;
     --leading-small-m: 1.5;

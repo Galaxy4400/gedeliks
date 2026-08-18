@@ -52,10 +52,10 @@
   font-weight: var(--font-psm);
 }
 
-@utility typography-small {
-  font-size: var(--text-small);
-  line-height: var(--leading-small);
-  font-weight: var(--font-small);
+@utility typography-small-r {
+  font-size: var(--text-small-r);
+  line-height: var(--leading-small-r);
+  font-weight: var(--font-small-r);
 }
 
 @utility typography-small-m {
