@@ -1,7 +1,7 @@
 @layer components {
   .label {
     @apply inline-flex items-center justify-center;
-    @apply border-txt text-txt rounded-full border;
+    @apply border-gray text-gray rounded-full border;
   }
 
   /* type */

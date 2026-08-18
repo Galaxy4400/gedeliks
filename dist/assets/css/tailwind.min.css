@@ -367,9 +367,6 @@
   .bg-stroke-white {
     background-color: var(--stroke-white);
   }
-  .bg-txt {
-    background-color: var(--txt);
-  }
   .bg-white {
     background-color: var(--white);
   }
@@ -467,6 +464,9 @@
   .text-dark-green {
     color: var(--dark-green);
   }
+  .text-gray {
+    color: var(--gray);
+  }
   .text-green {
     color: var(--green);
   }
@@ -475,9 +475,6 @@
   }
   .text-red {
     color: var(--red);
-  }
-  .text-txt {
-    color: var(--txt);
   }
   .uppercase {
     text-transform: uppercase;
@@ -589,7 +586,7 @@
   --red: #f64f19;
   --black: #07260b;
   --bg: #f2f9ee;
-  --txt: #767676;
+  --gray: #767676;
   --stroke-white: #e6e6e6;
   --stroke-green: #d6dfd1;
 }
@@ -1058,7 +1055,7 @@
     font-size: var(--text-small-m);
     line-height: var(--leading-small-m);
     font-weight: var(--font-small-m);
-    color: var(--txt);
+    color: var(--gray);
   }
   .link-tag {
     font-size: var(--text-small-m);
@@ -1165,7 +1162,7 @@
     display: inline-flex;
     align-items: center;
     gap: calc(var(--spacing) * 2);
-    color: var(--txt);
+    color: var(--gray);
     min-height: calc(var(--spacing) * 11.5);
     @media (width >= 48rem) {
       min-height: calc(var(--spacing) * 17);
@@ -1265,7 +1262,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    color: var(--txt);
+    color: var(--gray);
     gap: calc(var(--spacing) * 1);
     padding-block: calc(var(--spacing) * 1);
     &::before {
@@ -1360,7 +1357,7 @@
     font-size: var(--text-small-r);
     line-height: var(--leading-small-r);
     font-weight: var(--font-small-r);
-    color: var(--txt);
+    color: var(--gray);
     display: inline-flex;
     align-items: center;
     gap: calc(var(--spacing) * 3.5);
@@ -1421,7 +1418,7 @@
       pointer-events: none;
     }
     &:last-child {
-      color: var(--txt);
+      color: var(--gray);
     }
     &:last-child {
       &::after {
@@ -1567,8 +1564,8 @@
     border-radius: calc(infinity * 1px);
     border-style: var(--tw-border-style);
     border-width: 1px;
-    border-color: var(--txt);
-    color: var(--txt);
+    border-color: var(--gray);
+    color: var(--gray);
   }
   .label-primary {
     font-size: var(--text-small-m);
@@ -1742,7 +1739,7 @@
     }
     &::after {
       content: var(--tw-content);
-      background-color: var(--txt);
+      background-color: var(--gray);
     }
     &:is(:where(.group\/new-card):hover *) {
       @media (hover: hover) {
@@ -1834,7 +1831,7 @@
     font-size: var(--text-small-r);
     line-height: var(--leading-small-r);
     font-weight: var(--font-small-r);
-    color: var(--txt);
+    color: var(--gray);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -1863,7 +1860,7 @@
     font-size: var(--text-small-r);
     line-height: var(--leading-small-r);
     font-weight: var(--font-small-r);
-    color: var(--txt);
+    color: var(--gray);
   }
   .input-wrapper:has(.input:not(:placeholder-shown)) .input-icon, .input-wrapper:has(.input:-webkit-autofill) .input-icon, [data-custom-input][data-active] .input-icon {
     color: var(--dark-green);
@@ -1973,7 +1970,7 @@
     font-size: var(--text-h6);
     line-height: var(--leading-h6);
     font-weight: var(--font-h6);
-    color: var(--txt);
+    color: var(--gray);
     position: relative;
     display: flex;
     align-items: center;

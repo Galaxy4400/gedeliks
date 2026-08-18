@@ -16,7 +16,7 @@
   }
 
   .quote {
-    @apply typography-h6 text-txt;
+    @apply typography-h6 text-gray;
     @apply bg-bg text-p relative flex items-center justify-center overflow-hidden rounded-2xl px-10 py-7 text-center md:px-20 md:py-10;
     @apply bg-[url(/assets/img/quote-pattern.png)];
   }

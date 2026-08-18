@@ -44,7 +44,7 @@
 
   .link-small {
     @apply typography-small-m;
-    @apply text-txt;
+    @apply text-gray;
     /* @apply hover:text-blue-dark; */
   }
 

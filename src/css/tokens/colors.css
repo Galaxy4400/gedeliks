@@ -6,7 +6,7 @@
   --red: #f64f19;
   --black: #07260b;
   --bg: #f2f9ee;
-  --txt: #767676;
+  --gray: #767676;
   --stroke-white: #e6e6e6;
   --stroke-green: #d6dfd1;
 }
@@ -21,7 +21,7 @@
   --color-red: var(--red);
   --color-black: var(--black);
   --color-bg: var(--bg);
-  --color-txt: var(--txt);
+  --color-gray: var(--gray);
   --color-stroke-white: var(--stroke-white);
   --color-stroke-green: var(--stroke-green);
 }
