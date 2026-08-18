@@ -1,29 +1,27 @@
 :root {
-  --blue-dark: #002e6d;
-  --blue-light: #0f3a76;
-  --blue-hover: #91bffe;
-  --gray-text: #6f6f6f;
-  --gray-element: #b4b4b4;
-  --gray-bg: #f4f3f3;
-  --stroke-in-bg: #dbdada;
   --white: #ffffff;
-  --black: #282828;
-  --white-glass: #ffffff1a;
-  --error: #cf0404;
+  --dark-green: #17400c;
+  --green: #24820a;
+  --orange: #fc9a08;
+  --red: #f64f19;
+  --black: #07260b;
+  --bg: #f2f9ee;
+  --txt: #767676;
+  --stroke-white: #e6e6e6;
+  --stroke-green: #d6dfd1;
 }
 
 @theme inline {
   --color-*: initial;
 
-  --color-blue-dark: var(--blue-dark);
-  --color-blue-light: var(--blue-light);
-  --color-blue-hover: var(--blue-hover);
-  --color-gray-text: var(--gray-text);
-  --color-gray-element: var(--gray-element);
-  --color-gray-bg: var(--gray-bg);
-  --color-stroke-in-bg: var(--stroke-in-bg);
   --color-white: var(--white);
+  --color-dark-green: var(--dark-green);
+  --color-green: var(--green);
+  --color-orange: var(--orange);
+  --color-red: var(--red);
   --color-black: var(--black);
-  --color-white-glass: var(--white-glass);
-  --color-error: var(--error);
+  --color-bg: var(--bg);
+  --color-txt: var(--txt);
+  --color-stroke-white: var(--stroke-white);
+  --color-stroke-green: var(--stroke-green);
 }
