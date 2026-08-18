@@ -1,71 +1,82 @@
+/*
+ * Кнопки — по инвентарю UI-кита Figma (node-id=14-2846, Bttn 1–7).
+ * Стилизация (цвета/паддинги/радиусы/hover) — вручную, здесь только скелет классов.
+ *
+ * Структура:
+ *   .btn         — база, общая для всех пилюль. Без .btn-sm — большой размер (Bttn 1–2, Desktop/P SM).
+ *   .btn-sm      — модификатор размера: средняя пилюля (Bttn 3–5, Desktop/Small M).
+ *   .btn-white   — тип: светлый фон / акцентный текст-бордер (Bttn 1 большая, Bttn 3 средняя).
+ *   .btn-green   — тип: заливка зелёным (Bttn 2 большая, Bttn 4 средняя).
+ *   .btn-bg      — тип: для секции на фоне BG (Bttn 5, средняя — крупного аналога в ките нет).
+ *   Типы применяются поверх .btn или .btn.btn-sm, независимо от размера.
+ *
+ * Отдельная семья .size-pill-* — селектор объёма (Bttn 6, 3 состояния), не часть .btn.
+ *
+ * Убрано из kripten (не встретилось в Figma-ките и не используется в разметке):
+ *   .btn-blue (переименован в .btn-green), .btn-gray, .btn-transparent, .btn-glass,
+ *   .btn-outline, .btn-icon, .btn-big, .btn-search, .btn-menu.
+ *   Оставлен .btn-burger — реально используется (мобильное меню, index.html).
+ *
+ * Под вопросом (не решал сам, не хватило данных для однозначного вывода):
+ *   — Bttn 7 (42022:4260, мобильный, встречается 1 раз рядом с List 2) — не похож на
+ *     обычную пилюлю по типографике (Mobile/P SM), возможно это не .btn, а что-то вроде
+ *     .link-*. Пока класс не создавал.
+ *   — «Выбрать препарат» с круглой иконкой на конце (использовали ранее в черновике
+ *     ui.html как .btn-badge) — в Bttn 1–7 такого компонента нет, похоже на отдельный
+ *     hero-элемент, а не тип кнопки. Не создавал, пока не подтвердишь.
+ */
+
 @layer components {
-  /* buttons */
+  /* база — большая пилюля (Bttn 1–2) */
   .btn {
-    @apply typography-small-medium cursor-pointer transition-all;
-    @apply min-h-12.5 text-center md:min-h-16;
-    @apply rounded-full px-7.5 py-4;
     @apply inline-flex items-center justify-center gap-2.5;
-    @apply disabled:border-stroke-white disabled:text-stroke-white disabled:pointer-events-none disabled:border disabled:bg-transparent;
-    @apply aria-disabled:border-stroke-white aria-disabled:text-stroke-white aria-disabled:pointer-events-none aria-disabled:border aria-disabled:bg-transparent;
+    @apply cursor-pointer transition-all;
+    @apply disabled:pointer-events-none disabled:opacity-40;
+    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
+    /* TODO: размеры/паддинги/radius/шрифт большой пилюли (Desktop/P SM, Bttn 1–2) */
   }
   .btn svg {
     @apply shrink-0;
   }
 
-  /* type */
-  .btn-blue {
-    @apply bg-green text-white;
-    @apply hover:bg-dark-green hover:text-white;
+  /* размер — средняя пилюля (Bttn 3–5) */
+  .btn-sm {
+    /* TODO: размеры/паддинги/radius/шрифт средней пилюли (Desktop/Small M, Bttn 3–5) */
   }
 
+  /* типы — применяются и на .btn, и на .btn.btn-sm */
   .btn-white {
-    @apply text-green bg-white;
-    @apply hover:bg-dark-green hover:text-white;
+    /* TODO: Bttn 1 / Bttn 3 */
   }
 
-  .btn-gray {
-    @apply bg-bg text-black;
-    @apply hover:bg-dark-green hover:text-white;
+  .btn-green {
+    /* TODO: Bttn 2 / Bttn 4 */
   }
 
-  .btn-transparent {
-    @apply border-white/20 border bg-transparent text-white;
-    @apply hover:bg-dark-green hover:text-white hover:border-dark-green;
+  .btn-bg {
+    /* TODO: Bttn 5 — для секций на фоне BG */
   }
 
-  .btn-glass {
-    @apply bg-white/10 text-white;
-    @apply hover:bg-dark-green hover:text-white;
-  }
-
-  .btn-outline {
-    @apply border-green text-green border bg-transparent;
-    @apply hover:bg-green hover:text-white;
-  }
-
-  /* mod */
-  .btn-icon {
-    @apply aspect-square rounded-xl p-2.5;
-  }
-
-  .btn-big {
-    @apply typography-p-semibold;
-    @apply min-h-19.25;
-    @apply rounded-2xl px-6 py-4;
-  }
-
-  /* burger */
+  /* бургер — мобильное меню, используется в index.html */
   .btn-burger {
-    @apply bg-green hover:bg-dark-green hover:text-white inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all 2xl:hidden;
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full transition-all 2xl:hidden;
+    /* TODO: цвета */
   }
 
-  /* search */
-  .btn-search {
-    @apply max-2xl:bg-bg max-2xl:hover:bg-dark-green max-2xl:hover:text-white inline-flex h-10 w-10 items-center justify-center rounded-full transition-all;
+  /* селектор объёма (Bttn 6) — отдельная семья, не часть .btn */
+  .size-pill {
+    /* TODO: общая пилюля селектора (Desktop/P, drop-shadow "Card") */
   }
 
-  /* menu-icon */
-  .btn-menu {
-    @apply hover:bg-dark-green hover:text-white inline-flex h-10 w-10 items-center justify-center rounded-full bg-white transition-all;
+  .size-pill-selected {
+    /* TODO: Bttn 6 / Property 1=Default */
+  }
+
+  .size-pill-available {
+    /* TODO: Bttn 6 / Property 1=Variant2 */
+  }
+
+  .size-pill-disabled {
+    /* TODO: Bttn 6 / Property 1=Variant3 */
   }
 }
