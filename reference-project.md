@@ -16,12 +16,14 @@
 уже не понадобится — всё нужное перенесено сюда.
 
 Перенесено:
+
 - `src/css/tokens/*` — токены (colors, fonts, spacing, breakpoints, animations)
 - `src/css/components/*` — компоненты (buttons, cards, forms, labels, menu, modal,
   pagination, sliders, spoilers, typography и т.д.)
 - `gulpfile.js` — минимальный (только сборка Tailwind CSS + browser-sync)
 
 Ещё **сырое, не зачищено под Gedeliks** (зачистка будет по ходу работы, не сразу):
+
 - `dist/index.html`, `dist/assets/js/*` — всё ещё контент/файлы Криптена (title,
   embla-carousel через unpkg и т.д.)
 - `README.md` — список страниц Криптена
@@ -60,19 +62,19 @@
   с текущими токенами, использует несуществующие классы sh1/sh2/b2/b3 — отдельная
   задача).
 
-### Переименование классов typography-* (по просьбе, следом за первым проходом)
+### Переименование классов typography-\* (по просьбе, следом за первым проходом)
 
 Старые имена (`btr/btsm/pr/psm/tagm/tagr`) — калька из kripten, ничего не говорят
 о смысле. Переименовал классы и переменные-токены на имена стилей из Figma:
 
-| было (класс)         | стало (класс)         | стиль в Figma      |
-| --------------------- | ---------------------- | ------------------ |
-| `typography-btr`      | `typography-p`         | P                   |
-| `typography-btsm`     | `typography-p-sm`      | P SM                |
-| `typography-pr`       | `typography-small-r`   | Small R             |
-| `typography-psm`      | `typography-small-m`   | Small M             |
-| `typography-tagm`     | `typography-tag-m`     | Small M CAPS        |
-| `typography-tagr`     | `typography-tag-r`     | Small R (в теге)    |
+| было (класс)      | стало (класс)        | стиль в Figma    |
+| ----------------- | -------------------- | ---------------- |
+| `typography-btr`  | `typography-p`       | P                |
+| `typography-btsm` | `typography-p-sm`    | P SM             |
+| `typography-pr`   | `typography-small-r` | Small R          |
+| `typography-psm`  | `typography-small-m` | Small M          |
+| `typography-tagm` | `typography-tag-m`   | Small M CAPS     |
+| `typography-tagr` | `typography-tag-r`   | Small R (в теге) |
 
 Токены в `fonts.css` переименованы синхронно (`--text-big-r`→`--text-p`,
 `--text-p-r`→`--text-small-r` и т.д.). Обновлены все места использования:
@@ -89,10 +91,11 @@ forms, cards, labels, menu, pagination, modal, breadcrumbs, components) —
 `on-surface-*`, `button-teritary`, `on-button-primary`, `button-card-*`,
 `sh1/sh2/b2/b3`, `cta`, `glass/white-glass`, `surface-error/success`), которых
 нет в `tokens/colors.css` (там только 10 токенов Gedeliks: white/dark-green/
-green/black/bg/txt/stroke-white/stroke-green/orange/red).
+green/black/bg/txt/stroke-white/green-light/orange/red).
 
 Сделал **механический проход** — заменил везде на ближайшие существующие токены,
 чтобы сборка компилировалась:
+
 - `blue-dark→green`, `blue-hover→dark-green`
 - `gray-bg→bg`, `gray-text/gray-element→txt`, `stroke-in-bg→stroke-white`
 - `on-surface-primary→black`, `on-surface-secondary/inactive→txt`,
@@ -100,7 +103,7 @@ green/black/bg/txt/stroke-white/stroke-green/orange/red).
 - `surface-error→red/10`, `surface-success→green/10`
 - `white-glass/glass→white/10` (border-вариант → `white/20`)
 - `button-teritary→green`, `on-button-primary→white`,
-  `button-card-default/hover/press→bg/stroke-green/green`
+  `button-card-default/hover/press→bg/green-light/green`
 - `cta→typography-p-sm`, `sh1→typography-p-sm`, `sh2→typography-small-m`,
   `b2→typography-small-r`, `b3→typography-tag-r` (эти 4 — неопознанные классы
   из ещё какого-то стороннего проекта, никогда не были определены; выбор
@@ -113,6 +116,7 @@ green/black/bg/txt/stroke-white/stroke-green/orange/red).
 будем уточнять по ходу пошаговой работы над UI-китом, как делали со шрифтами.
 
 Заодно 2 отдельных бага из исходника:
+
 - в `layout.css` не хватало токена `--spacing-container-narrow` — вернул
   значение kripten (`1194px`) с пометкой TODO, не проверено по Figma;
 - в `menu.css` опечатка `before:` без утилиты (потерялось `content-['']`) —
@@ -135,6 +139,7 @@ green/black/bg/txt/stroke-white/stroke-green/orange/red).
 Figma MCP — 20 SVG-ассетов за вызов, и непонятно, какие 20 из 36 вернутся).
 
 Из 36 в спрайт вошли **30**:
+
 - 24 — с понятным именем прямо из Figma (location, tick-circle, arrow-right,
   arrow-down, chevron-down, box, people, user, forbidden, lungs, add, minus,
   book, home, water-drop, energy, history, import, clipboard-text, car,
@@ -148,6 +153,7 @@ Figma MCP — 20 SVG-ассетов за вызов, и непонятно, ка
 за точные дубли `arrow-right`/`arrow-down`/`people` — судил только по общему
 внутреннему id `vuesax/linear/...` в самих SVG, не сверив реальную геометрию
 путей. На деле это три другие иконки:
+
 - `Variant19` → **`arrow-down`** — полноценная стрелка вниз (шеврон + стержень).
   Раньше под именем `icon-arrow-down` был другой узел (2:1065) — голый шеврон
   без стержня; переименовал его в **`icon-chevron-down`**, чтобы освободить
@@ -163,6 +169,7 @@ Figma MCP — 20 SVG-ассетов за вызов, и непонятно, ка
 многослойность сама по себе не проблема — currentColor работает одинаково
 для 1 path и для 17 — поэтому объединил в одну сетку). Что сделал при
 вставке:
+
 - вычленил вложенную группу `<g id="Property 1=...">` из «сырого» экспорта
   (экспорт узла у Figma отдаёт весь холст целиком — фон, дэшед-рамку
   выделения и т.д., не только саму иконку)

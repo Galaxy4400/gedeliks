@@ -1,14 +1,14 @@
 :root {
   --white: #ffffff;
+  --green-lightest: #f2f9ee;
+  --green-light: #d6dfd1;
   --green-dark: #17400c;
   --green: #24820a;
   --orange: #fc9a08;
   --red: #f64f19;
   --black: #07260b;
-  --bg: #f2f9ee;
   --gray: #767676;
   --stroke-white: #e6e6e6;
-  --stroke-green: #d6dfd1;
 }
 
 @theme inline {
@@ -20,8 +20,8 @@
   --color-orange: var(--orange);
   --color-red: var(--red);
   --color-black: var(--black);
-  --color-bg: var(--bg);
+  --color-green-lightest: var(--green-lightest);
   --color-gray: var(--gray);
   --color-stroke-white: var(--stroke-white);
-  --color-stroke-green: var(--stroke-green);
+  --color-green-light: var(--green-light);
 }

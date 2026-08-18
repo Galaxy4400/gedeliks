@@ -4,7 +4,7 @@
   }
 
   .input {
-    @apply bg-bg typography-small-r ring-stroke-white min-h-[55px] w-full rounded-sm pt-7.5 pr-14 pb-2.5 pl-5 focus:ring md:min-h-16;
+    @apply bg-green-lightest typography-small-r ring-stroke-white min-h-[55px] w-full rounded-sm pt-7.5 pr-14 pb-2.5 pl-5 focus:ring md:min-h-16;
   }
 
   .input-label {

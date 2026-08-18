@@ -12,8 +12,8 @@
     @apply typography-small-r;
     @apply h-10 md:h-11.25;
     @apply p-3;
-    @apply bg-bg;
-    @apply hover:bg-stroke-green;
+    @apply bg-green-lightest;
+    @apply hover:bg-green-light;
     @apply active:bg-green;
     @apply disabled:pointer-events-none disabled:opacity-40;
     @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;

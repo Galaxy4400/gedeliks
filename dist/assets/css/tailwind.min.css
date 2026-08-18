@@ -343,9 +343,6 @@
   .border-stroke-white {
     border-color: var(--stroke-white);
   }
-  .bg-bg {
-    background-color: var(--bg);
-  }
   .bg-black {
     background-color: var(--black);
   }
@@ -355,23 +352,23 @@
   .bg-green-dark {
     background-color: var(--green-dark);
   }
+  .bg-green-light {
+    background-color: var(--green-light);
+  }
+  .bg-green-lightest {
+    background-color: var(--green-lightest);
+  }
   .bg-orange {
     background-color: var(--orange);
   }
   .bg-red {
     background-color: var(--red);
   }
-  .bg-stroke-green {
-    background-color: var(--stroke-green);
-  }
   .bg-stroke-white {
     background-color: var(--stroke-white);
   }
   .bg-white {
     background-color: var(--white);
-  }
-  .stroke-green {
-    stroke: var(--green);
   }
   .stroke-white {
     stroke: var(--white);
@@ -580,15 +577,15 @@
 }
 :root {
   --white: #ffffff;
+  --green-lightest: #f2f9ee;
+  --green-light: #d6dfd1;
   --green-dark: #17400c;
   --green: #24820a;
   --orange: #fc9a08;
   --red: #f64f19;
   --black: #07260b;
-  --bg: #f2f9ee;
   --gray: #767676;
   --stroke-white: #e6e6e6;
-  --stroke-green: #d6dfd1;
 }
 @font-face {
   font-family: 'Inter';
@@ -775,7 +772,19 @@
     color: var(--white);
     &:hover {
       @media (hover: hover) {
-        border-color: var(--green-dark);
+        background-color: var(--green-dark);
+      }
+    }
+  }
+  .btn-light {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--green-lightest);
+    background-color: var(--green-lightest);
+    color: var(--green);
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--green);
       }
     }
   }
@@ -852,7 +861,7 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     @media (width < 96rem) {
-      background-color: var(--bg);
+      background-color: var(--green-lightest);
     }
     @media (width < 96rem) {
       &:hover {
@@ -1366,10 +1375,10 @@
       height: calc(var(--spacing) * 11.25);
     }
     padding: calc(var(--spacing) * 3);
-    background-color: var(--bg);
+    background-color: var(--green-lightest);
     &:hover {
       @media (hover: hover) {
-        background-color: var(--stroke-green);
+        background-color: var(--green-light);
       }
     }
     &:active {
@@ -1606,13 +1615,13 @@
 @layer components {
   .card {
     border-radius: var(--radius-2xl);
-    background-color: var(--bg);
+    background-color: var(--green-lightest);
     padding: calc(var(--spacing) * 5);
   }
   .card-new {
     display: block;
     border-radius: var(--radius-2xl);
-    background-color: var(--bg);
+    background-color: var(--green-lightest);
     padding: calc(var(--spacing) * 5);
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 7.5);
@@ -1716,7 +1725,7 @@
     min-height: 55px;
     width: 100%;
     border-radius: var(--radius-sm);
-    background-color: var(--bg);
+    background-color: var(--green-lightest);
     padding-top: calc(var(--spacing) * 7.5);
     padding-right: calc(var(--spacing) * 14);
     padding-bottom: calc(var(--spacing) * 2.5);
@@ -1887,7 +1896,7 @@
     justify-content: center;
     overflow: hidden;
     border-radius: var(--radius-2xl);
-    background-color: var(--bg);
+    background-color: var(--green-lightest);
     padding-inline: calc(var(--spacing) * 10);
     padding-block: calc(var(--spacing) * 7);
     text-align: center;

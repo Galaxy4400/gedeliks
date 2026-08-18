@@ -18,10 +18,12 @@
 
   .btn-green {
     @apply bg-green text-white;
-    @apply hover:border-green-dark;
+    @apply hover:bg-green-dark;
   }
 
   .btn-light {
+    @apply text-green border-green-lightest bg-green-lightest border;
+    @apply hover:border-green;
   }
 
   .btn-dark {
@@ -51,7 +53,7 @@
 
   /* search */
   .btn-search {
-    @apply max-2xl:bg-bg max-2xl:hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full transition-all max-2xl:hover:text-white;
+    @apply max-2xl:bg-green-lightest max-2xl:hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full transition-all max-2xl:hover:text-white;
   }
 
   /* menu-icon */
