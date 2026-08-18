@@ -1,9 +1,9 @@
 @layer components {
   /* buttons */
   .btn {
-    @apply typography-small-m cursor-pointer transition-all;
-    @apply min-h-[70px] text-center md:min-h-[50px];
-    @apply rounded-full px-5 py-2;
+    @apply typography-psm cursor-pointer transition-all;
+    @apply min-h-[50px] text-center md:min-h-[70px];
+    @apply rounded-full px-7 py-2;
     @apply inline-flex items-center justify-center gap-2.5;
   }
   .btn svg {
@@ -27,20 +27,22 @@
   }
 
   .btn-dark {
+    @apply bg-green-dark text-white;
+    @apply hover:bg-green;
   }
 
   .btn-transparent {
-    @apply border border-white/20 bg-transparent text-white;
-    @apply hover:bg-green-dark hover:border-green-dark hover:text-white;
+    @apply border-green text-green border bg-transparent;
+    @apply hover:bg-green hover:text-white;
   }
 
   /* mod */
   .btn-icon {
-    @apply aspect-square rounded-xl p-2.5;
+    /* @apply aspect-square rounded-xl p-2.5; */
   }
 
   .btn-small {
-    @apply typography-psm min-h-[55px];
+    @apply typography-small-m min-h-10 px-5 md:min-h-[55px];
   }
 
   .btn-little {

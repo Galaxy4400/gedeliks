@@ -733,19 +733,19 @@
 @layer components {
   .btn {
     cursor: pointer;
-    font-size: var(--text-small-m);
-    line-height: var(--leading-small-m);
-    font-weight: var(--font-small-m);
+    font-size: var(--text-psm);
+    line-height: var(--leading-psm);
+    font-weight: var(--font-psm);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-    min-height: 70px;
+    min-height: 50px;
     text-align: center;
     @media (width >= 48rem) {
-      min-height: 50px;
+      min-height: 70px;
     }
     border-radius: calc(infinity * 1px);
-    padding-inline: calc(var(--spacing) * 5);
+    padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 2);
     display: inline-flex;
     align-items: center;
@@ -788,23 +788,24 @@
       }
     }
   }
-  .btn-transparent {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: var(--white);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--white) 20%, transparent);
-    }
-    background-color: transparent;
+  .btn-dark {
+    background-color: var(--green-dark);
     color: var(--white);
     &:hover {
       @media (hover: hover) {
-        border-color: var(--green-dark);
+        background-color: var(--green);
       }
     }
+  }
+  .btn-transparent {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--green);
+    background-color: transparent;
+    color: var(--green);
     &:hover {
       @media (hover: hover) {
-        background-color: var(--green-dark);
+        background-color: var(--green);
       }
     }
     &:hover {
@@ -813,16 +814,15 @@
       }
     }
   }
-  .btn-icon {
-    aspect-ratio: 1 / 1;
-    border-radius: var(--radius-xl);
-    padding: calc(var(--spacing) * 2.5);
-  }
   .btn-small {
-    min-height: 55px;
-    font-size: var(--text-psm);
-    line-height: var(--leading-psm);
-    font-weight: var(--font-psm);
+    min-height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 5);
+    font-size: var(--text-small-m);
+    line-height: var(--leading-small-m);
+    font-weight: var(--font-small-m);
+    @media (width >= 48rem) {
+      min-height: 55px;
+    }
   }
   .btn-burger {
     display: inline-flex;
