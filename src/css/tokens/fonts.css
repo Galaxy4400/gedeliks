@@ -1,115 +1,155 @@
+/* Inter Variable — самохостинг, разбит по unicode-range (как раздаёт Google Fonts),
+   т.к. на сайте нужны и кириллица, и латиница. Файлы: src/fonts/Inter-Variable-*.woff2 */
 @font-face {
-  font-family: 'Geist';
-  src: url('/assets/fonts/Geist-Variable.woff2') format('woff2');
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Variable-cyrillic-ext.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Variable-cyrillic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Variable-latin-ext.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Variable-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @theme inline {
-  --font-sans: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
+
+/* Шкала типографики — по стилям текста из Figma (файл «Геделикс», UI-кит + главная).
+   Названия токенов слева — как в Figma, направление Desktop/Mobile: */
+/* h1..h6      → Desktop/Mobile H1..H6 */
+/* big-r/big-sm → Desktop/Mobile P / P SM  (крупный основной текст) */
+/* p-r/p-sm     → Desktop/Mobile Small R / Small M  (мелкий UI-текст) */
+/* tag-m/tag-r  → те же Small M CAPS / Small R, но с uppercase на уровне компонента (см. .link-tag) */
 
 /* Mobile (base) */
 @theme {
-  --text-h1: 40px;
+  --text-h1: 42px; /* TODO: hero на мобилке ещё не свёрстан, в Figma нет отдельного стиля Mobile/H1 —
+    в макете (node 42022-4017) заголовок набран смешанными размерами 42px/50px, взял 42px как базу под <h1> */
   --leading-h1: 1.1;
-  --font-h1: 500;
+  --font-h1: 700;
 
-  --text-h2: 30px;
+  --text-h2: 35px;
   --leading-h2: 1.1;
-  --font-h2: 500;
+  --font-h2: 600;
 
-  --text-h3: 26px;
-  --leading-h3: 1.3;
-  --font-h3: 500;
+  --text-h3: 29px; /* TODO: в Figma нет стиля Mobile/H3, посчитано по пропорции соседних Mobile/Desktop (H2, H4) от Desktop/H3 (50px) — уточнить, когда появится мобильный фрейм с H3 */
+  --leading-h3: 1.1;
+  --font-h3: 600;
 
-  --text-h4: 22px;
-  --leading-h4: 1.3;
-  --font-h4: 500;
+  --text-h4: 25px;
+  --leading-h4: 1.1;
+  --font-h4: 600;
 
-  --text-h5: 20px;
-  --leading-h5: 1.3;
+  --text-h5: 22px;
+  --leading-h5: 1.2;
   --font-h5: 500;
 
   --text-h6: 18px;
-  --leading-h6: 1.3;
+  --leading-h6: 1.2;
   --font-h6: 500;
 
-  --text-big-r: 16px;
-  --leading-big-r: 1.5;
+  --text-big-r: 15px;
+  --leading-big-r: 1.6;
   --font-big-r: 400;
 
-  --text-big-sm: 16px;
-  --leading-big-sm: 1.5;
+  --text-big-sm: 15px;
+  --leading-big-sm: 1.6;
   --font-big-sm: 600;
 
-  --text-p-r: 14px;
+  --text-p-r: 13px;
   --leading-p-r: 1.5;
   --font-p-r: 400;
 
-  --text-p-sm: 14px;
+  --text-p-sm: 13px;
   --leading-p-sm: 1.5;
-  --font-p-sm: 600;
+  --font-p-sm: 500;
 
-  --text-tag-m: 12px;
-  --leading-tag-m: 1.4;
+  --text-tag-m: 13px;
+  --leading-tag-m: 1.5;
   --font-tag-m: 500;
 
-  --text-tag-r: 12px;
-  --leading-tag-r: 1.4;
+  --text-tag-r: 13px;
+  --leading-tag-r: 1.5;
   --font-tag-r: 400;
 }
 
 /* Desktop */
 @media (width >= theme(--breakpoint-md)) {
   :root {
-    --text-h1: 60px;
+    --text-h1: 70px;
     --leading-h1: 1.1;
-    --font-h1: 500;
+    --font-h1: 700;
 
-    --text-h2: 42px;
+    --text-h2: 60px;
     --leading-h2: 1.1;
-    --font-h2: 500;
+    --font-h2: 600;
 
-    --text-h3: 32px;
-    --leading-h3: 1.3;
-    --font-h3: 500;
+    --text-h3: 50px;
+    --leading-h3: 1.1;
+    --font-h3: 600;
 
-    --text-h4: 28px;
-    --leading-h4: 1.3;
-    --font-h4: 500;
+    --text-h4: 43px;
+    --leading-h4: 1.1;
+    --font-h4: 600;
 
-    --text-h5: 24px;
-    --leading-h5: 1.3;
+    --text-h5: 33px;
+    --leading-h5: 1.2;
     --font-h5: 500;
 
-    --text-h6: 20px;
-    --leading-h6: 1.3;
+    --text-h6: 26px;
+    --leading-h6: 1.2;
     --font-h6: 500;
 
-    --text-big-r: 18px;
-    --leading-big-r: 1.5;
+    --text-big-r: 20px;
+    --leading-big-r: 1.6;
     --font-big-r: 400;
 
-    --text-big-sm: 18px;
-    --leading-big-sm: 1.5;
+    --text-big-sm: 20px;
+    --leading-big-sm: 1.6;
     --font-big-sm: 600;
 
-    --text-p-r: 16px;
+    --text-p-r: 18px;
     --leading-p-r: 1.5;
     --font-p-r: 400;
 
-    --text-p-sm: 16px;
+    --text-p-sm: 18px;
     --leading-p-sm: 1.5;
-    --font-p-sm: 600;
+    --font-p-sm: 500;
 
-    --text-tag-m: 14px;
-    --leading-tag-m: 1.4;
+    --text-tag-m: 18px;
+    --leading-tag-m: 1.5;
     --font-tag-m: 500;
 
-    --text-tag-r: 14px;
-    --leading-tag-r: 1.4;
+    --text-tag-r: 18px;
+    --leading-tag-r: 1.5;
     --font-tag-r: 400;
   }
 }
