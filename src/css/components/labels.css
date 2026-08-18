@@ -6,7 +6,7 @@
 
   /* type */
   .label-primary {
-    @apply typography-small-m;
+    @apply typography-small-medium;
     @apply px-3 py-2;
   }
 
@@ -20,14 +20,14 @@
   }
 
   .label-big {
-    @apply typography-small-r;
+    @apply typography-small;
     @apply min-w-56.25;
     @apply rounded-[30px];
     @apply px-6 py-4;
     @apply grid justify-start gap-2;
   }
   .sub-label {
-    @apply typography-p-sm;
+    @apply typography-p-semibold;
     @apply text-black inline-flex items-center gap-2;
   }
   .sub-label svg {
@@ -36,7 +36,7 @@
 
   /* mode */
   .label-small {
-    @apply typography-tag-r;
+    @apply typography-small;
     @apply min-h-6;
     @apply px-3 py-1;
   }
@@ -52,7 +52,7 @@
   /* state */
   .label-glass {
     @apply bg-white/10;
-    @apply typography-small-m;
+    @apply typography-small-medium;
     @apply inline-flex items-center gap-2 border border-transparent px-3 py-2 backdrop-blur-md;
     @apply text-white;
   }

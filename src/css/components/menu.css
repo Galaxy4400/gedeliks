@@ -8,7 +8,7 @@
   }
 
   .menu-item {
-    @apply typography-p-sm;
+    @apply typography-p-semibold;
     @apply text-txt relative inline-flex items-center gap-2;
     @apply min-h-11.5 md:min-h-17;
     @apply py-6 pr-5 pl-4;
@@ -24,7 +24,7 @@
   }
 
   .lang-item {
-    @apply typography-small-m;
+    @apply typography-small-medium;
     @apply text-txt relative inline-flex items-center;
     @apply gap-1 py-1;
     @apply before:bg-black before:content-[''] before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;

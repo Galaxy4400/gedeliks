@@ -4,20 +4,20 @@
   }
 
   .input {
-    @apply bg-bg typography-small-r ring-stroke-white min-h-[55px] w-full rounded-sm pt-7.5 pr-14 pb-2.5 pl-5 focus:ring md:min-h-16;
+    @apply bg-bg typography-small ring-stroke-white min-h-[55px] w-full rounded-sm pt-7.5 pr-14 pb-2.5 pl-5 focus:ring md:min-h-16;
   }
 
   .input-label {
-    @apply typography-tag-r text-txt pointer-events-none absolute top-2 left-5 transition-all;
+    @apply typography-small text-txt pointer-events-none absolute top-2 left-5 transition-all;
   }
 
   .input:placeholder-shown:not(:focus) ~ .input-label {
-    @apply typography-small-r top-5;
+    @apply typography-small top-5;
   }
 
   .input:-webkit-autofill ~ .input-label,
   [data-custom-input][data-active] .input-label {
-    @apply typography-tag-r top-2;
+    @apply typography-small top-2;
   }
 
   .input-label span {
@@ -25,7 +25,7 @@
   }
 
   .input-icon {
-    @apply typography-small-r text-txt absolute top-5 right-5 h-[18px] w-[18px];
+    @apply typography-small text-txt absolute top-5 right-5 h-[18px] w-[18px];
   }
 
   .input-wrapper:has(.input:not(:placeholder-shown)) .input-icon,
@@ -49,7 +49,7 @@
   }
 
   .file-text {
-    @apply typography-small-m text-green transition-colors;
+    @apply typography-small-medium text-green transition-colors;
   }
 
   .file-icon {

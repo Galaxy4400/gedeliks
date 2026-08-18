@@ -44,13 +44,21 @@
 
 /* Шкала типографики — по стилям текста из Figma (файл «Геделикс», UI-кит + главная).
    Названия токенов слева — как в Figma, направление Desktop/Mobile: */
-/* h1..h6      → Desktop/Mobile H1..H6 */
-/* p/p-sm      → Desktop/Mobile P / P SM      (крупный основной текст) */
-/* small-r/small-m → Desktop/Mobile Small R / Small M (мелкий UI-текст) */
-/* tag-m/tag-r → те же Small M CAPS / Small R, но с uppercase на уровне компонента (см. .link-tag) */
+/* display        → Desktop Big Text (мобильного стиля в Figma нет, см. TODO ниже) */
+/* h1..h6         → Desktop/Mobile H1..H6 */
+/* p/p-semibold   → Desktop/Mobile P / P SM      (крупный основной текст) */
+/* small/small-medium → Desktop/Mobile Small R / Small M (мелкий UI-текст) */
+/* «CAPS»-варианты (P SM CAPS, Small M CAPS) — тот же токен + uppercase на уровне
+   компонента (см. .link-tag), отдельной шкалы под них в Figma нет */
 
 /* Mobile (base) */
 @theme {
+  --text-display: 77px; /* TODO: в Figma есть только Desktop/Big Text (128px) — мобильного стиля нет,
+    hero на мобилке использует этот стиль иначе (смешанные размеры, не единый Big Text). Прикинул
+    по пропорции H1 (42/70 ≈ 0.6) — уточнить, когда появится мобильный фрейм с этим стилем */
+  --leading-display: 1.1;
+  --font-display: 700;
+
   --text-h1: 42px; /* TODO: hero на мобилке ещё не свёрстан, в Figma нет отдельного стиля Mobile/H1 —
     в макете (node 42022-4017) заголовок набран смешанными размерами 42px/50px, взял 42px как базу под <h1> */
   --leading-h1: 1.1;
@@ -80,30 +88,26 @@
   --leading-p: 1.6;
   --font-p: 400;
 
-  --text-p-sm: 15px;
-  --leading-p-sm: 1.6;
-  --font-p-sm: 600;
+  --text-p-semibold: 15px;
+  --leading-p-semibold: 1.6;
+  --font-p-semibold: 600;
 
-  --text-small-r: 13px;
-  --leading-small-r: 1.5;
-  --font-small-r: 400;
+  --text-small: 13px;
+  --leading-small: 1.5;
+  --font-small: 400;
 
-  --text-small-m: 13px;
-  --leading-small-m: 1.5;
-  --font-small-m: 500;
-
-  --text-tag-m: 13px;
-  --leading-tag-m: 1.5;
-  --font-tag-m: 500;
-
-  --text-tag-r: 13px;
-  --leading-tag-r: 1.5;
-  --font-tag-r: 400;
+  --text-small-medium: 13px;
+  --leading-small-medium: 1.5;
+  --font-small-medium: 500;
 }
 
 /* Desktop */
 @media (width >= theme(--breakpoint-md)) {
   :root {
+    --text-display: 128px;
+    --leading-display: 1.1;
+    --font-display: 700;
+
     --text-h1: 70px;
     --leading-h1: 1.1;
     --font-h1: 700;
@@ -132,24 +136,16 @@
     --leading-p: 1.6;
     --font-p: 400;
 
-    --text-p-sm: 20px;
-    --leading-p-sm: 1.6;
-    --font-p-sm: 600;
+    --text-p-semibold: 20px;
+    --leading-p-semibold: 1.6;
+    --font-p-semibold: 600;
 
-    --text-small-r: 18px;
-    --leading-small-r: 1.5;
-    --font-small-r: 400;
+    --text-small: 18px;
+    --leading-small: 1.5;
+    --font-small: 400;
 
-    --text-small-m: 18px;
-    --leading-small-m: 1.5;
-    --font-small-m: 500;
-
-    --text-tag-m: 18px;
-    --leading-tag-m: 1.5;
-    --font-tag-m: 500;
-
-    --text-tag-r: 18px;
-    --leading-tag-r: 1.5;
-    --font-tag-r: 400;
+    --text-small-medium: 18px;
+    --leading-small-medium: 1.5;
+    --font-small-medium: 500;
   }
 }
