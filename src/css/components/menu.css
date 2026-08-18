@@ -8,39 +8,30 @@
   }
 
   .menu-item {
-    /* @apply ; */
-    /* @apply cta; */
-    /* @apply text-on-surface-secondary gap-2 relative inline-flex items-center; */
-    /* @apply min-h-11.5 md:min-h-17; */
-    /* @apply py-6 pr-5 pl-4; */
-    /* @apply before:bg-on-surface-primary before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0 before:; */
-    /* @apply aria-selected:text-on-surface-primary aria-selected:before:opacity-100; */
-    /* @apply hover:text-button-teritary hover:before:bg-button-teritary; */
-    /* @apply active:text-on-surface-primary active:before:text-on-surface-primary; */
-    /* @apply disabled:pointer-events-none disabled:opacity-40; */
-    /* @apply aria-disabled:pointer-events-none aria-disabled:opacity-40; */
+    @apply cta;
+    @apply text-on-surface-secondary relative inline-flex items-center gap-2;
+    @apply min-h-11.5 md:min-h-17;
+    @apply py-6 pr-5 pl-4;
+    @apply before:bg-on-surface-primary before: before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;
+    @apply aria-selected:text-on-surface-primary aria-selected:before:opacity-100;
+    @apply hover:text-button-teritary hover:before:bg-button-teritary;
+    @apply active:text-on-surface-primary active:before:text-on-surface-primary;
+    @apply disabled:pointer-events-none disabled:opacity-40;
+    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
   }
   .menu-item svg {
-    /* @apply h-4 w-4 shrink-0; */
+    @apply h-4 w-4 shrink-0;
   }
 
   .lang-item {
-    /* @apply ; */
-    /* @apply sh2; */
-    /* @apply text-on-surface-secondary relative inline-flex items-center; */
-    /* @apply gap-1 py-1; */
-    /* @apply before:bg-on-surface-primary before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0 before:; */
-    /* @apply aria-selected:text-on-surface-primary aria-selected:before:opacity-100; */
-    /* @apply hover:text-button-teritary hover:before:bg-button-teritary; */
-    /* @apply active:text-on-surface-primary active:before:text-on-surface-primary; */
-    /* @apply disabled:pointer-events-none disabled:opacity-40; */
-    /* @apply aria-disabled:pointer-events-none aria-disabled:opacity-40; */
-  }
-
-  .lang-flag {
-    /* @apply h-4 w-4 shrink-0 overflow-hidden rounded-full md:h-5 md:w-5; */
-  }
-  .lang-flag img {
-    /* @apply h-full w-full object-cover; */
+    @apply sh2;
+    @apply text-on-surface-secondary relative inline-flex items-center;
+    @apply gap-1 py-1;
+    @apply before:bg-on-surface-primary before: before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:opacity-0;
+    @apply aria-selected:text-on-surface-primary aria-selected:before:opacity-100;
+    @apply hover:text-button-teritary hover:before:bg-button-teritary;
+    @apply active:text-on-surface-primary active:before:text-on-surface-primary;
+    @apply disabled:pointer-events-none disabled:opacity-40;
+    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
   }
 }
