@@ -49,7 +49,7 @@
   }
 
   .file-text {
-    @apply typography-small-medium text-green transition-colors;
+    @apply typography-small-m text-green transition-colors;
   }
 
   .file-icon {

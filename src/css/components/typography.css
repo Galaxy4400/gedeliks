@@ -58,10 +58,10 @@
   font-weight: var(--font-small);
 }
 
-@utility typography-small-medium {
-  font-size: var(--text-small-medium);
-  line-height: var(--leading-small-medium);
-  font-weight: var(--font-small-medium);
+@utility typography-small-m {
+  font-size: var(--text-small-m);
+  line-height: var(--leading-small-m);
+  font-weight: var(--font-small-m);
 }
 
 @layer base {

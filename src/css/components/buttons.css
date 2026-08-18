@@ -1,7 +1,7 @@
 @layer components {
   /* buttons */
   .btn {
-    @apply typography-small-medium cursor-pointer transition-all;
+    @apply typography-small-m cursor-pointer transition-all;
     @apply min-h-12.5 text-center md:min-h-16;
     @apply rounded-full px-7.5 py-4;
     @apply inline-flex items-center justify-center gap-2.5;
