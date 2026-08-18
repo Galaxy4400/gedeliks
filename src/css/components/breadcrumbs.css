@@ -4,7 +4,7 @@
   }
 
   .breadcrumb-item {
-    @apply text-gray-text typography-pr;
+    @apply text-gray-text typography-small-r;
     @apply inline-flex items-center;
     @apply gap-3.5;
     @apply not-last:pr-0;

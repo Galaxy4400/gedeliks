@@ -45,9 +45,9 @@
 /* Шкала типографики — по стилям текста из Figma (файл «Геделикс», UI-кит + главная).
    Названия токенов слева — как в Figma, направление Desktop/Mobile: */
 /* h1..h6      → Desktop/Mobile H1..H6 */
-/* big-r/big-sm → Desktop/Mobile P / P SM  (крупный основной текст) */
-/* p-r/p-sm     → Desktop/Mobile Small R / Small M  (мелкий UI-текст) */
-/* tag-m/tag-r  → те же Small M CAPS / Small R, но с uppercase на уровне компонента (см. .link-tag) */
+/* p/p-sm      → Desktop/Mobile P / P SM      (крупный основной текст) */
+/* small-r/small-m → Desktop/Mobile Small R / Small M (мелкий UI-текст) */
+/* tag-m/tag-r → те же Small M CAPS / Small R, но с uppercase на уровне компонента (см. .link-tag) */
 
 /* Mobile (base) */
 @theme {
@@ -76,21 +76,21 @@
   --leading-h6: 1.2;
   --font-h6: 500;
 
-  --text-big-r: 15px;
-  --leading-big-r: 1.6;
-  --font-big-r: 400;
+  --text-p: 15px;
+  --leading-p: 1.6;
+  --font-p: 400;
 
-  --text-big-sm: 15px;
-  --leading-big-sm: 1.6;
-  --font-big-sm: 600;
+  --text-p-sm: 15px;
+  --leading-p-sm: 1.6;
+  --font-p-sm: 600;
 
-  --text-p-r: 13px;
-  --leading-p-r: 1.5;
-  --font-p-r: 400;
+  --text-small-r: 13px;
+  --leading-small-r: 1.5;
+  --font-small-r: 400;
 
-  --text-p-sm: 13px;
-  --leading-p-sm: 1.5;
-  --font-p-sm: 500;
+  --text-small-m: 13px;
+  --leading-small-m: 1.5;
+  --font-small-m: 500;
 
   --text-tag-m: 13px;
   --leading-tag-m: 1.5;
@@ -128,21 +128,21 @@
     --leading-h6: 1.2;
     --font-h6: 500;
 
-    --text-big-r: 20px;
-    --leading-big-r: 1.6;
-    --font-big-r: 400;
+    --text-p: 20px;
+    --leading-p: 1.6;
+    --font-p: 400;
 
-    --text-big-sm: 20px;
-    --leading-big-sm: 1.6;
-    --font-big-sm: 600;
+    --text-p-sm: 20px;
+    --leading-p-sm: 1.6;
+    --font-p-sm: 600;
 
-    --text-p-r: 18px;
-    --leading-p-r: 1.5;
-    --font-p-r: 400;
+    --text-small-r: 18px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
 
-    --text-p-sm: 18px;
-    --leading-p-sm: 1.5;
-    --font-p-sm: 500;
+    --text-small-m: 18px;
+    --leading-small-m: 1.5;
+    --font-small-m: 500;
 
     --text-tag-m: 18px;
     --leading-tag-m: 1.5;

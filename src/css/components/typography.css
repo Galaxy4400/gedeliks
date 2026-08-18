@@ -34,37 +34,37 @@
   font-weight: var(--font-h6);
 }
 
-@utility typography-btr {
-  font-size: var(--text-big-r);
-  line-height: var(--leading-big-r);
-  font-weight: var(--font-big-r);
+@utility typography-p {
+  font-size: var(--text-p);
+  line-height: var(--leading-p);
+  font-weight: var(--font-p);
 }
 
-@utility typography-btsm {
-  font-size: var(--text-big-sm);
-  line-height: var(--leading-big-sm);
-  font-weight: var(--font-big-sm);
-}
-
-@utility typography-pr {
-  font-size: var(--text-p-r);
-  line-height: var(--leading-p-r);
-  font-weight: var(--font-p-r);
-}
-
-@utility typography-psm {
+@utility typography-p-sm {
   font-size: var(--text-p-sm);
   line-height: var(--leading-p-sm);
   font-weight: var(--font-p-sm);
 }
 
-@utility typography-tagm {
+@utility typography-small-r {
+  font-size: var(--text-small-r);
+  line-height: var(--leading-small-r);
+  font-weight: var(--font-small-r);
+}
+
+@utility typography-small-m {
+  font-size: var(--text-small-m);
+  line-height: var(--leading-small-m);
+  font-weight: var(--font-small-m);
+}
+
+@utility typography-tag-m {
   font-size: var(--text-tag-m);
   line-height: var(--leading-tag-m);
   font-weight: var(--font-tag-m);
 }
 
-@utility typography-tagr {
+@utility typography-tag-r {
   font-size: var(--text-tag-r);
   line-height: var(--leading-tag-r);
   font-weight: var(--font-tag-r);
@@ -96,6 +96,6 @@
   }
 
   p {
-    @apply typography-btr;
+    @apply typography-p;
   }
 }

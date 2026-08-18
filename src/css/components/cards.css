@@ -14,7 +14,7 @@
   }
   .card-new-date {
     @apply flex items-center justify-between gap-4;
-    @apply typography-btr pt-5 md:pt-7.5;
+    @apply typography-p pt-5 md:pt-7.5;
     @apply border-stroke-in-bg border-t;
     @apply after:bg-gray-element after:h-1.5 after:w-1.5;
     @apply group-hover/new-card:text-blue-hover group-hover/new-card:border-blue-hover group-hover/new-card:after:bg-blue-hover;
