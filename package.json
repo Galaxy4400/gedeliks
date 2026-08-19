@@ -9,7 +9,8 @@
     "dev": "gulp",
     "build": "gulp build",
     "buildimg": "gulp buildimg",
-    "buildsvg": "gulp buildsvg"
+    "buildsvg": "gulp buildsvg",
+    "buildhtml": "gulp buildhtml"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.17",

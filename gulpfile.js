@@ -157,6 +157,7 @@ const watcher = () => {
 export const build = gulp.series(html, stylesMinify, resetImg, images, svg);
 export const buildimg = gulp.series(images);
 export const buildsvg = gulp.series(svg);
+export const buildhtml = gulp.series(html);
 
 export const dev = gulp.series(html, styles, svg, server, watcher);
 export default dev;
