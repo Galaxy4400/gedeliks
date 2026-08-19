@@ -331,6 +331,9 @@
   .gap-6\.25 {
     gap: calc(var(--spacing) * 6.25);
   }
+  .gap-7\.5 {
+    gap: calc(var(--spacing) * 7.5);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
@@ -357,9 +360,6 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
-  }
-  .rounded-\[30px\] {
-    border-radius: 30px;
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -411,20 +411,14 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .p-8\.75 {
-    padding: calc(var(--spacing) * 8.75);
-  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
-  .px-27\.5 {
-    padding-inline: calc(var(--spacing) * 27.5);
+  .py-3\.75 {
+    padding-block: calc(var(--spacing) * 3.75);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
-  }
-  .py-5\.75 {
-    padding-block: calc(var(--spacing) * 5.75);
   }
   .py-12\.5 {
     padding-block: calc(var(--spacing) * 12.5);
@@ -443,9 +437,6 @@
   }
   .pb-7\.5 {
     padding-bottom: calc(var(--spacing) * 7.5);
-  }
-  .text-center {
-    text-align: center;
   }
   .typography-display {
     font-size: var(--text-display);
@@ -511,10 +502,6 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .tracking-\[0\.1155px\] {
-    --tw-tracking: 0.1155px;
-    letter-spacing: 0.1155px;
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -628,14 +615,44 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
+  .lg\:gap-3\.75 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 3.75);
+    }
+  }
+  .lg\:gap-10 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:gap-12\.5 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 12.5);
+    }
+  }
   .lg\:gap-25 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 25);
     }
   }
+  .lg\:rounded-\[30px\] {
+    @media (width >= 64rem) {
+      border-radius: 30px;
+    }
+  }
+  .lg\:p-8\.75 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 8.75);
+    }
+  }
   .lg\:py-25 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 25);
+    }
+  }
+  .lg\:text-center {
+    @media (width >= 64rem) {
+      text-align: center;
     }
   }
   .xl\:gap-5 {
@@ -1020,10 +1037,13 @@
     }
   }
   .link-dotted {
+    width: 100%;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    padding-bottom: calc(var(--spacing) * 1.25);
     color: var(--gray);
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-underline-offset: 8px;
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1.5px);
+    background-size: 6px 2px;
   }
 }
 @layer components {
@@ -1899,10 +1919,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-tracking {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-content {
   syntax: "*";
   inherits: false;
@@ -2033,7 +2049,6 @@
       --tw-translate-z: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-tracking: initial;
       --tw-content: "";
       --tw-ease: initial;
       --tw-shadow: 0 0 #0000;
