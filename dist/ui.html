@@ -503,26 +503,167 @@
 		<section class="flex flex-col gap-5">
 			<h2>Карточки</h2>
 			<div class="grid gap-5">
-				<h5>Карточка</h5>
+				<h5>Карточка товара-рекомендации</h5>
+				<p class="typography-small-r text-gray max-w-150">
+					<code>.card-product</code> + <code>.product-tag</code> (модификаторы <code>-red</code>/<code>-green</code>/<code>-orange</code>) +
+					<code>.check-item</code>. См. Figma <code>node-id=36003-6131</code> (десктоп) /
+					<code>node-id=58001-8336</code> (мобайл).
+				</p>
 				<div class="grid gap-3.75 md:grid-cols-3">
-					<div class=""> <!-- сама карточка -->
-						<div> <!-- секция под теги, может быть разные -->
-							<div class="здесь и иконке и тексту задаётся общий цвет">(svg иконка) Хит продаж<sub>11</sub></div> <!-- Тег. Надо сделать отдельным классом например product-tag -->
+					<!-- сама карточка -->
+					<div class="card-product w-full">
+						<!-- секция под теги, может быть разные -->
+						<div class="w-full">
+							<div class="product-tag product-tag-red">
+								<div class="product-tag-icon">
+									<svg class="size-4 text-white md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-flame"></use>
+									</svg>
+								</div>
+								<p>Хит продаж<sup>11</sup></p>
+							</div>
 						</div>
-						<div> <!-- секция под изображение на десктопах фиксированная высота 300 -->
-							<img src="" alt=""> <!-- изображение, обджект фит контейн -->
+						<!-- секция под изображение, на десктопах фиксированная высота 300 -->
+						<div class="h-45 w-full md:h-75">
+							<img class="size-full object-contain" src="assets/img/content/product-syrup-100.avif" width="1016" height="1280" loading="lazy" alt="Геделикс® Сироп 100 мл" />
 						</div>
-						<div> <!-- секция заголовок -->
-							<p class="typography-h4"></p> <!-- название -->
-							<p></p> <!-- лейбл -->
+						<!-- секция заголовок -->
+						<div class="grid w-full gap-2.5 md:gap-5">
+							<p class="typography-h4">Геделикс<sup>®</sup> Сироп</p>
+							<p class="typography-h6 text-green">100 МЛ</p>
 						</div>
-						<div> <!-- секция под элементы с галочкой -->
-							<!-- элементы с галочкой сделать отдельным классом -->
+						<!-- секция под элементы с галочкой -->
+						<div class="grid w-full gap-3.75">
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Без спирта — безопасен для детей</p>
+							</div>
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Мерная ложка в комплекте</p>
+							</div>
 						</div>
-						<div></div> <!-- секция с кнопками -->
+						<!-- секция с кнопками -->
+						<div class="flex w-full items-center gap-2.5">
+							<a class="btn btn-dark btn-arrow flex-1 justify-between whitespace-nowrap" href="#">
+								Где купить
+								<div>
+									<svg class="size-5 md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-location"></use>
+									</svg>
+								</div>
+							</a>
+							<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">Подробнее</a>
+						</div>
 					</div>
 
+					<!-- сама карточка -->
+					<div class="card-product w-full">
+						<!-- секция под теги, может быть разные -->
+						<div class="w-full">
+							<div class="product-tag product-tag-green">
+								<div class="product-tag-icon">
+									<svg class="size-4 text-white md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-share"></use>
+									</svg>
+								</div>
+								<p>Семейный формат</p>
+							</div>
+						</div>
+						<!-- секция под изображение, на десктопах фиксированная высота 300 -->
+						<div class="h-45 w-full md:h-75">
+							<img class="size-full object-contain" src="assets/img/content/product-syrup-200.avif" width="1280" height="1280" loading="lazy" alt="Геделикс® Сироп 200 мл" />
+						</div>
+						<!-- секция заголовок -->
+						<div class="grid w-full gap-2.5 md:gap-5">
+							<p class="typography-h4">Геделикс<sup>®</sup> Сироп</p>
+							<p class="typography-h6 text-green">200 МЛ</p>
+						</div>
+						<!-- секция под элементы с галочкой -->
+						<div class="grid w-full gap-3.75">
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Двойной объём — экономия 20%</p>
+							</div>
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Мерный шприц в комплекте</p>
+							</div>
+						</div>
+						<!-- секция с кнопками -->
+						<div class="flex w-full items-center gap-2.5">
+							<a class="btn btn-dark btn-arrow flex-1 justify-between whitespace-nowrap" href="#">
+								Где купить
+								<div>
+									<svg class="size-5 md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-location"></use>
+									</svg>
+								</div>
+							</a>
+							<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">Подробнее</a>
+						</div>
+					</div>
+
+					<!-- сама карточка -->
+					<div class="card-product w-full">
+						<!-- секция под теги, может быть разные -->
+						<div class="w-full">
+							<div class="product-tag product-tag-orange">
+								<div class="product-tag-icon">
+									<svg class="size-4 text-white md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-flash"></use>
+									</svg>
+								</div>
+								<p>Макс. концентрация</p>
+							</div>
+						</div>
+						<!-- секция под изображение, на десктопах фиксированная высота 300 -->
+						<div class="h-45 w-full md:h-75">
+							<img class="size-full object-contain" src="assets/img/content/product-drops-50.avif" width="1254" height="1254" loading="lazy" alt="Геделикс® Капли 50 мл" />
+						</div>
+						<!-- секция заголовок -->
+						<div class="grid w-full gap-2.5 md:gap-5">
+							<p class="typography-h4">Геделикс<sup>®</sup> Капли</p>
+							<p class="typography-h6 text-green">50 МЛ</p>
+						</div>
+						<!-- секция под элементы с галочкой -->
+						<div class="grid w-full gap-3.75">
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Самая высокая концентрация плюща</p>
+							</div>
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Компактный флакон-капельница</p>
+							</div>
+						</div>
+						<!-- секция с кнопками -->
+						<div class="flex w-full items-center gap-2.5">
+							<a class="btn btn-dark btn-arrow flex-1 justify-between whitespace-nowrap" href="#">
+								Где купить
+								<div>
+									<svg class="size-5 md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-location"></use>
+									</svg>
+								</div>
+							</a>
+							<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">Подробнее</a>
+						</div>
+					</div>
 				</div>
+			</div>
 		</section>
 
 	</main>

@@ -68,4 +68,32 @@
   .label-bottom {
     @apply rounded-t-2xl;
   }
+
+  /* product tag — иконка в цветном кружке + подпись того же цвета (см. карточку товара,
+     Figma node 36003:6134). Иконка внутри кружка всегда белая — сама задаёт себе text-white,
+     цвет кружка (.product-tag-icon, bg-current) и текста берётся из цвета .product-tag-*. */
+  .product-tag {
+    @apply inline-flex items-center gap-2.5;
+  }
+
+  .product-tag-icon {
+    @apply bg-current;
+    @apply flex size-8.75 shrink-0 items-center justify-center rounded-full md:size-12;
+  }
+
+  .product-tag p {
+    @apply typography-psm uppercase;
+  }
+
+  .product-tag-red {
+    @apply text-red;
+  }
+
+  .product-tag-green {
+    @apply text-green;
+  }
+
+  .product-tag-orange {
+    @apply text-orange;
+  }
 }

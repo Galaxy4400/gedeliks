@@ -38,4 +38,17 @@
     @apply right-1.5 md:right-[50px];
     @apply bg-[url(/assets/img/svg/quote-right.svg)];
   }
+
+  /* элемент списка с галочкой (карточка товара, блок преимуществ и т.п.) */
+  .check-item {
+    @apply flex items-start gap-2.5;
+  }
+
+  .check-item svg {
+    @apply text-green-dark mt-0.5 size-5 shrink-0 md:size-6;
+  }
+
+  .check-item p {
+    @apply typography-p text-green-dark;
+  }
 }

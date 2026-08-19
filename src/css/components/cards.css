@@ -30,4 +30,11 @@
     @apply bg-green;
     @apply hover:bg-white;
   }
+
+  /* card product — карточка товара-рекомендации (см. Figma node 36003:6131 / 58001:8336) */
+  .card-product {
+    @apply bg-white shadow-[0_15px_40px_rgba(0,0,0,0.05)];
+    @apply flex flex-col items-center gap-7.5 md:gap-10;
+    @apply rounded-2xl p-5 md:rounded-[30px] md:p-7.5;
+  }
 }
