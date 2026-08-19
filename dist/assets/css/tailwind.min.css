@@ -277,9 +277,6 @@
   .max-w-150 {
     max-width: calc(var(--spacing) * 150);
   }
-  .max-w-\[816px\] {
-    max-width: 816px;
-  }
   .max-w-\[908px\] {
     max-width: 908px;
   }
@@ -304,9 +301,6 @@
   }
   .flex-wrap {
     flex-wrap: wrap;
-  }
-  .place-items-center {
-    place-items: center;
   }
   .content-start {
     align-content: flex-start;
@@ -424,12 +418,6 @@
   .bg-white {
     background-color: var(--white);
   }
-  .bg-\[linear-gradient\(180deg\,\#fff_43\%\,var\(--green-lightest\)_100\%\)\] {
-    background-image: linear-gradient(180deg,#fff 43%,var(--green-lightest) 100%);
-  }
-  .bg-clip-text {
-    background-clip: text;
-  }
   .stroke-white {
     stroke: var(--white);
   }
@@ -453,9 +441,6 @@
   }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
-  }
-  .py-16 {
-    padding-block: calc(var(--spacing) * 16);
   }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
@@ -541,23 +526,12 @@
   .text-\[20px\] {
     font-size: 20px;
   }
-  .text-\[168px\] {
-    font-size: 168px;
-  }
   .text-h5 {
     font-size: var(--text-h5);
-  }
-  .leading-\[1\.1\] {
-    --tw-leading: 1.1;
-    line-height: 1.1;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .tracking-\[-6\.72px\] {
-    --tw-tracking: -6.72px;
-    letter-spacing: -6.72px;
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -586,9 +560,6 @@
   .text-red {
     color: var(--red);
   }
-  .text-transparent {
-    color: transparent;
-  }
   .text-white {
     color: var(--white);
   }
@@ -598,9 +569,6 @@
   .content-\[\'\'\] {
     --tw-content: '';
     content: var(--tw-content);
-  }
-  .\[grid-area\:1\/1\] {
-    grid-area: 1/1;
   }
   .max-xl\:hidden {
     @media (width < 80rem) {
@@ -662,11 +630,6 @@
       grid-template-columns: repeat(8, minmax(0, 1fr));
     }
   }
-  .md\:gap-5 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 5);
-    }
-  }
   .md\:gap-10 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 10);
@@ -682,11 +645,6 @@
       padding-block: calc(var(--spacing) * 6);
     }
   }
-  .md\:py-30 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 30);
-    }
-  }
   .md\:pt-12\.5 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 12.5);
@@ -700,17 +658,6 @@
   .md\:text-\[34px\] {
     @media (width >= 48rem) {
       font-size: 34px;
-    }
-  }
-  .md\:text-\[485px\] {
-    @media (width >= 48rem) {
-      font-size: 485px;
-    }
-  }
-  .md\:tracking-\[-19\.38px\] {
-    @media (width >= 48rem) {
-      --tw-tracking: -19.38px;
-      letter-spacing: -19.38px;
     }
   }
   .lg\:absolute {
@@ -2049,15 +1996,7 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -2065,6 +2004,10 @@
   syntax: "*";
   inherits: false;
   initial-value: "";
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-ease {
   syntax: "*";
@@ -2190,10 +2133,9 @@
       --tw-translate-y: 0;
       --tw-translate-z: 0;
       --tw-border-style: solid;
-      --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-tracking: initial;
       --tw-content: "";
+      --tw-tracking: initial;
       --tw-ease: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
