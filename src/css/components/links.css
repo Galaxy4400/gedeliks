@@ -1,66 +1,12 @@
 @layer components {
   .link {
-    @apply typography-small-r;
-    @apply cursor-pointer;
+    @apply cursor-pointer transition-colors;
     @apply text-black;
     @apply inline-flex items-center gap-2.5;
-    /* @apply hover:text-blue-dark; */
-    @apply disabled:pointer-events-none disabled:opacity-40;
-    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
-  }
-  .link svg {
-    @apply shrink-0;
+    @apply hover:text-green;
   }
 
-  .link-blue {
-    /* @apply text-blue-dark; */
-    @apply hover:text-green-dark;
-  }
-
-  .link-white {
-    @apply text-white;
-    @apply hover:text-green-dark;
-  }
-
-  .link-blue-light {
-    @apply text-green-dark;
-    /* @apply hover:text-blue-dark; */
-  }
-
-  .link-glass {
-    @apply text-white/50;
-    @apply hover:text-white;
-  }
-
-  .link-underline {
-    @apply underline underline-offset-4;
-  }
-
-  .link-big {
-    @apply typography-small-m;
-    /* @apply text-blue-dark; */
-    @apply hover:text-green-dark;
-  }
-
-  .link-small {
-    @apply typography-small-m;
-    @apply text-gray;
-    /* @apply hover:text-blue-dark; */
-  }
-
-  .link-tag {
-    @apply typography-small-m uppercase;
-    /* @apply text-blue-dark; */
-    @apply hover:text-green-dark;
-    @apply rounded-full;
-    @apply bg-white;
-    @apply px-4 py-[5px];
-    @apply min-h-8;
-  }
-
-  .prod-link {
-    @apply typography-small-m md:typography-h6 border-green/20 block border-b py-[15px] last:border-none md:py-5;
-    @apply md:group-hover:border-white/20 md:group-hover:text-white;
-    @apply hover:border-green-dark hover:text-green-dark;
+  .link-dashed {
+    @apply text-gray decoration-dotted;
   }
 }

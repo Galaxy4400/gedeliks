@@ -937,146 +937,23 @@
 }
 @layer components {
   .link {
-    font-size: var(--text-small-r);
-    line-height: var(--leading-small-r);
-    font-weight: var(--font-small-r);
     cursor: pointer;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
     color: var(--black);
     display: inline-flex;
     align-items: center;
     gap: calc(var(--spacing) * 2.5);
-    &:disabled {
-      pointer-events: none;
-    }
-    &:disabled {
-      opacity: 40%;
-    }
-    &[aria-disabled="true"] {
-      pointer-events: none;
-    }
-    &[aria-disabled="true"] {
-      opacity: 40%;
-    }
-  }
-  .link svg {
-    flex-shrink: 0;
-  }
-  .link-blue {
     &:hover {
       @media (hover: hover) {
-        color: var(--green-dark);
+        color: var(--green);
       }
     }
   }
-  .link-white {
-    color: var(--white);
-    &:hover {
-      @media (hover: hover) {
-        color: var(--green-dark);
-      }
-    }
-  }
-  .link-blue-light {
-    color: var(--green-dark);
-  }
-  .link-glass {
-    color: var(--white);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--white) 50%, transparent);
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
-      }
-    }
-  }
-  .link-underline {
-    text-decoration-line: underline;
-    text-underline-offset: 4px;
-  }
-  .link-big {
-    font-size: var(--text-small-m);
-    line-height: var(--leading-small-m);
-    font-weight: var(--font-small-m);
-    &:hover {
-      @media (hover: hover) {
-        color: var(--green-dark);
-      }
-    }
-  }
-  .link-small {
-    font-size: var(--text-small-m);
-    line-height: var(--leading-small-m);
-    font-weight: var(--font-small-m);
+  .link-dashed {
     color: var(--gray);
-  }
-  .link-tag {
-    font-size: var(--text-small-m);
-    line-height: var(--leading-small-m);
-    font-weight: var(--font-small-m);
-    text-transform: uppercase;
-    &:hover {
-      @media (hover: hover) {
-        color: var(--green-dark);
-      }
-    }
-    border-radius: calc(infinity * 1px);
-    background-color: var(--white);
-    padding-inline: calc(var(--spacing) * 4);
-    padding-block: 5px;
-    min-height: calc(var(--spacing) * 8);
-  }
-  .prod-link {
-    display: block;
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-    border-color: var(--green);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--green) 20%, transparent);
-    }
-    padding-block: 15px;
-    font-size: var(--text-small-m);
-    line-height: var(--leading-small-m);
-    font-weight: var(--font-small-m);
-    &:last-child {
-      --tw-border-style: none;
-      border-style: none;
-    }
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 5);
-    }
-    @media (width >= 48rem) {
-      font-size: var(--text-h6);
-      line-height: var(--leading-h6);
-      font-weight: var(--font-h6);
-    }
-    @media (width >= 48rem) {
-      &:is(:where(.group):hover *) {
-        @media (hover: hover) {
-          border-color: var(--white);
-          @supports (color: color-mix(in lab, red, red)) {
-            border-color: color-mix(in oklab, var(--white) 20%, transparent);
-          }
-        }
-      }
-    }
-    @media (width >= 48rem) {
-      &:is(:where(.group):hover *) {
-        @media (hover: hover) {
-          color: var(--white);
-        }
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--green-dark);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--green-dark);
-      }
-    }
+    text-decoration-style: dotted;
   }
 }
 @layer components {
