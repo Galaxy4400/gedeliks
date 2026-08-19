@@ -452,6 +452,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
   .py-12\.5 {
     padding-block: calc(var(--spacing) * 12.5);
   }
@@ -700,6 +703,11 @@
   .md\:py-6 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:py-27\.5 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 27.5);
     }
   }
   .md\:py-35 {
