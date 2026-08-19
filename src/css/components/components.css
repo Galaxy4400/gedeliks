@@ -51,4 +51,10 @@
   .check-item p {
     @apply typography-p text-green-dark;
   }
+
+  /* Декоративная линия */
+  .bottom-deco-line {
+    @apply relative;
+    @apply before:left-1/2 before:bg-stroke-white before:absolute before:bottom-0 before:h-px before:w-screen before:-translate-x-1/2 before:content-[''];
+  }
 }
