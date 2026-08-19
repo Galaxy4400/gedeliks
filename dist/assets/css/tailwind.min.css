@@ -400,9 +400,6 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
   }
@@ -546,6 +543,11 @@
   .md\:gap-10 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:py-6 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 6);
     }
   }
   .md\:text-\[34px\] {
