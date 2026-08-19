@@ -42,7 +42,7 @@
   }
   .btn-arrow > div {
     @apply inline-flex aspect-square min-h-[50px] shrink-0 items-center justify-center rounded-full transition-colors md:min-h-[70px];
-    @apply bg-green border-green-dark border-2;
+    @apply bg-green border-green-dark border;
   }
   .btn-arrow:hover > div {
     @apply border-green;

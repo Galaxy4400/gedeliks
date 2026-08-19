@@ -48,6 +48,7 @@
    Названия токенов слева — как в Figma, направление Desktop/Mobile: */
 /* display        → Desktop Big Text (мобильного стиля в Figma нет, см. TODO ниже) */
 /* h1..h6         → Desktop/Mobile H1..H6 */
+/* large          → Desktop/Mobile Large (лид-текст под заголовками, напр. подзаголовок 404) */
 /* p/p-semibold   → Desktop/Mobile P / P SM      (крупный основной текст) */
 /* small/small-medium → Desktop/Mobile Small R / Small M (мелкий UI-текст) */
 /* «CAPS»-варианты (P SM CAPS, Small M CAPS) — тот же токен + uppercase на уровне
@@ -85,6 +86,10 @@
   --text-h6: 18px;
   --leading-h6: 1.2;
   --font-h6: 500;
+
+  --text-large: 16px;
+  --leading-large: 1.5;
+  --font-large: 400;
 
   --text-p: 15px;
   --leading-p: 1.6;
@@ -133,6 +138,10 @@
     --text-h6: 26px;
     --leading-h6: 1.2;
     --font-h6: 500;
+
+    --text-large: 24px;
+    --leading-large: 1.5;
+    --font-large: 400;
 
     --text-p: 20px;
     --leading-p: 1.6;

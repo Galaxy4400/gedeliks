@@ -40,6 +40,12 @@
   font-weight: var(--font-h6);
 }
 
+@utility typography-large {
+  font-size: var(--text-large);
+  line-height: var(--leading-large);
+  font-weight: var(--font-large);
+}
+
 @utility typography-p {
   font-size: var(--text-p);
   line-height: var(--leading-p);
