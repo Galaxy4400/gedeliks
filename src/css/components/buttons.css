@@ -3,7 +3,7 @@
   .btn {
     @apply typography-psm cursor-pointer transition-all;
     @apply min-h-[50px] text-center md:min-h-[70px];
-    @apply rounded-full px-7 py-2;
+    @apply rounded-full px-5 py-2 md:px-7;
     @apply inline-flex items-center justify-center gap-2.5;
   }
   .btn svg {
@@ -38,11 +38,11 @@
 
   /* mod */
   .btn-arrow {
-    @apply py-0 pr-0!;
+    @apply py-0 pr-0! text-left max-md:pl-5;
   }
   .btn-arrow > div {
     @apply inline-flex aspect-square min-h-[50px] shrink-0 items-center justify-center rounded-full transition-colors md:min-h-[70px];
-    @apply bg-green border-green-dark border;
+    @apply bg-green border-green-dark border-2;
   }
   .btn-arrow:hover > div {
     @apply border-green;

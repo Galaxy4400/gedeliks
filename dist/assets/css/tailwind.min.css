@@ -314,6 +314,9 @@
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-3\.75 {
     gap: calc(var(--spacing) * 3.75);
   }
@@ -325,9 +328,6 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
-  }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
   }
   .gap-15 {
     gap: calc(var(--spacing) * 15);
@@ -480,8 +480,8 @@
   .text-\[12\.9px\] {
     font-size: 12.9px;
   }
-  .text-\[34px\] {
-    font-size: 34px;
+  .text-\[20px\] {
+    font-size: 20px;
   }
   .text-h5 {
     font-size: var(--text-h5);
@@ -541,6 +541,16 @@
   .md\:grid-cols-8 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+  .md\:gap-10 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:text-\[34px\] {
+    @media (width >= 48rem) {
+      font-size: 34px;
     }
   }
   .lg\:grid-cols-5 {
@@ -729,8 +739,11 @@
       min-height: 70px;
     }
     border-radius: calc(infinity * 1px);
-    padding-inline: calc(var(--spacing) * 7);
+    padding-inline: calc(var(--spacing) * 5);
     padding-block: calc(var(--spacing) * 2);
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 7);
+    }
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -801,6 +814,10 @@
   .btn-arrow {
     padding-block: calc(var(--spacing) * 0);
     padding-right: calc(var(--spacing) * 0) !important;
+    text-align: left;
+    @media (width < 48rem) {
+      padding-left: calc(var(--spacing) * 5);
+    }
   }
   .btn-arrow > div {
     display: inline-flex;
@@ -817,7 +834,7 @@
       min-height: 70px;
     }
     border-style: var(--tw-border-style);
-    border-width: 1px;
+    border-width: 2px;
     border-color: var(--green-dark);
     background-color: var(--green);
   }
@@ -947,7 +964,7 @@
     pointer-events: none;
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: var(--green-lightest);
     opacity: 0%;
     &[data-active] {
       pointer-events: auto;
@@ -966,6 +983,9 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+    &>.container-base {
+      margin-inline: calc(var(--spacing) * 0);
+    }
   }
   .menu-item svg {
     width: calc(var(--spacing) * 2.5);
@@ -1028,96 +1048,6 @@
   .group:hover .menu-dropdown, .group:focus-within .menu-dropdown {
     pointer-events: auto;
     opacity: 100%;
-  }
-  .lang-item {
-    font-size: var(--text-small-m);
-    line-height: var(--leading-small-m);
-    font-weight: var(--font-small-m);
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    color: var(--gray);
-    gap: calc(var(--spacing) * 1);
-    padding-block: calc(var(--spacing) * 1);
-    &::before {
-      content: var(--tw-content);
-      pointer-events: none;
-    }
-    &::before {
-      content: var(--tw-content);
-      position: absolute;
-    }
-    &::before {
-      content: var(--tw-content);
-      bottom: calc(var(--spacing) * 0);
-    }
-    &::before {
-      content: var(--tw-content);
-      left: calc(var(--spacing) * 0);
-    }
-    &::before {
-      content: var(--tw-content);
-      height: 1px;
-    }
-    &::before {
-      content: var(--tw-content);
-      width: 100%;
-    }
-    &::before {
-      content: var(--tw-content);
-      background-color: var(--black);
-    }
-    &::before {
-      content: var(--tw-content);
-      opacity: 0%;
-    }
-    &::before {
-      --tw-content: '';
-      content: var(--tw-content);
-    }
-    &[aria-selected="true"] {
-      color: var(--black);
-    }
-    &[aria-selected="true"] {
-      &::before {
-        content: var(--tw-content);
-        opacity: 100%;
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--green);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        &::before {
-          content: var(--tw-content);
-          background-color: var(--green);
-        }
-      }
-    }
-    &:active {
-      color: var(--black);
-    }
-    &:active {
-      &::before {
-        content: var(--tw-content);
-        color: var(--black);
-      }
-    }
-    &:disabled {
-      pointer-events: none;
-    }
-    &:disabled {
-      opacity: 40%;
-    }
-    &[aria-disabled="true"] {
-      pointer-events: none;
-    }
-    &[aria-disabled="true"] {
-      opacity: 40%;
-    }
   }
 }
 @layer components {
