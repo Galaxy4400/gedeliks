@@ -39,8 +39,146 @@
 			</div>
 		</section>
 
-		<!-- TODO: карточки товаров-рекомендаций (Хит продаж / Семейный формат / Макс. концентрация) —
-		     см. figma-links.md, компонент карточки продукта ещё не свёрстан нигде в проекте -->
+		<section class="py-20 md:py-35 bg-white">
+			<div class="container-base">
+				<div class="grid md:gap-2.5 gap-3.75 lg:grid-cols-2 xl:grid-cols-3">
+					<div class="card-product w-full">
+						<div class="w-full">
+							<div class="product-tag product-tag-red">
+								<div class="product-tag-icon">
+									<svg class="size-4 text-white md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-flame"></use>
+									</svg>
+								</div>
+								<p>Хит продаж<sup>11</sup></p>
+							</div>
+						</div>
+						<a class="block h-45 w-full md:h-75" href="#">
+							<img class="size-full object-contain" src="assets/img/content/product-syrup-100.avif" width="1016" height="1280" loading="lazy" alt="Геделикс® Сироп 100 мл" />
+						</a>
+						<a class="grid w-full gap-2.5 transition-colors hover:text-green md:gap-5" href="#">
+							<p class="typography-h4">Геделикс<sup>®</sup> Сироп</p>
+							<p class="typography-h6 text-green">100 МЛ</p>
+						</a>
+						<div class="grid w-full gap-3.75">
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Без спирта — безопасен для детей</p>
+							</div>
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Мерная ложка в комплекте</p>
+							</div>
+						</div>
+						<div class="flex w-full items-center gap-2.5">
+							<a class="btn btn-dark btn-arrow flex-1 justify-between whitespace-nowrap" href="#">
+								Где купить
+								<div>
+									<svg class="size-5 md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-location"></use>
+									</svg>
+								</div>
+							</a>
+							<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">Подробнее</a>
+						</div>
+					</div>
+
+					<div class="card-product w-full">
+						<div class="w-full">
+							<div class="product-tag product-tag-green">
+								<div class="product-tag-icon">
+									<svg class="size-4 text-white md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-share"></use>
+									</svg>
+								</div>
+								<p>Семейный формат</p>
+							</div>
+						</div>
+						<a class="block h-45 w-full md:h-75" href="#">
+							<img class="size-full object-contain" src="assets/img/content/product-syrup-200.avif" width="1280" height="1280" loading="lazy" alt="Геделикс® Сироп 200 мл" />
+						</a>
+						<a class="grid w-full gap-2.5 transition-colors hover:text-green md:gap-5" href="#">
+							<p class="typography-h4">Геделикс<sup>®</sup> Сироп</p>
+							<p class="typography-h6 text-green">200 МЛ</p>
+						</a>
+						<div class="grid w-full gap-3.75">
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Двойной объём — экономия 20%</p>
+							</div>
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Мерный шприц в комплекте</p>
+							</div>
+						</div>
+						<div class="flex w-full items-center gap-2.5">
+							<a class="btn btn-dark btn-arrow flex-1 justify-between whitespace-nowrap" href="#">
+								Где купить
+								<div>
+									<svg class="size-5 md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-location"></use>
+									</svg>
+								</div>
+							</a>
+							<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">Подробнее</a>
+						</div>
+					</div>
+
+					<div class="card-product w-full">
+						<div class="w-full">
+							<div class="product-tag product-tag-orange">
+								<div class="product-tag-icon">
+									<svg class="size-4 text-white md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-flash"></use>
+									</svg>
+								</div>
+								<p>Макс. концентрация</p>
+							</div>
+						</div>
+						<a class="block h-45 w-full md:h-75" href="#">
+							<img class="size-full object-contain" src="assets/img/content/product-drops-50.avif" width="1254" height="1254" loading="lazy" alt="Геделикс® Капли 50 мл" />
+						</a>
+						<a class="grid w-full gap-2.5 transition-colors hover:text-green md:gap-5" href="#">
+							<p class="typography-h4">Геделикс<sup>®</sup> Капли</p>
+							<p class="typography-h6 text-green">50 МЛ</p>
+						</a>
+						<div class="grid w-full gap-3.75">
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Самая высокая концентрация плюща</p>
+							</div>
+							<div class="check-item">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+								</svg>
+								<p>Компактный флакон-капельница</p>
+							</div>
+						</div>
+						<div class="flex w-full items-center gap-2.5">
+							<a class="btn btn-dark btn-arrow flex-1 justify-between whitespace-nowrap" href="#">
+								Где купить
+								<div>
+									<svg class="size-5 md:size-6">
+										<use href="assets/img/svg/sprite.svg#icon-location"></use>
+									</svg>
+								</div>
+							</a>
+							<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	@@include('../partials/_footer.html')

@@ -240,6 +240,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -455,6 +458,9 @@
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
   }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
   }
@@ -579,9 +585,21 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .content-\[\'\'\] {
     --tw-content: '';
     content: var(--tw-content);
+  }
+  .hover\:text-green {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--green);
+      }
+    }
   }
   .max-xl\:hidden {
     @media (width < 80rem) {
@@ -677,6 +695,11 @@
   .md\:py-6 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:py-35 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 35);
     }
   }
   .md\:pt-12\.5 {
