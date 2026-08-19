@@ -201,9 +201,34 @@ const initVideo = () => {
 };
 
 //===============================================================
+// Фоновое зацикленное видео (без кнопки/controls) — play/pause по видимости, а не autoplay
+// на всю жизнь страницы. prefers-reduced-motion — не запускаем вовсе, как и Lenis.
+const initVideoLoop = () => {
+  const videos = document.querySelectorAll('[data-video-loop]');
+  if (!videos.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.play();
+        } else {
+          entry.target.pause();
+        }
+      });
+    },
+    { threshold: 0.25 },
+  );
+
+  videos.forEach((video) => observer.observe(video));
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initSearch();
 initSpoilers();
 initModals();
 initVideo();
+initVideoLoop();

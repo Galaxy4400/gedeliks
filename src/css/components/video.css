@@ -24,4 +24,8 @@
   .video-player[data-active] .video-player-pulse {
     @apply hidden;
   }
+
+  .video-loop {
+    @apply block w-full rounded-2xl object-cover md:rounded-[30px];
+  }
 }

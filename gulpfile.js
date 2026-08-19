@@ -20,6 +20,9 @@ const htmlOutput = './dist';
 const imgContentSrc = './src/img/content';
 const imgContentDist = './dist/assets/img/content';
 
+const svgSrc = './src/img/svg/**/*.svg';
+const svgDist = './dist/assets/img/svg';
+
 // --img=name1,name2 — пересобрать только конкретные файлы по имени (npm run buildimg --img=hero,logo)
 const imgNames = process.env.npm_config_img?.split(',').map((s) => s.trim()) || null;
 
@@ -128,6 +131,13 @@ const images = async () => {
   }
 };
 
+// без минификации — svgmin/svgo (preset-default) на спрайте (<symbol> внутри
+// <svg class="hidden">) агрессивно вырезает содержимое, приняв скрытый спрайт за
+// неиспользуемое (проверено: 35Кб схлопывались в 57 байт), а старый flat-array конфиг
+// плагинов из fin_system_2 ({removeViewBox: false}) на текущей версии svgo вообще падает
+// с ошибкой. Поэтому просто копируем 1:1, как раньше делали вручную.
+const svg = () => gulp.src(svgSrc, { base: './src/img/svg' }).pipe(gulp.dest(svgDist));
+
 const server = (done) => {
   bs.init({ server: './dist', notify: false, port: 3000 });
   done();
@@ -141,10 +151,12 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('./src/css/**/*.css', gulp.series(styles, reload));
   gulp.watch(htmlWatchInput, gulp.series(html, styles, reload));
+  gulp.watch(svgSrc, gulp.series(svg, reload));
 };
 
-export const build = gulp.series(html, stylesMinify, resetImg, images);
+export const build = gulp.series(html, stylesMinify, resetImg, images, svg);
 export const buildimg = gulp.series(images);
+export const buildsvg = gulp.series(svg);
 
-export const dev = gulp.series(html, styles, server, watcher);
+export const dev = gulp.series(html, styles, svg, server, watcher);
 export default dev;

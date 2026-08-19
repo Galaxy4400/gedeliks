@@ -149,6 +149,15 @@
 		<path d="M12 22C16.9706 22 21 18.2711 21 13.6712C21 9.51396 18.7111 6.26457 17.1322 4.71595C16.8394 4.42871 16.3518 4.55562 16.1863 4.92542C15.346 6.80322 13.595 9.50675 11.3571 9.50675C9.97218 9.68984 7.85649 8.52049 9.56418 2.72076C9.71794 2.19854 9.15344 1.77904 8.72226 2.12821C6.26767 4.11595 3 8.12381 3 13.6712C3 18.2711 7.02944 22 12 22Z" stroke="currentColor" stroke-width="1.5"/>
 	</symbol>
 
+	<!-- vuesax-стиля в оригинале нет как цельного path — в Figma собрана из 4 замаскированных
+	     фрагментов (см. node 32001:4259). Нарисована вручную по образцу того же стиля
+	     (round caps, stroke-width 1.5), не экспортирована 1:1. -->
+	<symbol id="icon-sprout" viewBox="0 0 24 24" fill="none">
+		<path d="M12 22V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M12 13C12 13 12 6.5 6.5 4.5C3.5 3.4 2 4 2 4C2 4 2 8 5 10.5C8 13 12 13 12 13Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M12 10.5C12 10.5 12 6 16.5 4.5C19 3.66 21 4 21 4C21 4 21 7.5 18.5 9.5C16 11.5 12 10.5 12 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+
 	<symbol id="icon-share" viewBox="0 0 24 24" fill="none">
 		<path d="M16.4 3.49528C18.0299 4.27494 19.15 5.89391 19.15 7.76471C19.15 9.6355 18.0299 11.2545 16.4 12.0341M18.6 17.5762C20.2626 18.3004 21.7598 19.4806 23 21M1 21C3.14114 18.3768 6.0481 16.7647 9.25 16.7647C12.4519 16.7647 15.3589 18.3768 17.5 21M14.2 7.76471C14.2 10.3962 11.9838 12.5294 9.25 12.5294C6.51619 12.5294 4.3 10.3962 4.3 7.76471C4.3 5.13323 6.51619 3 9.25 3C11.9838 3 14.2 5.13323 14.2 7.76471Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
