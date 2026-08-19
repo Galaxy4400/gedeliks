@@ -42,4 +42,22 @@
     @apply size-full object-contain transition-transform duration-300;
     @apply group-hover/card:scale-[1.05];
   }
+
+  .partner-card {
+    @apply bg-white shadow-[0_15px_40px_rgba(0,0,0,0.05)] transition-shadow;
+    @apply flex h-40 items-center justify-center rounded-2xl p-5 lg:h-45 lg:rounded-[30px] lg:p-10;
+    @apply hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)];
+  }
+
+  .partner-card img {
+    @apply max-h-full max-w-full object-contain;
+  }
+
+  .partners-grid > :nth-child(n + 7) {
+    @apply hidden lg:flex;
+  }
+
+  .partners-grid[data-active] > :nth-child(n + 7) {
+    @apply flex;
+  }
 }

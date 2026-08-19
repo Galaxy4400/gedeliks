@@ -225,6 +225,20 @@ const initVideoLoop = () => {
 };
 
 //===============================================================
+// data-active на .partners-grid открывает скрытые ниже lg карточки (см. cards.css) —
+// от lg и шире там и так показаны все, кнопка на этих ширинах просто ничего не меняет.
+const initShowMore = () => {
+  const grid = document.querySelector('[data-partners-grid]');
+  const button = document.querySelector('[data-partners-more]');
+  if (!grid || !button) return;
+
+  button.addEventListener('click', () => {
+    grid.setAttribute('data-active', '');
+    button.remove();
+  });
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initSearch();
@@ -232,3 +246,4 @@ initSpoilers();
 initModals();
 initVideo();
 initVideoLoop();
+initShowMore();
