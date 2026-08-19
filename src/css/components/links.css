@@ -7,6 +7,6 @@
   }
 
   .link-dotted {
-    @apply text-gray underline decoration-dotted;
+    @apply text-gray underline decoration-dotted underline-offset-8;
   }
 }

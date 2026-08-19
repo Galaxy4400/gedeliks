@@ -955,6 +955,7 @@
     color: var(--gray);
     text-decoration-line: underline;
     text-decoration-style: dotted;
+    text-underline-offset: 8px;
   }
 }
 @layer components {
