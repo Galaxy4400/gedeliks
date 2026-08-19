@@ -814,6 +814,40 @@
       }
     }
   }
+  .btn-arrow {
+    padding-block: calc(var(--spacing) * 0);
+    padding-right: calc(var(--spacing) * 0) !important;
+  }
+  .btn-arrow > div {
+    display: inline-flex;
+    aspect-ratio: 1 / 1;
+    min-height: 50px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(infinity * 1px);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    @media (width >= 48rem) {
+      min-height: 70px;
+    }
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--green-dark);
+    background-color: var(--green);
+  }
+  .btn-arrow:hover > div {
+    border-color: var(--green);
+  }
+  .btn-arrow > div > svg {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 6);
+      height: calc(var(--spacing) * 6);
+    }
+  }
   .btn-small {
     min-height: calc(var(--spacing) * 10);
     padding-inline: calc(var(--spacing) * 5);
