@@ -6,8 +6,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
     --radius-xl: 0.75rem;
@@ -241,10 +239,6 @@
   .inline-block {
     display: inline-block;
   }
-  .size-3\.5 {
-    width: calc(var(--spacing) * 3.5);
-    height: calc(var(--spacing) * 3.5);
-  }
   .size-4 {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
@@ -275,10 +269,6 @@
   }
   .grow {
     flex-grow: 1;
-  }
-  .translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * 1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-2 {
     --tw-translate-y: calc(var(--spacing) * 2);
@@ -469,13 +459,6 @@
     font-size: var(--text-small-r);
     line-height: var(--leading-small-r);
     font-weight: var(--font-small-r);
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .text-\[12\.9px\] {
-    font-size: 12.9px;
   }
   .text-\[20px\] {
     font-size: 20px;
@@ -861,28 +844,10 @@
       min-height: 55px;
     }
   }
-  .btn-burger {
-    display: inline-flex;
-    height: calc(var(--spacing) * 10);
-    width: calc(var(--spacing) * 10);
-    align-items: center;
-    justify-content: center;
+  .btn-circle {
+    aspect-ratio: 1 / 1;
     border-radius: calc(infinity * 1px);
-    background-color: var(--green);
-    color: var(--white);
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--green-dark);
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--white);
-      }
-    }
+    padding: calc(var(--spacing) * 0) !important;
     @media (width >= 48rem) {
       display: none;
     }
