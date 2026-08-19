@@ -258,9 +258,6 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
-  .w-48 {
-    width: calc(var(--spacing) * 48);
-  }
   .w-full {
     width: 100%;
   }
@@ -334,14 +331,8 @@
   .gap-7\.5 {
     gap: calc(var(--spacing) * 7.5);
   }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
-  }
   .gap-15 {
     gap: calc(var(--spacing) * 15);
-  }
-  .gap-27\.5 {
-    gap: calc(var(--spacing) * 27.5);
   }
   .gap-x-9\.25 {
     column-gap: calc(var(--spacing) * 9.25);
@@ -349,8 +340,14 @@
   .gap-x-10 {
     column-gap: calc(var(--spacing) * 10);
   }
+  .gap-x-20 {
+    column-gap: calc(var(--spacing) * 20);
+  }
   .gap-y-7\.5 {
     row-gap: calc(var(--spacing) * 7.5);
+  }
+  .gap-y-10 {
+    row-gap: calc(var(--spacing) * 10);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -545,14 +542,14 @@
       display: none;
     }
   }
-  .max-xl\:flex-col {
+  .max-xl\:flex-col-reverse {
     @media (width < 80rem) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
-  .max-lg\:flex-col-reverse {
-    @media (width < 64rem) {
-      flex-direction: column-reverse;
+  .max-xl\:items-center {
+    @media (width < 80rem) {
+      align-items: center;
     }
   }
   .max-md\:hidden {
@@ -570,9 +567,19 @@
       align-items: flex-start;
     }
   }
-  .max-md\:gap-10 {
-    @media (width < 48rem) {
-      gap: calc(var(--spacing) * 10);
+  .max-sm\:w-full {
+    @media (width < 40rem) {
+      width: 100%;
+    }
+  }
+  .max-sm\:flex-col {
+    @media (width < 40rem) {
+      flex-direction: column;
+    }
+  }
+  .max-sm\:items-start {
+    @media (width < 40rem) {
+      align-items: flex-start;
     }
   }
   .sm\:grid-cols-6 {
@@ -663,6 +670,18 @@
   .xl\:gap-7\.5 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 7.5);
+    }
+  }
+  .xl\:max-2xl\:flex-col {
+    @media (width >= 80rem) {
+      @media (width < 96rem) {
+        flex-direction: column;
+      }
+    }
+  }
+  .\32 xl\:justify-between {
+    @media (width >= 96rem) {
+      justify-content: space-between;
     }
   }
   .\32 xl\:gap-x-27\.5 {
