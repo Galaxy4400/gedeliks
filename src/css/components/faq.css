@@ -1,0 +1,35 @@
+@layer components {
+  .faq-item {
+    @apply border-stroke-white rounded-2xl border p-5 transition-colors;
+    @apply lg:rounded-[30px] lg:py-5 lg:pr-5 lg:pl-8.75;
+  }
+
+  .faq-item[aria-expanded='true'] {
+    @apply bg-green-lightest border-transparent;
+  }
+
+  .faq-item-button {
+    @apply flex w-full items-center gap-5 text-left lg:gap-2.5;
+  }
+
+  .faq-item-button span:first-child {
+    @apply flex-1;
+  }
+
+  .faq-item-icon {
+    @apply bg-green-lightest text-green;
+    @apply flex size-10 shrink-0 items-center justify-center rounded-full transition-colors lg:size-16;
+  }
+
+  .faq-item-icon svg {
+    @apply size-5 lg:size-7;
+  }
+
+  .faq-item[aria-expanded='true'] .faq-item-icon {
+    @apply bg-white;
+  }
+
+  .faq-item-answer {
+    @apply pt-2.5 lg:pt-6.25;
+  }
+}
