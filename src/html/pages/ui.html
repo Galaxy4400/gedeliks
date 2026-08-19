@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Геделикс — UI Kit</title>
+
+	<link rel="preload" href="assets/fonts/Inter-Variable-cyrillic.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="assets/css/tailwind.min.css" />
+</head>
+
+<body>
+	<main class="container-base flex flex-col gap-15 py-15 lg:gap-25 lg:py-25">
+		<header class="flex flex-col gap-2.5 border-b border-stroke-white pb-7.5">
+			<p class="typography-small-m text-gray uppercase">Служебная страница — не часть сайта</p>
+			<h1>UI Kit</h1>
+			<p class="max-w-150 text-gray">
+				Витрина компонентов по фрейму <code>node-id=14-2846</code> из Figma. Источник правды для токенов и классов
+				— используем дальше по коду секций сайта.
+			</p>
+		</header>
+
+		<!-- ==================== ЦВЕТА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Цвета</h2>
+			<div class="grid grid-cols-2 gap-3.75 md:grid-cols-3 lg:grid-cols-5">
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl border border-stroke-white bg-white"></div>
+					<p class="typography-small-r text-gray">white · #FFFFFF</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-green-lightest"></div>
+					<p class="typography-small-r text-gray">bg · #F2F9EE</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-green"></div>
+					<p class="typography-small-r text-gray">green · #24820A</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-green-dark"></div>
+					<p class="typography-small-r text-gray">dark-green · #17400C</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-black"></div>
+					<p class="typography-small-r text-gray">black · #07260B</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-txt"></div>
+					<p class="typography-small-r text-gray">txt · #767676</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-stroke-white"></div>
+					<p class="typography-small-r text-gray">stroke-white · #E6E6E6</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-green-light"></div>
+					<p class="typography-small-r text-gray">green-light · #D6DFD1</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-orange"></div>
+					<p class="typography-small-r text-gray">orange · #FC9A08</p>
+				</div>
+				<div class="flex flex-col gap-1.25">
+					<div class="h-15 rounded-2xl bg-red"></div>
+					<p class="typography-small-r text-gray">red · #F64F19</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== ТИПОГРАФИКА ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Типографика</h2>
+			<p class="typography-small-r text-gray max-w-150">
+				Ресайзните окно ниже 768px (breakpoint md) — вся шкала адаптивная, значения меняются сами.
+				Шрифт — Inter.
+			</p>
+
+			<div class="flex flex-col gap-6">
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<p class="typography-display">Display</p>
+					<p class="typography-small-r text-gray">
+						typography-display · 77 → 128px · weight 700 · lh 1.1
+						<span class="text-red">— мобильный размер не подтверждён в Figma (см. TODO в fonts.css)</span>
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<h1>H1 заголовок</h1>
+					<p class="typography-small-r text-gray">
+						typography-h1 · 42 → 70px · weight 700 · lh 1.1
+						<span class="text-red">— мобильный размер не подтверждён в Figma</span>
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<h2>H2 заголовок</h2>
+					<p class="typography-small-r text-gray">typography-h2 · 35 → 60px · weight 600 · lh 1.1</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<h3>H3 заголовок</h3>
+					<p class="typography-small-r text-gray">
+						typography-h3 · 29 → 50px · weight 600 · lh 1.1
+						<span class="text-red">— мобильный размер расчётный (пропорция H2/H4), не подтверждён</span>
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<h4>H4 заголовок</h4>
+					<p class="typography-small-r text-gray">typography-h4 · 25 → 43px · weight 600 · lh 1.1</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<h5>H5 заголовок</h5>
+					<p class="typography-small-r text-gray">typography-h5 · 22 → 33px · weight 500 · lh 1.2</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<h6>H6 заголовок</h6>
+					<p class="typography-small-r text-gray">typography-h6 · 18 → 26px · weight 500 · lh 1.2</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<p class="typography-p">P — крупный основной текст абзаца</p>
+					<p class="typography-small-r text-gray">typography-p · 15 → 20px · weight 400 · lh 1.6</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<p class="typography-psm">P SM — крупный текст, полужирный (кнопки, акценты)</p>
+					<p class="typography-small-r text-gray">typography-psm · 15 → 20px · weight 600 · lh 1.6</p>
+				</div>
+
+				<div class="flex flex-col gap-2 border-b border-stroke-white pb-6">
+					<p class="typography-small-r">Small R — мелкий UI-текст (лейблы, подписи)</p>
+					<p class="typography-small-r text-gray">typography-small-r · 13 → 18px · weight 400 · lh 1.5</p>
+				</div>
+
+				<div class="flex flex-col gap-2">
+					<p class="typography-small-m">Small M — мелкий UI-текст, medium (теги, кнопки среднего размера)</p>
+					<p class="typography-small-m uppercase">Small M CAPS — тот же класс + uppercase (см. .link-tag)</p>
+					<p class="typography-small-r text-gray">typography-small-m · 13 → 18px · weight 500 · lh 1.5</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== ИКОНКИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Иконки</h2>
+			<p class="typography-small-r text-gray max-w-150">
+				SVG-спрайт по образцу kripten: один файл <code>assets/img/svg/sprite.svg</code>, иконки — символы,
+				пути внутри — <code>currentColor</code>. Сама иконка не задаёт себе цвет — он берётся из
+				<code>color</code> элемента (или родителя, если цвет не переопределён на самой svg).
+				Поэтому размер иконки задаём через <code>width</code>/<code>height</code> (или Tailwind-класс), а цвет
+				— через <code>text-*</code>.
+			</p>
+
+			<div class="flex flex-wrap items-center gap-6 rounded-2xl bg-green-lightest p-5">
+				<div class="flex flex-col items-center gap-2">
+					<svg width="24" height="24" class="text-black">
+						<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">text-black</p>
+				</div>
+				<div class="flex flex-col items-center gap-2">
+					<svg width="24" height="24" class="text-green">
+						<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">text-green</p>
+				</div>
+				<div class="flex flex-col items-center gap-2">
+					<svg width="24" height="24" class="text-red">
+						<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">text-red</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 text-orange">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">цвет с родителя (div)</p>
+				</div>
+				<div class="flex flex-col items-center gap-2">
+					<svg width="40" height="40" class="text-green-dark">
+						<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">40×40</p>
+				</div>
+			</div>
+
+			<p class="typography-small-m">Одна и та же иконка — один <code>#id</code></p>
+			<div class="grid grid-cols-4 gap-3.75 sm:grid-cols-6 md:grid-cols-8">
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+					<p class="typography-small-r text-gray">location</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">tick-circle</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+					</svg>
+					<p class="typography-small-r text-gray">arrow-right</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-arrow-down"></use>
+					</svg>
+					<p class="typography-small-r text-gray">arrow-down</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+					</svg>
+					<p class="typography-small-r text-gray">chevron-down</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-chevron-up"></use>
+					</svg>
+					<p class="typography-small-r text-gray">chevron-up</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+					</svg>
+					<p class="typography-small-r text-gray">chevron-right</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-video-circle"></use>
+					</svg>
+					<p class="typography-small-r text-gray">video-circle</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-box"></use>
+					</svg>
+					<p class="typography-small-r text-gray">box</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-people"></use>
+					</svg>
+					<p class="typography-small-r text-gray">people</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-user"></use>
+					</svg>
+					<p class="typography-small-r text-gray">user</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-forbidden"></use>
+					</svg>
+					<p class="typography-small-r text-gray">forbidden</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-lungs"></use>
+					</svg>
+					<p class="typography-small-r text-gray">lungs</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-add"></use>
+					</svg>
+					<p class="typography-small-r text-gray">add</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-minus"></use>
+					</svg>
+					<p class="typography-small-r text-gray">minus</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-close"></use>
+					</svg>
+					<p class="typography-small-r text-gray">close</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-book"></use>
+					</svg>
+					<p class="typography-small-r text-gray">book</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-home"></use>
+					</svg>
+					<p class="typography-small-r text-gray">home</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-water-drop"></use>
+					</svg>
+					<p class="typography-small-r text-gray">water-drop</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-energy"></use>
+					</svg>
+					<p class="typography-small-r text-gray">energy</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-history"></use>
+					</svg>
+					<p class="typography-small-r text-gray">history</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-import"></use>
+					</svg>
+					<p class="typography-small-r text-gray">import</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-clipboard-text"></use>
+					</svg>
+					<p class="typography-small-r text-gray">clipboard-text</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-car"></use>
+					</svg>
+					<p class="typography-small-r text-gray">car</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-danger"></use>
+					</svg>
+					<p class="typography-small-r text-gray">danger</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-shield-tick"></use>
+					</svg>
+					<p class="typography-small-r text-gray">shield-tick</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-flame"></use>
+					</svg>
+					<p class="typography-small-r text-gray">flame</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-share"></use>
+					</svg>
+					<p class="typography-small-r text-gray">share</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-flash"></use>
+					</svg>
+					<p class="typography-small-r text-gray">flash</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-flash-down"></use>
+					</svg>
+					<p class="typography-small-r text-gray">flash-down</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-leaves"></use>
+					</svg>
+					<p class="typography-small-r text-gray">leaves</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-wind"></use>
+					</svg>
+					<p class="typography-small-r text-gray">wind</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-antibacterial"></use>
+					</svg>
+					<p class="typography-small-r text-gray">antibacterial</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-virus"></use>
+					</svg>
+					<p class="typography-small-r text-gray">virus</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-target"></use>
+					</svg>
+					<p class="typography-small-r text-gray">target</p>
+				</div>
+				<div class="flex flex-col items-center gap-2 rounded-xl border border-stroke-white p-3">
+					<svg width="24" height="24">
+						<use href="assets/img/svg/sprite.svg#icon-smile"></use>
+					</svg>
+					<p class="typography-small-r text-gray">smile</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== КНОПКИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Кнопки</h2>
+			<div class="grid gap-5">
+				<h5>Bttn 1</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="btn btn-dark btn-arrow" href="#">
+						Выбрать препарат
+						<div>
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+							</svg>
+						</div>
+					</a>
+					<!-- <a class="btn btn-dark btn-arrow btn-small" href="#">Выбрать препарат</a>
+					<button class="btn btn-dark btn-arrow" type="button">Выбрать препарат</button>
+					<button class="btn btn-dark btn-arrow btn-small" type="button">Выбрать препарат</button> -->
+				</div>
+			</div>
+			<div class="grid gap-5">
+				<h5>Bttn 2</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="btn btn-transparent btn-icon" href="#">Где купить</a>
+					<a class="btn btn-transparent btn-icon btn-small" href="#">Где купить</a>
+					<button class="btn btn-transparent btn-icon" type="button">Где купить</button>
+					<button class="btn btn-transparent btn-icon btn-small" type="button">Где купить</button>
+				</div>
+			</div>
+			<div class="grid gap-5">
+				<h5>Bttn 3</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="btn btn-white" href="#">Для врачей</a>
+					<a class="btn btn-white btn-small" href="#">Для врачей</a>
+					<button class="btn btn-white" type="button">Для врачей</button>
+					<button class="btn btn-white btn-small" type="button">Для врачей</button>
+				</div>
+			</div>
+			<div class="grid gap-5">
+				<h5>Bttn 4</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="btn btn-green" href="#">Где купить</a>
+					<a class="btn btn-green btn-small" href="#">Где купить</a>
+					<button class="btn btn-green" type="button">Где купить</button>
+					<button class="btn btn-green btn-small" type="button">Где купить</button>
+				</div>
+			</div>
+			<div class="grid gap-5">
+				<h5>Bttn 5</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="btn btn-light" href="#">Для врачей</a>
+					<a class="btn btn-light btn-small" href="#">Для врачей</a>
+					<button class="btn btn-light" type="button">Для врачей</button>
+					<button class="btn btn-light btn-small" type="button">Для врачей</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== ССЫЛКИ ==================== -->
+		<section class="flex flex-col gap-5">
+			<h2>Ссылки</h2>
+			<div class="grid gap-5">
+				<h5>Link</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="link" href="#">Геделикс® Сироп 100 мл</a>
+				</div>
+			</div>
+			<div class="grid gap-5">
+				<h5>Dashed link</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="link link-dotted" href="#">Пользовательское соглашение</a>
+				</div>
+			</div>
+			<div class="grid gap-5">
+				<h5>Nav link</h5>
+				<div class="flex flex-wrap gap-5 items-center">
+					<a class="link" href="#">Продукты</a>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+</body>
+
+</html>

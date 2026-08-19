@@ -13,6 +13,7 @@
     "@tailwindcss/cli": "^4.1.17",
     "browser-sync": "^3.0.4",
     "gulp": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4.0.0"

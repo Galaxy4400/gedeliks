@@ -7,20 +7,28 @@
     @apply h-screen overflow-y-auto;
   }
 
-  .menu-item {
-    @apply typography-psm;
-    @apply text-gray relative inline-flex items-center gap-2;
-    @apply min-h-11.5 md:min-h-17;
-    @apply py-6 pr-5 pl-4;
-    @apply before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:bg-black before:opacity-0 before:content-[''];
-    @apply aria-selected:text-black aria-selected:before:opacity-100;
-    @apply hover:text-green hover:before:bg-green;
-    @apply active:text-black active:before:text-black;
-    @apply disabled:pointer-events-none disabled:opacity-40;
-    @apply aria-disabled:pointer-events-none aria-disabled:opacity-40;
-  }
+  /* пункт десктопной навигации с выпадающим списком (шапка), раскрывается по ховеру/фокусу
+     родительского li.group — см. partials/_header.html */
   .menu-item svg {
-    @apply h-4 w-4 shrink-0;
+    @apply text-green size-2.5 shrink-0 transition-transform;
+  }
+  .group:hover .menu-item svg,
+  .group:focus-within .menu-item svg {
+    @apply rotate-180;
+  }
+
+  /* панель выпадающего списка того же пункта меню */
+  .menu-dropdown {
+    @apply pointer-events-none absolute top-full left-1/2 z-30 -translate-x-1/2 translate-y-4;
+    @apply grid w-80 gap-5 rounded-[30px] bg-white p-7.5;
+    @apply opacity-0 shadow-[0_15px_40px_rgba(0,0,0,0.05)] transition-opacity;
+    /* невидимый мостик над панелью — перекрывает зазор от translate-y-4, чтобы hover
+       не прерывался при движении курсора от пункта меню к дропдауну */
+    @apply before:absolute before:-top-4 before:left-0 before:h-4 before:w-full before:content-[''];
+  }
+  .group:hover .menu-dropdown,
+  .group:focus-within .menu-dropdown {
+    @apply pointer-events-auto opacity-100;
   }
 
   .lang-item {

@@ -34,6 +34,10 @@
 		<path d="M10.2207 7.38109L14.024 11.1844C14.4732 11.6336 14.4732 12.3686 14.024 12.8178L10.2207 16.6211" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 
+	<symbol id="icon-chevron-menu" viewBox="0 0 10 10" fill="none">
+		<path d="M8.30007 3.72876L5.58341 6.44543C5.26257 6.76626 4.73757 6.76626 4.41674 6.44543L1.70007 3.72876" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+
 	<symbol id="icon-video-circle" viewBox="0 0 24 24" fill="none">
 		<path d="M19.4806 11.1318C20.1524 11.5157 20.1524 12.4843 19.4806 12.8682L8.49614 19.1451C7.82948 19.526 7 19.0446 7 18.2768L7 5.72318C7 4.95536 7.82948 4.47399 8.49614 4.85494L19.4806 11.1318Z" fill="currentColor"/>
 	</symbol>

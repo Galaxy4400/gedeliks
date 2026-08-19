@@ -6,7 +6,7 @@
   body {
     @apply typography-p;
     @apply relative;
-    @apply bg-white text-black;
+    @apply bg-green-lightest text-black;
     @apply flex min-h-screen flex-col;
   }
 
