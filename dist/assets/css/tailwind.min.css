@@ -289,6 +289,9 @@
   .flex-wrap {
     flex-wrap: wrap;
   }
+  .content-start {
+    align-content: flex-start;
+  }
   .items-center {
     align-items: center;
   }
@@ -328,9 +331,6 @@
   .gap-6\.25 {
     gap: calc(var(--spacing) * 6.25);
   }
-  .gap-7\.5 {
-    gap: calc(var(--spacing) * 7.5);
-  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
@@ -342,6 +342,12 @@
   }
   .gap-x-9\.25 {
     column-gap: calc(var(--spacing) * 9.25);
+  }
+  .gap-x-10 {
+    column-gap: calc(var(--spacing) * 10);
+  }
+  .gap-y-7\.5 {
+    row-gap: calc(var(--spacing) * 7.5);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -420,11 +426,11 @@
   .py-5\.75 {
     padding-block: calc(var(--spacing) * 5.75);
   }
+  .py-12\.5 {
+    padding-block: calc(var(--spacing) * 12.5);
+  }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
-  }
-  .py-25 {
-    padding-block: calc(var(--spacing) * 25);
   }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
@@ -499,9 +505,6 @@
   .text-\[20px\] {
     font-size: 20px;
   }
-  .text-\[34px\] {
-    font-size: 34px;
-  }
   .text-h5 {
     font-size: var(--text-h5);
   }
@@ -555,9 +558,14 @@
       display: none;
     }
   }
-  .max-lg\:flex-col {
-    @media (width < 64rem) {
+  .max-xl\:flex-col {
+    @media (width < 80rem) {
       flex-direction: column;
+    }
+  }
+  .max-lg\:flex-col-reverse {
+    @media (width < 64rem) {
+      flex-direction: column-reverse;
     }
   }
   .max-md\:hidden {
@@ -610,9 +618,9 @@
       font-size: 34px;
     }
   }
-  .lg\:w-\[700px\] {
+  .lg\:w-\[705px\] {
     @media (width >= 64rem) {
-      width: 700px;
+      width: 705px;
     }
   }
   .lg\:grid-cols-5 {
@@ -628,6 +636,21 @@
   .lg\:py-25 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 25);
+    }
+  }
+  .xl\:gap-5 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
+  .xl\:gap-7\.5 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 7.5);
+    }
+  }
+  .\32 xl\:gap-x-27\.5 {
+    @media (width >= 96rem) {
+      column-gap: calc(var(--spacing) * 27.5);
     }
   }
 }
