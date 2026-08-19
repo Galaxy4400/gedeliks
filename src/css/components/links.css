@@ -6,7 +6,7 @@
     @apply hover:text-green;
   }
 
-  .link-dashed {
-    @apply text-gray decoration-dotted;
+  .link-dotted {
+    @apply text-gray underline decoration-dotted;
   }
 }

@@ -951,8 +951,9 @@
       }
     }
   }
-  .link-dashed {
+  .link-dotted {
     color: var(--gray);
+    text-decoration-line: underline;
     text-decoration-style: dotted;
   }
 }
