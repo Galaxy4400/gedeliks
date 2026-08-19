@@ -60,4 +60,35 @@
   .partners-grid[data-active] > :nth-child(n + 7) {
     @apply flex;
   }
+
+  /* news card — карточка статьи (см. Figma node 18006:5332 десктоп / 58001:7926 мобайл) */
+  .news-card {
+    @apply bg-white shadow-[0_15px_20px_rgba(0,0,0,0.05)];
+    @apply flex flex-col gap-4 rounded-2xl px-4 pt-4 pb-5;
+    @apply lg:gap-8.75 lg:rounded-[30px] lg:p-8.75;
+  }
+
+  .news-card-image {
+    @apply bg-green-lightest relative h-37.5 w-full overflow-hidden rounded-[6px] lg:h-65 lg:rounded-[15px];
+  }
+
+  .news-card-image img {
+    @apply size-full object-cover;
+  }
+
+  .news-card-badge {
+    @apply typography-small-m absolute bottom-3 left-4 text-white lg:bottom-5 lg:left-5;
+  }
+
+  .news-card-title {
+    @apply flex items-start justify-between gap-5;
+  }
+
+  .news-card-title svg {
+    @apply -rotate-90 size-6 shrink-0 lg:hidden;
+  }
+
+  .news-card-text {
+    @apply line-clamp-3;
+  }
 }
