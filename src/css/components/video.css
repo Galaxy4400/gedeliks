@@ -1,0 +1,27 @@
+@layer components {
+  .video-player {
+    @apply relative cursor-pointer overflow-hidden rounded-[35px];
+  }
+
+  .video-player-media {
+    @apply block aspect-1700/930 size-full object-cover;
+  }
+
+  .video-player-play {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply bg-green flex size-16 items-center justify-center rounded-full md:size-25;
+    @apply cursor-pointer transition-colors;
+    @apply hover:bg-green-dark;
+  }
+
+  .video-player-pulse {
+    @apply pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply bg-green/30 size-16 rounded-full opacity-0 md:size-25;
+    @apply group-hover/video:animate-video-pulse group-hover/video:opacity-100;
+  }
+
+  .video-player[data-active] .video-player-play,
+  .video-player[data-active] .video-player-pulse {
+    @apply hidden;
+  }
+}

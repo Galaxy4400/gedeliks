@@ -2,4 +2,17 @@
   --default-transition-duration: 300ms;
 
   --background-image-check: url("data:image/svg+xml;utf8,<svg fill='none' stroke='white' stroke-width='3' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M5 13l4 4L19 7'/></svg>");
+
+  --animate-video-pulse: video-pulse 1s ease-out infinite;
+}
+
+@keyframes video-pulse {
+  0% {
+    scale: 1;
+    opacity: 0.6;
+  }
+  100% {
+    scale: 1.6;
+    opacity: 0;
+  }
 }

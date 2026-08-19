@@ -41,10 +41,6 @@ const initLazyLoad = () => {
 };
 
 //===============================================================
-// Состояние — aria-expanded/aria-hidden (доступность для скринридеров), а не произвольный
-// data-active. Дефолт "открыт" задаётся на каждом [data-spoiler-item] отдельно через
-// aria-expanded="true" в разметке — можно смешивать открытые/закрытые айтемы в одной группе.
-// data-spoiler-accordion на группе — закрывать остальные айтемы при открытии одного.
 const initSpoilers = () => {
   const groups = document.querySelectorAll('[data-spoiler]');
 
@@ -181,8 +177,33 @@ const initModals = () => {
 };
 
 //===============================================================
+const initVideo = () => {
+  const players = document.querySelectorAll('[data-video]');
+
+  players.forEach((player) => {
+    const video = player.querySelector('[data-video-media]');
+    if (!video) return;
+
+    player.addEventListener('click', () => {
+      if (player.hasAttribute('data-active')) return;
+
+      player.setAttribute('data-active', '');
+      video.controls = true;
+      video.play();
+    });
+
+    video.addEventListener('ended', () => {
+      player.removeAttribute('data-active');
+      video.controls = false;
+      video.currentTime = 0;
+    });
+  });
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initSearch();
 initSpoilers();
 initModals();
+initVideo();

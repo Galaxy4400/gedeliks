@@ -160,7 +160,17 @@
 
 		<section class="py-10 md:py-27.5">
 			<div class="container-base">
-				<!-- video -->
+				<div class="video-player group/video" data-video>
+					<video class="video-player-media" poster="assets/img/content/video-hero-poster.avif" preload="none" playsinline data-video-media>
+						<source src="assets/video/gedelix-dochka-olv.mp4" type="video/mp4" />
+					</video>
+					<span class="video-player-pulse" aria-hidden="true"></span>
+					<button type="button" class="video-player-play" data-video-play aria-label="Воспроизвести видео">
+						<svg class="size-6 text-white md:size-8.5">
+							<use href="assets/img/svg/sprite.svg#icon-video-circle"></use>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</section>
 
