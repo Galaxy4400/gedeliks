@@ -31,10 +31,18 @@
     @apply hover:bg-white;
   }
 
-  /* card product — карточка товара-рекомендации (см. Figma node 36003:6131 / 58001:8336) */
+  /* card product — карточка товара-рекомендации (см. Figma node 36003:6131 / 58001:8336).
+     group/card вешается прямо в разметке (см. .card-new-date) — на hover карточки тень
+     проявляется сильнее, а .card-product-image чуть скейлится. */
   .card-product {
-    @apply bg-white shadow-[0_15px_40px_rgba(0,0,0,0.05)];
+    @apply bg-white shadow-[0_15px_40px_rgba(0,0,0,0.05)] transition-shadow duration-300;
+    @apply hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)];
     @apply flex flex-col items-center gap-7.5 md:gap-10;
     @apply rounded-2xl p-5 md:rounded-[30px] md:p-7.5;
+  }
+
+  .card-product-image {
+    @apply size-full object-contain transition-transform duration-300;
+    @apply group-hover/card:scale-[1.05];
   }
 }
