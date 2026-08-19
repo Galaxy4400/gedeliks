@@ -1,0 +1,72 @@
+<!-- мобильное меню -->
+<div class="mobile-menu" data-mobile-menu>
+	<div class="container-base flex items-center justify-between py-5">
+		<a class="text-green-dark text-xl font-bold" href="index.html">
+			Геделикс<sup class="text-[12.9px] inline-block translate-y-1">®</sup>
+		</a>
+		<button type="button" class="btn-menu text-green-dark" data-menu-close aria-label="Закрыть меню">
+			<svg class="size-3.5" width="14" height="14">
+				<use href="assets/img/svg/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+	</div>
+
+	<div class="container-base grow overflow-y-auto py-5">
+		<div class="grid gap-2.5">
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5" data-spoiler="mobile-menu-preparations">
+				<div data-spoiler-item aria-expanded="true">
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Препараты</span>
+						<svg class="size-4" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+						</svg>
+					</button>
+					<div class="pt-5" data-spoiler-content>
+						<ul class="grid gap-2.5">
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5" data-spoiler="mobile-menu-instructions">
+				<div data-spoiler-item aria-expanded="false">
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Инструкции</span>
+						<svg class="size-4" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+						</svg>
+					</button>
+					<div class="pt-5" data-spoiler-content>
+						<!-- TODO: плейсхолдеры — заменить на реальные пункты инструкции -->
+						<ul class="grid gap-2.5">
+							<li><a class="link typography-psm" href="#">Ссылка 1</a></li>
+							<li><a class="link typography-psm" href="#">Ссылка 2</a></li>
+							<li><a class="link typography-psm" href="#">Ссылка 3</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<ul class="grid gap-2.5 px-5 pt-2.5">
+				<li><a class="link typography-psm" href="#">Статьи</a></li>
+				<li><a class="link typography-psm" href="#">Где купить</a></li>
+				<li><a class="link typography-psm" href="#">Частые вопросы</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-base flex shrink-0 items-center gap-2.5 py-5">
+		<a class="btn btn-dark btn-arrow whitespace-nowrap" href="#">
+			Где купить
+			<div>
+				<svg class="size-5">
+					<use href="assets/img/svg/sprite.svg#icon-location"></use>
+				</svg>
+			</div>
+		</a>
+		<a class="btn btn-transparent grow whitespace-nowrap" href="#">Для врачей</a>
+	</div>
+</div>

@@ -41,32 +41,57 @@ const initLazyLoad = () => {
 };
 
 //===============================================================
+// Состояние — aria-expanded/aria-hidden (доступность для скринридеров), а не произвольный
+// data-active. Дефолт "открыт" задаётся на каждом [data-spoiler-item] отдельно через
+// aria-expanded="true" в разметке — можно смешивать открытые/закрытые айтемы в одной группе.
+// data-spoiler-accordion на группе — закрывать остальные айтемы при открытии одного.
 const initSpoilers = () => {
-  const sliders = document.querySelectorAll('[data-spoiler]');
+  const groups = document.querySelectorAll('[data-spoiler]');
 
-  sliders.forEach((slider) => {
-    const openByDefault = slider.hasAttribute('data-spoiler-open');
-    const spoilerItems = slider.querySelectorAll('[data-spoiler-item]');
-    const items = spoilerItems.length ? Array.from(spoilerItems) : Array.from(slider.children);
+  groups.forEach((group) => {
+    const accordion = group.hasAttribute('data-spoiler-accordion');
+    const items = Array.from(group.querySelectorAll('[data-spoiler-item]'));
+
+    const openItem = (item) => {
+      const content = item.querySelector('[data-spoiler-content]');
+      item.setAttribute('aria-expanded', 'true');
+      if (content) {
+        content.setAttribute('aria-hidden', 'false');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    };
+
+    const closeItem = (item) => {
+      const content = item.querySelector('[data-spoiler-content]');
+      item.setAttribute('aria-expanded', 'false');
+      if (content) {
+        content.setAttribute('aria-hidden', 'true');
+        content.style.maxHeight = '0';
+      }
+    };
 
     items.forEach((item) => {
       const button = item.querySelector('[data-spoiler-button]');
-      const content = item.querySelector('[data-spoiler-content]');
+      const isOpenByDefault = item.getAttribute('aria-expanded') === 'true';
 
-      if (openByDefault && content) {
-        item.setAttribute('data-active', '');
-        content.style.maxHeight = content.scrollHeight + "px";
+      if (isOpenByDefault) {
+        openItem(item);
+      } else {
+        closeItem(item);
       }
 
       button?.addEventListener('click', () => {
-        const isActive = item.hasAttribute('data-active');
+        const isActive = item.getAttribute('aria-expanded') === 'true';
 
         if (isActive) {
-          item.removeAttribute('data-active');
-          if (content) content.style.maxHeight = '0';
+          closeItem(item);
         } else {
-          item.setAttribute('data-active', '');
-          if (content) content.style.maxHeight = content.scrollHeight + "px";
+          if (accordion) {
+            items.forEach((other) => {
+              if (other !== item) closeItem(other);
+            });
+          }
+          openItem(item);
         }
       });
     });

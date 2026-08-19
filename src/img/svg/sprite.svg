@@ -242,4 +242,12 @@
 		<path d="M11.3818 6.19531C11.3818 6.19531 16.2727 3.44914 11.3818 0.702922" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 
+	<!-- TODO: временная заглушка (нет в Figma UI-ките и в исходном спрайте) — заменить,
+	     когда появится реальный ассет иконки бургера из макета свёрнутого мобильного хедера. -->
+	<symbol id="icon-menu" viewBox="0 0 24 24" fill="none">
+		<path d="M4 6H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+		<path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+		<path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+	</symbol>
+
 </svg>

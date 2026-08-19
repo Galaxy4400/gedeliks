@@ -64,7 +64,7 @@
 
   /* burger */
   .btn-burger {
-    @apply bg-green hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:text-white 2xl:hidden;
+    @apply bg-green hover:bg-green-dark inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:text-white md:hidden;
   }
 
   /* search */

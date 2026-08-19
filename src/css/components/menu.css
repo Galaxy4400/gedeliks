@@ -1,10 +1,11 @@
 @layer components {
+  /* flex-колонка на весь экран: шапка (лого+крестик) и низ (кнопки CTA) не скроллятся,
+     скроллится только средняя часть — см. structure в partials/_header.html */
   .mobile-menu {
-    @apply pointer-events-none gap-8 bg-white opacity-0;
-    @apply data-active:pointer-events-auto data-active:scale-100 data-active:opacity-100;
-    @apply ease-out;
-    @apply absolute top-0 left-0 z-70 w-full;
-    @apply h-screen overflow-y-auto;
+    @apply pointer-events-none flex flex-col bg-white opacity-0;
+    @apply data-active:pointer-events-auto data-active:opacity-100;
+    @apply absolute top-0 left-0 z-70 h-screen w-full;
+    @apply transition-opacity ease-out;
   }
 
   /* пункт десктопной навигации с выпадающим списком (шапка), раскрывается по ховеру/фокусу

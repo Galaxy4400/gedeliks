@@ -164,14 +164,14 @@
 	<!-- ==== ниже — сложные многослойные иконки, ещё не собраны (заполняются вручную) ==== -->
 
 	<symbol id="icon-leaves" viewBox="0 0 24 24" fill="none">
-		<path d="M0.9375 0.936762C0.9375 0.936762 6.48633 1.00703 9.22556 3.74626C10.7385 5.25911 10.7385 7.71193 9.22556 9.22478C7.71272 10.7376 5.25989 10.7376 3.74705 9.22478C1.00777 6.4855 0.9375 0.936762 0.9375 0.936762Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M0.9375 0.936762C0.9375 0.936762 6.48633 1.00703 9.22556 3.74626C10.7385 5.25911 10.7385 7.71193 9.22556 9.22478C7.71272 10.7376 5.25989 10.7376 3.74705 9.22478C1.00777 6.4855 0.9375 0.936762 0.9375 0.936762Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M6.48633 6.48624L9.22561 9.22552C11.002 11.0019 12 13.4112 12 15.9234V23.0625" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M23.0624 0.936762C23.0624 0.936762 17.5136 1.00703 14.7743 3.74626C13.2614 5.25911 13.2614 7.71193 14.7743 9.22478C16.2872 10.7376 18.74 10.7376 20.2528 9.22478C22.9921 6.4855 23.0624 0.936762 23.0624 0.936762Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M17.5137 6.48663L14.7744 9.22591C12.998 11.0023 12 13.4116 12 15.9238" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 
 	<symbol id="icon-wind" viewBox="0 0 24 24" fill="none">
-		<path d="M3.52734 8.69922H17.1299C18.4297 8.69922 19.4835 7.64552 19.4835 6.34572C19.4835 5.04588 18.4297 3.99217 17.1299 3.99217C15.9926 3.99217 15.0437 4.79894 14.8242 5.87139" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M3.52734 8.69922H17.1299C18.4297 8.69922 19.4835 7.64552 19.4835 6.34572C19.4835 5.04588 18.4297 3.99217 17.1299 3.99217C15.9926 3.99217 15.0437 4.79894 14.8242 5.87139" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M0.703125 11.5234H20.9434C22.2432 11.5234 23.2969 12.5771 23.2969 13.8769C23.2969 15.1768 22.2432 16.2305 20.9434 16.2305C19.806 16.2305 18.8571 15.4237 18.6376 14.3513" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M2.11523 14.349H11.9968C13.5583 14.349 14.8242 15.6149 14.8242 17.1764C14.8242 18.738 13.5583 20.0039 11.9968 20.0039H11.9967C10.4352 20.0039 9.16927 18.738 9.16927 17.1765" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
@@ -240,6 +240,14 @@
 		<path d="M14.1963 13.6365C14.1963 13.6365 15.2995 14.9466 16.609 13.6365" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M9.80371 18.8135C10.3201 19.456 11.1123 19.8672 12.0003 19.8672C12.8884 19.8672 13.6806 19.456 14.1967 18.8135" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M11.3818 6.19531C11.3818 6.19531 16.2727 3.44914 11.3818 0.702922" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+
+	<!-- TODO: временная заглушка (нет в Figma UI-ките и в исходном спрайте) — заменить,
+	     когда появится реальный ассет иконки бургера из макета свёрнутого мобильного хедера. -->
+	<symbol id="icon-menu" viewBox="0 0 24 24" fill="none">
+		<path d="M4 6H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+		<path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+		<path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 	</symbol>
 
 </svg>

@@ -6,7 +6,7 @@
 				Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
 			</a>
 
-			<nav>
+			<nav class="max-md:hidden">
 				<ul class="flex items-center gap-x-9.25 flex-wrap justify-center">
 					<li class="group relative">
 						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
@@ -42,14 +42,22 @@
 			</nav>
 
 			<div class="flex items-center gap-2.5">
-				<a class="btn btn-white btn-small whitespace-nowrap" href="#">Для врачей</a>
+				<a class="btn btn-white btn-small whitespace-nowrap max-xl:hidden" href="#">Для врачей</a>
 				<a class="btn btn-green btn-small whitespace-nowrap" href="#">
 					Где купить
 					<svg class="size-6 shrink-0">
 						<use href="assets/img/svg/sprite.svg#icon-location"></use>
 					</svg>
 				</a>
+				<button type="button" class="btn-burger" data-menu-icon aria-label="Открыть меню">
+					<svg class="size-4.5" width="18" height="18">
+						<use href="assets/img/svg/sprite.svg#icon-menu"></use>
+					</svg>
+				</button>
 			</div>
+
 		</div>
 	</div>
+
+	@@include('./_mobile-menu.html')
 </header>

@@ -1,4 +1,13 @@
-/* Базовые стили слайдеров */
+/* Базовые стили спойлеров — состояние управляется JS через aria-expanded/aria-hidden,
+   см. initSpoilers() в scripts.js. Дефолт по умолчанию — свёрнуто, если в разметке
+   не указано aria-expanded="true" на конкретном [data-spoiler-item]. */
 [data-spoiler-content] {
-  @apply max-h-0 overflow-hidden;
+  @apply max-h-0 overflow-hidden transition-[max-height];
+}
+
+[data-spoiler-item] [data-spoiler-button] svg {
+  @apply shrink-0 transition-transform;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-button] svg {
+  @apply rotate-180;
 }
