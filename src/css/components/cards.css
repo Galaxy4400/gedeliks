@@ -61,15 +61,22 @@
     @apply flex;
   }
 
-  /* news card — карточка статьи (см. Figma node 18006:5332 десктоп / 58001:7926 мобайл) */
+  /* news card — карточка статьи (см. Figma node 18006:5332 десктоп / 58001:7926 мобайл).
+     .news-card-main (картинка+тайтл) — flex-auto, .news-card-text — второй блок-сосед:
+     при разной длине заголовка в соседних карточках ряда main-блок растягивается и
+     забирает лишнее место, текст описания остаётся прижат к низу карточки. */
   .news-card {
     @apply bg-white shadow-[0_15px_20px_rgba(0,0,0,0.05)];
     @apply flex flex-col gap-4 rounded-2xl px-4 pt-4 pb-5;
     @apply lg:gap-8.75 lg:rounded-[30px] lg:p-8.75;
   }
 
+  .news-card-main {
+    @apply flex flex-auto flex-col gap-4 lg:gap-8.75;
+  }
+
   .news-card-image {
-    @apply bg-green-lightest relative h-37.5 w-full overflow-hidden rounded-[6px] lg:h-65 lg:rounded-[15px];
+    @apply bg-green-lightest relative aspect-486/260 w-full overflow-hidden rounded-md lg:rounded-[15px];
   }
 
   .news-card-image img {
@@ -85,7 +92,7 @@
   }
 
   .news-card-title svg {
-    @apply -rotate-90 size-6 shrink-0 lg:hidden;
+    @apply size-6 shrink-0 lg:hidden;
   }
 
   .news-card-text {
