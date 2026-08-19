@@ -6,17 +6,8 @@
     @apply hover:text-green;
   }
 
-  /* полоса на всю ширину блока, а не text-decoration под текстом — иначе при переносе
-     ссылки на 2+ строки подчёркивание идёт только по ширине текста, а не во всю ширину
-     карточки, как в Figma (см. footer, node 42022:5774).
-     border-style:dotted при 1px в большинстве браузеров рисует точки настолько мелкими
-     и частыми, что выглядит сплошной линией — поэтому точки через background-image
-     (radial-gradient), размер и шаг точки не зависят от рендеринга border. */
   .link-dotted {
-    @apply text-gray w-full bg-repeat-x bg-bottom-left pb-1.25;
-    /* currentColor — точки сами следуют за color элемента (серый в покое, зелёный на
-       hover через .link:hover, у которого выше специфичность, чем у .link-dotted) */
-    background-image: radial-gradient(circle, currentColor 1px, transparent 1.5px);
-    background-size: 6px 2px;
+    @apply text-gray bg-bottom-left bg-repeat-x pb-1.25;
+    @apply bg-[radial-gradient(circle,currentColor_1px,transparent_1.5px)] bg-size-[6px_2px];
   }
 }

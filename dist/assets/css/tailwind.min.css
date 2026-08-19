@@ -1162,12 +1162,11 @@
     }
   }
   .link-dotted {
-    width: 100%;
     background-position: left bottom;
     background-repeat: repeat-x;
     padding-bottom: calc(var(--spacing) * 1.25);
     color: var(--gray);
-    background-image: radial-gradient(circle, currentColor 1px, transparent 1.5px);
+    background-image: radial-gradient(circle,currentColor 1px,transparent 1.5px);
     background-size: 6px 2px;
   }
 }
