@@ -129,7 +129,8 @@ const initSlider = (sliderTag, options = {}, plugins = []) => {
 const initSliders = () => {
   markupSliders();
 
-  initSlider('main', { loop: true }, [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]);
+  // initSlider('main', { loop: true }, [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]);
+  initSlider('main', { loop: true });
 	// slidesToScroll: 'auto' — листаем ровно на столько итемов, сколько реально помещается
 	// в вьюпорт (не фиксированное число 1/2/3), поэтому промежуточные ширины экрана тоже
 	// отрабатывают корректно, без резких скачков между "2 карточки" и "3 карточки".

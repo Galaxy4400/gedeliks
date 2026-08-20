@@ -1,76 +1,67 @@
-<!-- hero — слайдер фейдом, node 26032:4531 (десктоп) / 42022:6770 (мобайл).
-     Декоративные волны/эллипс из макета осознанно пропущены (см. лог ревью), фон — сплошной bg-green-lightest.
-     Стрелки/пагинация в макете не нарисованы — добавлены по UI-киту (node 14:2830) и стилю пагинации новостного
-     слайдера, выведены как есть, дальше позиционируются вручную. -->
 <section class="bg-green-lightest overflow-x-hidden">
-	<div data-slider="main">
-	<div class="flex">
-		<!-- Слайд 1 -->
-		<div class="relative min-w-0 shrink-0 basis-full">
-			<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
-				<div class="grid gap-7.5 md:gap-10 lg:max-w-130 xl:max-w-155">
-					<h1 class="text-green-dark">
-						Кашля больше не боюсь,
-						<span class="typography-display text-green block">Геделиксом<sup>®</sup></span>
-						<span class="typography-display text-green block">я лечусь!</span>
-					</h1>
-					<a class="btn btn-dark btn-arrow justify-self-start" href="#">
-						Выбрать препарат
-						<div>
-							<svg class="size-5 md:size-6">
-								<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
-							</svg>
-						</div>
-					</a>
+	<div class="relative" data-slider="main">
+		<div class="flex">
+			<!-- Слайд 1 -->
+			<div class="relative min-w-0 shrink-0 basis-full">
+				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
+					<div class="grid gap-7.5 md:gap-10">
+						<h2 class="typography-h1 text-green-dark grid gap-5">
+							<span>Кашля больше не боюсь,</span>
+							<p class="typography-display text-green block">Геделиксом<sup>®</sup> <br> я лечусь!</p>
+						</h2>
+						<a class="btn btn-dark btn-arrow justify-self-start" href="#">
+							Выбрать препарат
+							<div>
+								<svg class="size-5 md:size-6">
+									<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
 				</div>
+				<!-- <div class="mx-auto max-w-75 px-5 pb-10 md:max-w-100 lg:absolute lg:right-0 lg:bottom-0 lg:mx-0 lg:max-w-none lg:w-125 lg:px-0 lg:pb-0 xl:w-150">
+					<img class="w-full" src="assets/img/content/hero-photo.avif" width="1274" height="1235" alt="Мама даёт Геделикс® дочке" loading="lazy" />
+				</div> -->
 			</div>
-			<div class="mx-auto max-w-75 px-5 pb-10 md:max-w-100 lg:absolute lg:right-0 lg:bottom-0 lg:mx-0 lg:max-w-none lg:w-125 lg:px-0 lg:pb-0 xl:w-150">
-				<img
-					class="w-full"
-					src="assets/img/content/hero-photo.avif"
-					width="1274"
-					height="1235"
-					alt="Мама даёт Геделикс® дочке"
-					loading="lazy"
-				/>
-			</div>
-		</div>
 
-		<!-- Слайд 2 — заглушка, второго слайда в макете нет -->
-		<div class="relative min-w-0 shrink-0 basis-full">
-			<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
-				<div class="grid gap-7.5 md:gap-10 lg:max-w-130 xl:max-w-155">
-					<h1 class="text-green-dark">
-						Второй слайд — заглушка,
-						<span class="typography-display text-green block">контент</span>
-						<span class="typography-display text-green block">появится позже</span>
-					</h1>
-					<a class="btn btn-dark btn-arrow justify-self-start" href="#">
-						Текст кнопки
-						<div>
-							<svg class="size-5 md:size-6">
-								<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
-							</svg>
-						</div>
-					</a>
+			<!-- Слайд 2 — заглушка, второго слайда в макете нет -->
+			<div class="relative min-w-0 shrink-0 basis-full">
+				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
+					<div class="grid gap-7.5 md:gap-10">
+						<h1 class="text-green-dark">
+							Второй слайд — заглушка,
+							<span class="typography-display text-green block">контент</span>
+							<span class="typography-display text-green block">появится позже</span>
+						</h1>
+						<a class="btn btn-dark btn-arrow justify-self-start" href="#">
+							Текст кнопки
+							<div>
+								<svg class="size-5 md:size-6">
+									<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	</div>
 
-	<!-- стрелки + пагинация: выведены без позиционирования, расположение — вручную -->
-	<div class="flex items-center gap-2.5">
-		<button type="button" class="slider-arrow" data-prev="main" aria-label="Предыдущий слайд">
-			<svg class="rotate-180">
-				<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
-			</svg>
-		</button>
-		<button type="button" class="slider-arrow" data-next="main" aria-label="Следующий слайд">
-			<svg>
-				<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
-			</svg>
-		</button>
+		<!-- стрелки + пагинация: выведены без позиционирования, расположение — вручную -->
+
+		<div class="flex items-center gap-2.5 justify-between absolute top-1/2 -translate-y-1/2 left-0 w-full p-5">
+			<button type="button" class="slider-arrow" data-prev="main" aria-label="Предыдущий слайд">
+				<svg class="rotate-180">
+					<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+				</svg>
+			</button>
+			<button type="button" class="slider-arrow" data-next="main" aria-label="Следующий слайд">
+				<svg>
+					<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+				</svg>
+			</button>
+		</div>
+
+
+		<div class="scroll absolute bottom-10 left-1/2 -translate-1/2 data-hidden:hidden" data-paggination="main"></div>
 	</div>
-	<div class="scroll data-[hidden]:hidden" data-paggination="main"></div>
 </section>
