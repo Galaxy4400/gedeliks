@@ -828,8 +828,7 @@
 				<use href="assets/img/svg/sprite.svg#icon-minus"></use>
 			</svg>
 		</div>
-		<!-- TODO: Доделать разворачивание списка. -->
-		<div class="grid gap-7.5">
+		<div>
 			<ol class="grid gap-2.5 md:gap-3.75 text-gray list-decimal list-inside">
 				<li><a class="link link-gray" href="#">Государственный реестр лекарственных средств. Регистрационное удостоверение Геделикс® сироп ЛП-№(004526)-(РГ-RU) от 07.02.2024. URL: grls.rosminzdrav.ru</a></li>
 				<li><a class="link link-gray" href="#">Государственный реестр лекарственных средств. Регистрационное удостоверение Геделикс® капли ЛП-№(005437)-(РГ-RU) от 30.09.2024. URL: grls.rosminzdrav.ru</a></li>
@@ -842,12 +841,22 @@
 				<li><a class="link link-gray" href="#">Инструкция по медицинскому применению лекарственного препарата Геделикс® (сироп). ЛП-№(004526)-(РГ-RU). — М., 2024.</a></li>
 				<li><a class="link link-gray" href="#">Инструкция по медицинскому применению лекарственного препарата Геделикс® (капли для приёма внутрь). ЛП-№(005437)-(РГ-RU). — М., 2024.</a></li>
 			</ol>
-			<button type="button" class="link link-icon typography-small-m whitespace-nowrap justify-self-start">
-				Инструкция
-				<svg class="text-green size-2.5">
-					<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
-				</svg>
-			</button>
+			<div class="pt-2.5 md:pt-3.75" data-spoiler>
+				<div class="grid gap-7.5" data-spoiler-item aria-expanded="false">
+					<div data-spoiler-content>
+						<ol class="grid gap-2.5 md:gap-3.75 text-gray list-decimal list-inside" start="11">
+							<li><a class="link link-gray" href="#">Остальные статьи</a></li>
+						</ol>
+					</div>
+					<button type="button" class="link link-icon typography-small-m whitespace-nowrap justify-self-start" data-spoiler-button>
+						<span data-spoiler-text-closed>Показать все</span>
+						<span data-spoiler-text-open>Скрыть</span>
+						<svg class="text-green size-2.5">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

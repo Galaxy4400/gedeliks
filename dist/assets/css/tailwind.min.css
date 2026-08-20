@@ -839,6 +839,11 @@
       padding-block: calc(var(--spacing) * 35);
     }
   }
+  .md\:pt-3\.75 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 3.75);
+    }
+  }
   .md\:pt-12\.5 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 12.5);
@@ -2582,6 +2587,15 @@
 }
 [data-spoiler-item][aria-expanded='true'] [data-spoiler-button] svg {
   rotate: 180deg;
+}
+[data-spoiler-item] [data-spoiler-text-open] {
+  display: none;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-text-closed] {
+  display: none;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-text-open] {
+  display: inline;
 }
 @layer components {
   .faq-item {
