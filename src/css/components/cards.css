@@ -53,14 +53,6 @@
     @apply max-h-full max-w-full object-contain;
   }
 
-  .partners-grid > :nth-child(n + 7) {
-    @apply hidden lg:flex;
-  }
-
-  .partners-grid[data-active] > :nth-child(n + 7) {
-    @apply flex;
-  }
-
   /* news card — карточка статьи (см. Figma node 18006:5332 десктоп / 58001:7926 мобайл).
      .news-card-main (картинка+тайтл) — flex-auto, .news-card-text — второй блок-сосед:
      при разной длине заголовка в соседних карточках ряда main-блок растягивается и

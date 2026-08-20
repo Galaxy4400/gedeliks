@@ -2094,15 +2094,6 @@
     max-width: 100%;
     object-fit: contain;
   }
-  .partners-grid > :nth-child(n + 7) {
-    display: none;
-    @media (width >= 64rem) {
-      display: flex;
-    }
-  }
-  .partners-grid[data-active] > :nth-child(n + 7) {
-    display: flex;
-  }
   .news-card {
     background-color: var(--white);
     --tw-shadow: 0 15px 20px var(--tw-shadow-color, rgba(0,0,0,0.05));

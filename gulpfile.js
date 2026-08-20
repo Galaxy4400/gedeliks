@@ -43,7 +43,12 @@ const stylesMinify = (done) => {
 };
 
 const html = () =>
-  gulp.src(htmlPagesInput).pipe(fileInclude({ prefix: '@@', basepath: '@file' })).pipe(gulp.dest(htmlOutput));
+  gulp
+    .src(htmlPagesInput)
+    // context — дефолты для @@if в партиалах, чтобы страницы без переопределения
+    // не падали с ReferenceError (см. _header.html: headerWhite)
+    .pipe(fileInclude({ prefix: '@@', basepath: '@file', context: { headerWhite: false } }))
+    .pipe(gulp.dest(htmlOutput));
 
 // перенесено 1:1 из fin_system_2 (gulp/utils/is-newer.js) — сравнение mtime вместо gulp-newer,
 // т.к. gulp-newer несовместим с async for-циклом вне gulp-потока
