@@ -842,11 +842,6 @@
       padding-block: calc(var(--spacing) * 35);
     }
   }
-  .md\:pt-7\.5 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 7.5);
-    }
-  }
   .md\:pt-12\.5 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 12.5);
@@ -870,11 +865,6 @@
   .md\:pb-35 {
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 35);
-    }
-  }
-  .md\:pb-\[50px\] {
-    @media (width >= 48rem) {
-      padding-bottom: 50px;
     }
   }
   .md\:text-\[34px\] {
