@@ -69,6 +69,24 @@
     @apply typography-p text-green-dark;
   }
 
+  /* notice — колл-аут с иконкой (см. Figma node 6017:4839 десктоп / 56001:4062 мобайл).
+     Сам .notice даёт только layout, цвет — от модификатора (-red), по аналогии с product-tag-*. */
+  .notice {
+    @apply flex items-start gap-2.5 rounded-lg p-2.5 md:gap-3.75 md:rounded-[10px] md:p-5;
+  }
+
+  .notice svg {
+    @apply mt-0.5 size-4 shrink-0 md:size-6;
+  }
+
+  .notice p {
+    @apply typography-small-r;
+  }
+
+  .notice-red {
+    @apply bg-red/10 text-red;
+  }
+
   /* Декоративная линия */
   .bottom-deco-line {
     @apply relative;
