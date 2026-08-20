@@ -71,8 +71,11 @@ const addDotBtnsAndClickHandlers = (sliderApi, sliderKey) => {
   let dots = [];
 
   const addDotBtnsWithClickHandlers = () => {
-    paggination.innerHTML = sliderApi
-      .scrollSnapList()
+    const snaps = sliderApi.scrollSnapList();
+
+    paggination.toggleAttribute('data-hidden', snaps.length <= 1);
+
+    paggination.innerHTML = snaps
       .map(
         (_, index) => `<button class="bullet" type="button" aria-label="Move to slide ${index + 1}"></button>`,
       )
@@ -127,7 +130,10 @@ const initSliders = () => {
   markupSliders();
 
   initSlider('main', { loop: true }, [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]);
-	initSlider('news', { loop: false, slidesToScroll: 1 });
+	// slidesToScroll: 'auto' — листаем ровно на столько итемов, сколько реально помещается
+	// в вьюпорт (не фиксированное число 1/2/3), поэтому промежуточные ширины экрана тоже
+	// отрабатывают корректно, без резких скачков между "2 карточки" и "3 карточки".
+	initSlider('news', { loop: false, align: 'start', slidesToScroll: 'auto', containScroll: 'trimSnaps' });
 	initSlider('prod', { loop: false, slidesToScroll: 1 });
 	initSlider('awards', { loop: false, slidesToScroll: 1, align: 'start' });
 };

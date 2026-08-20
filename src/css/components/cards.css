@@ -60,7 +60,7 @@
   .news-card {
     @apply bg-white shadow-[0_15px_20px_rgba(0,0,0,0.05)] transition-shadow duration-300;
     @apply hover:shadow-[0_15px_20px_rgba(0,0,0,0.15)];
-    @apply flex flex-col gap-4 rounded-2xl px-4 pt-4 pb-5;
+    @apply flex h-full flex-col gap-4 rounded-2xl px-4 pt-4 pb-5;
     @apply lg:gap-8.75 lg:rounded-[30px] lg:p-8.75;
   }
 
