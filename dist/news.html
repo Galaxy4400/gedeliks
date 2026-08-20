@@ -387,26 +387,21 @@
 
 		<section class="pb-20 md:pb-35 bg-white">
 			<div class="container-base">
-				<div class="relative overflow-hidden rounded-2xl bg-green-lightest p-5 md:rounded-[30px] md:p-12.5">
-					<div class="relative z-10 flex min-h-100 max-w-full flex-col gap-5 lg:max-w-[70%]">
-						<div class="grid gap-7.5 flex-auto">
+				<div class="relative overflow-hidden rounded-2xl bg-green-lightest md:rounded-[30px] ">
+					<div class="relative z-10 flex lg:min-h-100 max-w-full flex-col p-5 gap-5 lg:max-w-[70%] md:p-12.5">
+						<div class="grid gap-7.5 flex-auto content-start">
 							<p class="typography-h6 text-green">Инструкция</p>
 							<div class="grid gap-5">
 								<h2>Не нашли ответ на свой вопрос?</h2>
 								<p>Ознакомьтесь с официальной инструкцией по применению препарата.</p>
 							</div>
 						</div>
-						<a class="btn btn-transparent justify-self-start" href="#">Инструкция по применению</a>
+						<div>
+							<a class="btn btn-transparent" href="#">Инструкция по применению</a>
+						</div>
 					</div>
-					<div class="absolute right-0 bottom-0 hidden h-full w-125 lg:block">
-						<img
-							class="size-full object-cover object-top"
-							src="assets/img/content/instruction-banner.avif"
-							width="514"
-							height="575"
-							alt="Женщина читает инструкцию по применению"
-							loading="lazy"
-						/>
+					<div class="lg:absolute right-0 bottom-0 h-full w-125">
+						<img class="size-full object-cover object-top" src="assets/img/content/instruction-banner.avif" width="514" height="575" alt="Женщина читает инструкцию по применению" loading="lazy" />
 					</div>
 				</div>
 			</div>
@@ -414,12 +409,12 @@
 
 	</main>
 
-	<!-- footer -->
-<!-- TODO: в Figma (Frame226, node 6027:6071) за футером есть декоративные фоновые SVG-линии
-     (Vector4/Vector7) и фото плюща (427259799_...png) в правом нижнем углу — сознательно
-     пропущены при вёрстке (договорились "только цвет фона"), но нужно будет добавить. -->
-<footer class="bg-green-lightest">
-	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start">
+	<footer class="bg-green-lightest relative">
+	<div class="absolute overflow-hidden w-full h-full">
+		<img class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-full" src="assets/img/svg/deco-1.svg" alt="deco">
+		<!-- <img src="" alt=""> -->
+	</div>
+	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start relative">
 		<div class="grid gap-7.5 rounded-2xl bg-white p-5 lg:gap-12.5 lg:rounded-[30px] max-sm:w-full lg:p-8.75 lg:w-[705px]">
 			<div class="grid gap-5 lg:gap-10">
 				<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
@@ -471,7 +466,7 @@
 		</div>
 	</div>
 
-	<div class="bg-green py-3.75 md:py-6">
+	<div class="bg-green py-3.75 md:py-6 relative">
 		<div class="container-base">
 			<p class="typography-small-m lg:text-center text-white uppercase xl:tracking-tighter">
 				Геделикс® является лекарственным препаратом. Перед применением ознакомьтесь с инструкцией. Имеются

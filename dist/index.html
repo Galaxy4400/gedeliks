@@ -166,9 +166,9 @@
 	<div class="relative" data-slider="main">
 		<div class="flex">
 			<!-- Слайд 1 -->
-			<div class="min-w-0 shrink-0 basis-full">
-				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25 relative">
-					<div class="grid gap-7.5 md:gap-10 max-w-[1000px]">
+			<div class="min-w-0 shrink-0 basis-full overflow-hidden">
+				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25 max-xl:pb-0! relative">
+					<div class="grid gap-7.5 md:gap-10 max-w-[1000px] relative z-1">
 						<h2 class="typography-h1 text-green-dark grid gap-5">
 							<span>Кашля больше не боюсь,</span>
 							<p class="typography-display text-green block">Геделиксом<sup>®</sup> <br> я лечусь!</p>
@@ -182,29 +182,39 @@
 							</div>
 						</a>
 					</div>
-					<div class="absolute inset-y-0 right-0">
-						<img class="h-full w-auto object-contain" src="assets/img/content/hero-photo.avif" width="1274" height="1235" alt="Мама даёт Геделикс® дочке" loading="lazy" />
+					<div class="xl:absolute inset-y-0 right-0">
+						<div class="absolute w-md h-[336px] xl:w-[1350px] xl:h-[822px] bg-white rounded-[100%] xl:top-[10%] xl:right-0 top-[430px] right-[70px] translate-x-[45%]"></div>
+						<img class="absolute w-[2000px] xl:w-[3417px] xl:top-[-350px] -left-5 max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+						<img class="absolute w-[1200px] xl:w-[2333px] xl:top-[130px] left-[-100px] max-w-none" src="assets/img/svg/deco-3.svg" alt="deco">
+						<img class="relative h-full w-auto object-contain" src="assets/img/content/hero-photo.avif" width="1274" height="1235" alt="Мама даёт Геделикс® дочке" loading="lazy" />
 					</div>
 				</div>
 			</div>
 
-			<!-- Слайд 2 — заглушка, второго слайда в макете нет -->
-			<div class="relative min-w-0 shrink-0 basis-full">
-				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
-					<div class="grid gap-7.5 md:gap-10 max-w-[1000px]">
-						<h1 class="text-green-dark">
-							Второй слайд — заглушка,
-							<span class="typography-display text-green block">контент</span>
-							<span class="typography-display text-green block">появится позже</span>
-						</h1>
+			<!-- Слайд 2 -->
+			<div class="min-w-0 shrink-0 basis-full overflow-hidden">
+				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25 max-xl:pb-0! relative">
+					<div class="grid gap-7.5 md:gap-10 max-w-[1000px] relative z-1">
+						<div class="grid md:gap-6.5 gap-3.75">
+							<h1 class="typography-display">
+								Геделикс<sup class="typography-h1 inline-block">®</sup>
+							</h1>
+							<p class="typography-h6">Отхаркивающее средство растительного происхождения</p>
+						</div>
 						<a class="btn btn-dark btn-arrow justify-self-start" href="#">
-							Текст кнопки
+							Выбрать препарат
 							<div>
 								<svg class="size-5 md:size-6">
 									<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
 								</svg>
 							</div>
 						</a>
+					</div>
+					<div class="xl:absolute inset-y-0 right-0">
+						<div class="absolute w-md h-[336px] xl:w-[1350px] xl:h-[822px] bg-white rounded-[100%] xl:top-[10%] xl:right-0 top-[430px] right-[70px] translate-x-[45%]"></div>
+						<img class="absolute w-[2000px] xl:w-[3417px] xl:top-[-350px] -left-5 max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+						<!-- <img class="absolute w-[1200px] xl:w-[2333px] xl:top-[130px] left-[-100px] max-w-none" src="assets/img/svg/deco-3.svg" alt="deco"> -->
+						<img class="relative h-full w-auto object-contain translate-x-[200px]" src="assets/img/content/hero-photo-2.avif" width="1274" height="1235" alt="Геделикс®" loading="lazy" />
 					</div>
 				</div>
 			</div>
@@ -213,7 +223,7 @@
 
 		<!-- стрелки + пагинация: выведены без позиционирования, расположение — вручную -->
 
-		<div class="flex items-center gap-2.5 justify-between absolute top-1/2 -translate-y-1/2 left-0 w-full p-5">
+		<div class="flex items-center gap-2.5 justify-between absolute top-1/2 -translate-y-1/2 left-0 w-full p-5 max-2xl:hidden">
 			<button type="button" class="slider-arrow" data-prev="main" aria-label="Предыдущий слайд">
 				<svg class="rotate-180">
 					<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
@@ -814,7 +824,7 @@
 		</div>
 		<div class="grid gap-7.5 md:gap-10">
 
-			<div class="overflow-hidden -m-5 p-5" data-slider="news">
+			<div class="overflow-hidden -m-10 p-10" data-slider="news">
 				<div class="-ml-3.75 md:-ml-2.5">
 					<div class="w-[331px] min-w-0 shrink-0 pl-2.5 md:w-[560px] md:pl-3.75">
 						<div class="news-card group/card">
@@ -938,12 +948,12 @@
 
 	</main>
 
-	<!-- footer -->
-<!-- TODO: в Figma (Frame226, node 6027:6071) за футером есть декоративные фоновые SVG-линии
-     (Vector4/Vector7) и фото плюща (427259799_...png) в правом нижнем углу — сознательно
-     пропущены при вёрстке (договорились "только цвет фона"), но нужно будет добавить. -->
-<footer class="bg-green-lightest">
-	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start">
+	<footer class="bg-green-lightest relative">
+	<div class="absolute overflow-hidden w-full h-full">
+		<img class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-full" src="assets/img/svg/deco-1.svg" alt="deco">
+		<!-- <img src="" alt=""> -->
+	</div>
+	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start relative">
 		<div class="grid gap-7.5 rounded-2xl bg-white p-5 lg:gap-12.5 lg:rounded-[30px] max-sm:w-full lg:p-8.75 lg:w-[705px]">
 			<div class="grid gap-5 lg:gap-10">
 				<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
@@ -995,7 +1005,7 @@
 		</div>
 	</div>
 
-	<div class="bg-green py-3.75 md:py-6">
+	<div class="bg-green py-3.75 md:py-6 relative">
 		<div class="container-base">
 			<p class="typography-small-m lg:text-center text-white uppercase xl:tracking-tighter">
 				Геделикс® является лекарственным препаратом. Перед применением ознакомьтесь с инструкцией. Имеются
