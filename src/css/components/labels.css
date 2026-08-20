@@ -111,12 +111,18 @@
      явно (bg-white), хотя в Figma он прозрачный — так компонент не зависит от фона, на
      который его положат. */
   .icon-spec {
-    @apply border-green-lightest bg-white;
+    @apply border-green-lightest;
     @apply flex size-13.75 items-center justify-center rounded-full border md:size-21.25;
+  }
+  .icon-spec-white {
+    @apply bg-green-lightest border-green-light;
   }
   .icon-spec-inner {
     @apply bg-green-lightest text-green;
     @apply flex size-11.25 items-center justify-center rounded-full md:size-17.5;
+  }
+  .icon-spec-white > .icon-spec-inner {
+    @apply bg-white;
   }
   .icon-spec-inner svg {
     @apply size-5 md:size-7;

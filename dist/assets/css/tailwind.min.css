@@ -216,6 +216,9 @@
   .relative {
     position: relative;
   }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
@@ -414,6 +417,9 @@
   .max-w-\[555px\] {
     max-width: 555px;
   }
+  .max-w-\[812px\] {
+    max-width: 812px;
+  }
   .max-w-\[908px\] {
     max-width: 908px;
   }
@@ -482,6 +488,9 @@
   }
   .rotate-180 {
     rotate: 180deg;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .list-inside {
     list-style-position: inside;
@@ -839,9 +848,21 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .content-\[\'\'\] {
     --tw-content: '';
     content: var(--tw-content);
+  }
+  .group-hover\:opacity-0 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 0%;
+      }
+    }
   }
   .hover\:text-green {
     &:hover {
@@ -918,6 +939,11 @@
   .max-lg\:flex-col {
     @media (width < 64rem) {
       flex-direction: column;
+    }
+  }
+  .max-lg\:gap-2\.5 {
+    @media (width < 64rem) {
+      gap: calc(var(--spacing) * 2.5);
     }
   }
   .max-md\:hidden {
@@ -1225,6 +1251,11 @@
       align-content: center;
     }
   }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
   .lg\:gap-3\.75 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 3.75);
@@ -1364,6 +1395,11 @@
     @media (width >= 80rem) {
       --tw-translate-x: 200px;
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .xl\:grid-cols-2 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .xl\:grid-cols-3 {
@@ -2307,7 +2343,6 @@
   }
   .icon-spec {
     border-color: var(--green-lightest);
-    background-color: var(--white);
     display: flex;
     width: calc(var(--spacing) * 13.75);
     height: calc(var(--spacing) * 13.75);
@@ -2320,6 +2355,10 @@
       width: calc(var(--spacing) * 21.25);
       height: calc(var(--spacing) * 21.25);
     }
+  }
+  .icon-spec-white {
+    border-color: var(--green-light);
+    background-color: var(--green-lightest);
   }
   .icon-spec-inner {
     background-color: var(--green-lightest);
@@ -2334,6 +2373,9 @@
       width: calc(var(--spacing) * 17.5);
       height: calc(var(--spacing) * 17.5);
     }
+  }
+  .icon-spec-white > .icon-spec-inner {
+    background-color: var(--white);
   }
   .icon-spec-inner svg {
     width: calc(var(--spacing) * 5);
