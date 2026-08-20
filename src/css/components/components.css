@@ -11,6 +11,23 @@
     @apply bg-green absolute top-3.5 left-0 h-1.5 w-1.5 -translate-y-1/2 rounded-full content-[''];
   }
 
+  /* custom-list-target — вариант списка с маркером-мишенью (сплошная точка в полупрозрачном
+     ободке), см. Figma node 6017:4823. Самодостаточный класс — вешается на <ul> вместо
+     .custom-list, а не поверх него: маркер строится через ring, а не absolute-позиционирование,
+     так что оба подхода к разметке li несовместимы. */
+  .custom-list-target {
+    @apply flex flex-col list-none gap-2.5;
+  }
+
+  .custom-list-target li {
+    @apply typography-p text-black;
+    @apply flex items-center gap-2;
+  }
+
+  .custom-list-target li::before {
+    @apply bg-green ring-green/20 size-1 shrink-0 rounded-full ring-2 content-[''];
+  }
+
   .tag {
     @apply text-small-m bg-green inline-flex min-h-10 items-center justify-center rounded-full px-4.5 py-2 text-white uppercase;
   }

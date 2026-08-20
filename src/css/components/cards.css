@@ -104,4 +104,11 @@
   .news-card-text {
     @apply line-clamp-3;
   }
+
+  .card-info {
+    @apply relative overflow-hidden;
+    @apply bg-white shadow-[0_15px_40px_rgba(0,0,0,0.05)] transition-shadow duration-300;
+    @apply flex flex-col items-center gap-6.25 md:gap-10;
+    @apply rounded-2xl p-5 md:rounded-[30px] md:p-10;
+  }
 }

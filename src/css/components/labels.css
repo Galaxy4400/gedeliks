@@ -127,4 +127,21 @@
   .icon-spec-inner svg {
     @apply size-5 md:size-7;
   }
+
+  /* status-tag — пилл-бейдж статуса препарата (см. Figma node 6017:4819 "показан" и
+     6017:4835 "нужна консультация"). Вертикальный паддинг занижен относительно Figma
+     (там py-[5px]) — высота держится через min-h, так текст центруется точнее, чем
+     через паддинг. */
+  .status-tag {
+    @apply typography-psm;
+    @apply inline-flex min-h-8.5 items-center justify-center rounded-full px-3.75 py-1 uppercase md:min-h-10.5;
+  }
+
+  .status-tag-green {
+    @apply bg-green text-white;
+  }
+
+  .status-tag-outline {
+    @apply border-green-light text-gray border;
+  }
 }

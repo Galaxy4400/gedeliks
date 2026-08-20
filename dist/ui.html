@@ -737,6 +737,29 @@
 								</svg>
 							</div>
 						</div>
+
+						<h5>Теги статуса (status-tag)</h5>
+						<p class="typography-small-r text-gray max-w-150">
+							<code>.status-tag</code> + модификаторы <code>-green</code>/<code>-outline</code>. Вертикальный паддинг занижен
+							относительно Figma, высота держится через <code>min-h</code> — так текст центруется точнее. См. Figma
+							<code>node-id=6017-4819</code> / <code>node-id=6017-4835</code>.
+						</p>
+						<div class="flex flex-wrap items-center gap-3.75">
+							<span class="status-tag status-tag-green">Геделикс<sup>®</sup> показан</span>
+							<span class="status-tag status-tag-outline">Нужна консультация</span>
+						</div>
+
+						<h5>Список с маркером-мишенью (custom-list-target)</h5>
+						<p class="typography-small-r text-gray max-w-150">
+							<code>.custom-list-target</code> — самодостаточный класс на <code>&lt;ul&gt;</code>, маркер строится через
+							<code>ring</code>, а не через absolute-точку, как в <code>.custom-list</code>. См. Figma
+							<code>node-id=6017-4823</code>.
+						</p>
+						<ul class="custom-list-target max-w-75">
+							<li>Ларингит</li>
+							<li>Трахеит</li>
+							<li>Бронхит</li>
+						</ul>
 					</div>
 				</section>
 			</div>
