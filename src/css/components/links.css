@@ -2,8 +2,15 @@
   .link {
     @apply cursor-pointer transition-colors;
     @apply text-black;
-    @apply inline-flex items-center gap-2.5;
     @apply hover:text-green;
+  }
+
+  .link-gray {
+    @apply text-gray;
+  }
+
+  .link-icon {
+    @apply inline-flex items-center gap-2.5;
   }
 
   .link-dotted {

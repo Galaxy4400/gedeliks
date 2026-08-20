@@ -8,6 +8,7 @@
   }
 
   .menu-item svg {
+    @apply inline-flex items-center gap-2.5;
     @apply text-green size-2.5 shrink-0 transition-transform;
   }
   .group:hover .menu-item svg,
