@@ -211,6 +211,9 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
   .absolute {
     position: absolute;
   }
@@ -420,9 +423,6 @@
   }
   .max-w-\[270px\] {
     max-width: 270px;
-  }
-  .max-w-\[400px\] {
-    max-width: 400px;
   }
   .max-w-\[555px\] {
     max-width: 555px;
@@ -680,6 +680,9 @@
   }
   .bg-white {
     background-color: var(--white);
+  }
+  .bg-\[linear-gradient\(0deg\,\#fff_0\%\,\#fff_2\%\,transparent_100\%\)\] {
+    background-image: linear-gradient(0deg,#fff 0%,#fff 2%,transparent 100%);
   }
   .stroke-white {
     stroke: var(--white);
@@ -1037,6 +1040,11 @@
   .md\:-ml-2\.5 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * -2.5);
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
     }
   }
   .md\:size-6 {
