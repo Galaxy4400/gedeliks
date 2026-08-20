@@ -59,9 +59,6 @@
     @apply typography-small-m min-h-10 px-5 md:min-h-[55px];
   }
 
-  .btn-little {
-  }
-
   .btn-circle {
     @apply aspect-square rounded-full p-0! md:hidden;
   }
