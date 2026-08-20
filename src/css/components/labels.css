@@ -76,9 +76,16 @@
     @apply inline-flex items-center gap-2.5;
   }
 
+  .product-tag-big {
+    @apply typography-h6 font-bold;
+  }
+
   .product-tag-icon {
     @apply bg-current;
     @apply flex size-8.75 shrink-0 items-center justify-center rounded-full md:size-12;
+  }
+  .product-tag-icon-big {
+    @apply size-10 md:size-15;
   }
 
   .product-tag p {
