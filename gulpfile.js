@@ -46,8 +46,8 @@ const html = () =>
   gulp
     .src(htmlPagesInput)
     // context — дефолты для @@if в партиалах, чтобы страницы без переопределения
-    // не падали с ReferenceError (см. _header.html: headerWhite)
-    .pipe(fileInclude({ prefix: '@@', basepath: '@file', context: { headerWhite: false } }))
+    // не падали с ReferenceError (см. _header.html: white)
+    .pipe(fileInclude({ prefix: '@@', basepath: '@file', context: { white: false } }))
     .pipe(gulp.dest(htmlOutput));
 
 // перенесено 1:1 из fin_system_2 (gulp/utils/is-newer.js) — сравнение mtime вместо gulp-newer,
