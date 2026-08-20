@@ -2,9 +2,9 @@
 	<div class="relative" data-slider="main">
 		<div class="flex">
 			<!-- Слайд 1 -->
-			<div class="relative min-w-0 shrink-0 basis-full">
-				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
-					<div class="grid gap-7.5 md:gap-10">
+			<div class="min-w-0 shrink-0 basis-full">
+				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25 relative">
+					<div class="grid gap-7.5 md:gap-10 max-w-[1000px]">
 						<h2 class="typography-h1 text-green-dark grid gap-5">
 							<span>Кашля больше не боюсь,</span>
 							<p class="typography-display text-green block">Геделиксом<sup>®</sup> <br> я лечусь!</p>
@@ -18,16 +18,18 @@
 							</div>
 						</a>
 					</div>
+					<div class="absolute bottom-0 right-0">
+						<div class="h-full">
+							<img src="assets/img/content/hero-photo.avif" width="1274" height="1235" alt="Мама даёт Геделикс® дочке" loading="lazy" />
+						</div>
+					</div>
 				</div>
-				<!-- <div class="mx-auto max-w-75 px-5 pb-10 md:max-w-100 lg:absolute lg:right-0 lg:bottom-0 lg:mx-0 lg:max-w-none lg:w-125 lg:px-0 lg:pb-0 xl:w-150">
-					<img class="w-full" src="assets/img/content/hero-photo.avif" width="1274" height="1235" alt="Мама даёт Геделикс® дочке" loading="lazy" />
-				</div> -->
 			</div>
 
 			<!-- Слайд 2 — заглушка, второго слайда в макете нет -->
 			<div class="relative min-w-0 shrink-0 basis-full">
 				<div class="container-base grid gap-10 py-15 md:gap-12.5 md:py-20 lg:min-h-165 lg:content-center lg:py-25">
-					<div class="grid gap-7.5 md:gap-10">
+					<div class="grid gap-7.5 md:gap-10 max-w-[1000px]">
 						<h1 class="text-green-dark">
 							Второй слайд — заглушка,
 							<span class="typography-display text-green block">контент</span>
@@ -44,6 +46,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<!-- стрелки + пагинация: выведены без позиционирования, расположение — вручную -->

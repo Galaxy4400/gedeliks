@@ -346,9 +346,6 @@
   .w-full {
     width: 100%;
   }
-  .max-w-75 {
-    max-width: calc(var(--spacing) * 75);
-  }
   .max-w-150 {
     max-width: calc(var(--spacing) * 150);
   }
@@ -357,6 +354,9 @@
   }
   .max-w-\[908px\] {
     max-width: 908px;
+  }
+  .max-w-\[1000px\] {
+    max-width: 1000px;
   }
   .max-w-full {
     max-width: 100%;
@@ -615,9 +615,6 @@
   .pb-7\.5 {
     padding-bottom: calc(var(--spacing) * 7.5);
   }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
-  }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
   }
@@ -858,11 +855,6 @@
       width: 560px;
     }
   }
-  .md\:max-w-100 {
-    @media (width >= 48rem) {
-      max-width: calc(var(--spacing) * 100);
-    }
-  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -993,21 +985,6 @@
       position: absolute;
     }
   }
-  .lg\:right-0 {
-    @media (width >= 64rem) {
-      right: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:bottom-0 {
-    @media (width >= 64rem) {
-      bottom: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:mx-0 {
-    @media (width >= 64rem) {
-      margin-inline: calc(var(--spacing) * 0);
-    }
-  }
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
@@ -1023,11 +1000,6 @@
       min-height: calc(var(--spacing) * 165);
     }
   }
-  .lg\:w-125 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 125);
-    }
-  }
   .lg\:w-\[705px\] {
     @media (width >= 64rem) {
       width: 705px;
@@ -1036,11 +1008,6 @@
   .lg\:max-w-\[70\%\] {
     @media (width >= 64rem) {
       max-width: 70%;
-    }
-  }
-  .lg\:max-w-none {
-    @media (width >= 64rem) {
-      max-width: none;
     }
   }
   .lg\:grid-cols-2 {
@@ -1103,29 +1070,14 @@
       padding: calc(var(--spacing) * 8.75);
     }
   }
-  .lg\:px-0 {
-    @media (width >= 64rem) {
-      padding-inline: calc(var(--spacing) * 0);
-    }
-  }
   .lg\:py-25 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 25);
     }
   }
-  .lg\:pb-0 {
-    @media (width >= 64rem) {
-      padding-bottom: calc(var(--spacing) * 0);
-    }
-  }
   .lg\:text-center {
     @media (width >= 64rem) {
       text-align: center;
-    }
-  }
-  .xl\:w-150 {
-    @media (width >= 80rem) {
-      width: calc(var(--spacing) * 150);
     }
   }
   .xl\:max-w-\[555px\] {
