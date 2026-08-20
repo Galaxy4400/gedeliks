@@ -215,6 +215,9 @@
   .relative {
     position: relative;
   }
+  .inset-y-0 {
+    inset-block: calc(var(--spacing) * 0);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -342,6 +345,9 @@
   }
   .w-\[331px\] {
     width: 331px;
+  }
+  .w-auto {
+    width: auto;
   }
   .w-full {
     width: 100%;
