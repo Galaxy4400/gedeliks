@@ -303,6 +303,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-auto {
+    margin-top: auto;
+  }
   .-ml-3\.75 {
     margin-left: calc(var(--spacing) * -3.75);
   }
@@ -587,6 +590,9 @@
   }
   .gap-y-\[5px\] {
     row-gap: 5px;
+  }
+  .self-stretch {
+    align-self: stretch;
   }
   .justify-self-start {
     justify-self: flex-start;
