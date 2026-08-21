@@ -527,15 +527,18 @@
 						<div class="grid gap-3.75 md:gap-7.5">
 							<h5 class="pl-5 md:pl-7.5">Дети</h5>
 							<div class="grid gap-2.5">
-								<div class="flex bg-green-lightest rounded-2xl p-5 items-center md:rounded-[30px] md:px-7.5 md:py-6.25 gap-[15px] justify-between">
-									<div class="min-w-[170px]">
-										<p class="typography-h6">2-4 года</p>
-									</div>
-									<div class="flex gap-[15px] flex-auto justify-between">
-										<div class="flex gap-[25px] items-center">
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 gap-[15px] justify-between">
+									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button"> <!--  кнопка элемента спойлера -->
+										<p class="typography-h6 whitespace-nowrap transition-colors">2-4 года</p>
+										<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start"> <!--  сворачивающаяся часть -->
+										<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center">
 											<p class="typography-large min-w-[75px]">2,5 мл</p>
-											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center min-w-[365px]">
-												<img class="w-[100px]" src="assets/img/content/spoon-half.avif" loading="lazy" alt="spoon half">
+											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
+												<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-half.avif" loading="lazy" alt="spoon half">
 												<p class="typography-p">Половина мерной ложки</p>
 											</div>
 										</div>
