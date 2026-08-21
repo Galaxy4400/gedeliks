@@ -274,11 +274,20 @@
   .left-\[-100px\] {
     left: -100px;
   }
+  .left-\[-200\%\] {
+    left: -200%;
+  }
   .left-\[-200px\] {
     left: -200px;
   }
   .left-\[1\%\] {
     left: 1%;
+  }
+  .left-\[10\%\] {
+    left: 10%;
+  }
+  .left-\[40\%\] {
+    left: 40%;
   }
   .left-\[45\%\] {
     left: 45%;
@@ -397,6 +406,9 @@
   }
   .h-\[336px\] {
     height: 336px;
+  }
+  .h-\[822px\] {
+    height: 822px;
   }
   .h-\[1000px\] {
     height: 1000px;
@@ -1444,6 +1456,11 @@
       top: -35%;
     }
   }
+  .xl\:top-\[-70\%\] {
+    @media (width >= 80rem) {
+      top: -70%;
+    }
+  }
   .xl\:top-\[-250px\] {
     @media (width >= 80rem) {
       top: -250px;
@@ -1469,6 +1486,11 @@
       top: 30%;
     }
   }
+  .xl\:top-\[41\%\] {
+    @media (width >= 80rem) {
+      top: 41%;
+    }
+  }
   .xl\:top-\[130px\] {
     @media (width >= 80rem) {
       top: 130px;
@@ -1477,11 +1499,6 @@
   .xl\:right-0 {
     @media (width >= 80rem) {
       right: calc(var(--spacing) * 0);
-    }
-  }
-  .xl\:right-\[-170px\] {
-    @media (width >= 80rem) {
-      right: -170px;
     }
   }
   .xl\:bottom-\[50px\] {
