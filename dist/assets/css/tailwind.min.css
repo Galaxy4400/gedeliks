@@ -446,6 +446,9 @@
   .h-full {
     height: 100%;
   }
+  .min-h-12 {
+    min-height: calc(var(--spacing) * 12);
+  }
   .w-\[91\.98\%\] {
     width: 91.98%;
   }
@@ -454,6 +457,9 @@
   }
   .w-\[100px\] {
     width: 100px;
+  }
+  .w-\[139px\] {
+    width: 139px;
   }
   .w-\[331px\] {
     width: 331px;
@@ -681,6 +687,9 @@
   .gap-15 {
     gap: calc(var(--spacing) * 15);
   }
+  .gap-\[25px\] {
+    gap: 25px;
+  }
   .gap-\[50px\] {
     gap: 50px;
   }
@@ -828,6 +837,9 @@
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
