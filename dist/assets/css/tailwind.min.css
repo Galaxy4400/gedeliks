@@ -458,9 +458,6 @@
   .w-\[100px\] {
     width: 100px;
   }
-  .w-\[139px\] {
-    width: 139px;
-  }
   .w-\[331px\] {
     width: 331px;
   }
@@ -526,6 +523,15 @@
   }
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
+  }
+  .min-w-\[75px\] {
+    min-width: 75px;
+  }
+  .min-w-\[170px\] {
+    min-width: 170px;
+  }
+  .min-w-\[365px\] {
+    min-width: 365px;
   }
   .flex-1 {
     flex: 1;
@@ -686,6 +692,9 @@
   }
   .gap-15 {
     gap: calc(var(--spacing) * 15);
+  }
+  .gap-\[15px\] {
+    gap: 15px;
   }
   .gap-\[25px\] {
     gap: 25px;
@@ -885,6 +894,9 @@
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pl-0\! {
+    padding-left: calc(var(--spacing) * 0) !important;
   }
   .pl-2\.5 {
     padding-left: calc(var(--spacing) * 2.5);
