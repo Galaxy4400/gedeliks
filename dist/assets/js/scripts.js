@@ -43,6 +43,9 @@ const initLazyLoad = () => {
 //===============================================================
 const initSpoilers = () => {
   const groups = document.querySelectorAll('[data-spoiler]');
+  // id спойлер-айтема -> функция, раскрывающая именно его (с учётом аккордеона).
+  // Заполняется ниже, используется хендлером якорных ссылок в конце функции.
+  const openById = new Map();
 
   groups.forEach((group) => {
     const accordion = group.hasAttribute('data-spoiler-accordion');
@@ -66,6 +69,15 @@ const initSpoilers = () => {
       }
     };
 
+    const openExclusive = (item) => {
+      if (accordion) {
+        items.forEach((other) => {
+          if (other !== item) closeItem(other);
+        });
+      }
+      openItem(item);
+    };
+
     items.forEach((item) => {
       const button = item.querySelector('[data-spoiler-button]');
       const isOpenByDefault = item.getAttribute('aria-expanded') === 'true';
@@ -82,15 +94,28 @@ const initSpoilers = () => {
         if (isActive) {
           closeItem(item);
         } else {
-          if (accordion) {
-            items.forEach((other) => {
-              if (other !== item) closeItem(other);
-            });
-          }
-          openItem(item);
+          openExclusive(item);
         }
       });
+
+      if (item.id) {
+        openById.set(item.id, () => openExclusive(item));
+      }
     });
+  });
+
+  // Якоря вида <a href="#id-спойлер-айтема">: раскрывают нужный пункт и скроллят к нему.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    const id = link.getAttribute('href').slice(1);
+    const open = openById.get(id);
+    if (!open) return;
+
+    e.preventDefault();
+    open();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 };
 
