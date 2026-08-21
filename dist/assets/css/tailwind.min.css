@@ -235,6 +235,9 @@
   .top-80 {
     top: calc(var(--spacing) * 80);
   }
+  .top-\[60\%\] {
+    top: 60%;
+  }
   .top-\[400px\] {
     top: 400px;
   }
@@ -273,6 +276,15 @@
   }
   .left-\[-200px\] {
     left: -200px;
+  }
+  .left-\[1\%\] {
+    left: 1%;
+  }
+  .left-\[45\%\] {
+    left: 45%;
+  }
+  .left-\[56\%\] {
+    left: 56%;
   }
   .-z-1 {
     z-index: calc(1 * -1);
@@ -369,6 +381,10 @@
     width: calc(var(--spacing) * 10);
     height: calc(var(--spacing) * 10);
   }
+  .size-\[50px\] {
+    width: 50px;
+    height: 50px;
+  }
   .size-full {
     width: 100%;
     height: 100%;
@@ -381,6 +397,9 @@
   }
   .h-\[336px\] {
     height: 336px;
+  }
+  .h-\[1000px\] {
+    height: 1000px;
   }
   .h-\[1046px\] {
     height: 1046px;
@@ -399,6 +418,9 @@
   }
   .w-\[1200px\] {
     width: 1200px;
+  }
+  .w-\[1350px\] {
+    width: 1350px;
   }
   .w-\[1578px\] {
     width: 1578px;
@@ -429,6 +451,9 @@
   }
   .max-w-\[812px\] {
     max-width: 812px;
+  }
+  .max-w-\[843px\] {
+    max-width: 843px;
   }
   .max-w-\[908px\] {
     max-width: 908px;
@@ -1106,6 +1131,11 @@
       gap: calc(var(--spacing) * 3.75);
     }
   }
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
   .md\:gap-5 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 5);
@@ -1156,6 +1186,11 @@
       gap: calc(var(--spacing) * 20);
     }
   }
+  .md\:gap-x-12\.5 {
+    @media (width >= 48rem) {
+      column-gap: calc(var(--spacing) * 12.5);
+    }
+  }
   .md\:rounded-\[30px\] {
     @media (width >= 48rem) {
       border-radius: 30px;
@@ -1164,6 +1199,11 @@
   .md\:p-7\.5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 7.5);
+    }
+  }
+  .md\:p-8\.75 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8.75);
     }
   }
   .md\:p-12\.5 {
@@ -1236,14 +1276,35 @@
       position: absolute;
     }
   }
+  .lg\:top-1\/2 {
+    @media (width >= 64rem) {
+      top: calc(1/2 * 100%);
+    }
+  }
   .lg\:top-\[10\%\] {
     @media (width >= 64rem) {
       top: 10%;
     }
   }
+  .lg\:left-0 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:col-span-2 {
+    @media (width >= 64rem) {
+      grid-column: span 2 / span 2;
+    }
+  }
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
+    }
+  }
+  .lg\:size-\[70px\] {
+    @media (width >= 64rem) {
+      width: 70px;
+      height: 70px;
     }
   }
   .lg\:min-h-100 {
@@ -1271,9 +1332,25 @@
       max-width: 70%;
     }
   }
+  .lg\:max-w-\[200px\] {
+    @media (width >= 64rem) {
+      max-width: 200px;
+    }
+  }
+  .lg\:max-w-\[300px\] {
+    @media (width >= 64rem) {
+      max-width: 300px;
+    }
+  }
   .lg\:translate-x-\[-100px\] {
     @media (width >= 64rem) {
       --tw-translate-x: -100px;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .lg\:-translate-y-1\/2 {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(calc(1/2 * 100%) * -1);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
@@ -1347,6 +1424,11 @@
       padding-block: calc(var(--spacing) * 25);
     }
   }
+  .lg\:pl-\[90px\] {
+    @media (width >= 64rem) {
+      padding-left: 90px;
+    }
+  }
   .lg\:text-center {
     @media (width >= 64rem) {
       text-align: center;
@@ -1355,6 +1437,11 @@
   .xl\:absolute {
     @media (width >= 80rem) {
       position: absolute;
+    }
+  }
+  .xl\:top-\[-35\%\] {
+    @media (width >= 80rem) {
+      top: -35%;
     }
   }
   .xl\:top-\[-250px\] {
@@ -1375,6 +1462,11 @@
   .xl\:top-\[10\%\] {
     @media (width >= 80rem) {
       top: 10%;
+    }
+  }
+  .xl\:top-\[30\%\] {
+    @media (width >= 80rem) {
+      top: 30%;
     }
   }
   .xl\:top-\[130px\] {
@@ -1437,6 +1529,12 @@
       max-width: 985px;
     }
   }
+  .xl\:translate-x-\[100px\] {
+    @media (width >= 80rem) {
+      --tw-translate-x: 100px;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
   .xl\:translate-x-\[200px\] {
     @media (width >= 80rem) {
       --tw-translate-x: 200px;
@@ -1468,6 +1566,11 @@
       gap: calc(var(--spacing) * 7.5);
     }
   }
+  .xl\:gap-\[60px\] {
+    @media (width >= 80rem) {
+      gap: 60px;
+    }
+  }
   .xl\:tracking-tighter {
     @media (width >= 80rem) {
       --tw-tracking: var(--tracking-tighter);
@@ -1495,6 +1598,11 @@
   .\32 xl\:justify-between {
     @media (width >= 96rem) {
       justify-content: space-between;
+    }
+  }
+  .\32 xl\:gap-\[124px\] {
+    @media (width >= 96rem) {
+      gap: 124px;
     }
   }
   .\32 xl\:gap-x-27\.5 {
