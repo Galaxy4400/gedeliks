@@ -526,15 +526,15 @@
 					<div class="grid xl:max-w-[985px] min-w-0 shrink gap-8.75 md:gap-13.75">
 						<div class="grid gap-3.75 md:gap-7.5">
 							<h5 class="pl-5 md:pl-7.5">Дети</h5>
-							<div class="grid gap-2.5">
-								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 gap-[15px] justify-between">
-									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button"> <!--  кнопка элемента спойлера -->
+							<div class="grid gap-2.5" data-spoiler>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button> <!--  кнопка элемента спойлера -->
 										<p class="typography-h6 whitespace-nowrap transition-colors">2-4 года</p>
 										<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
 											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
 										</svg>
 									</button>
-									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start"> <!--  сворачивающаяся часть -->
+									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content> <!--  сворачивающаяся часть -->
 										<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center">
 											<p class="typography-large min-w-[75px]">2,5 мл</p>
 											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">

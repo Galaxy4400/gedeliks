@@ -1570,6 +1570,11 @@
       height: 70px;
     }
   }
+  .lg\:max-h-none\! {
+    @media (width >= 64rem) {
+      max-height: none !important;
+    }
+  }
   .lg\:min-h-100 {
     @media (width >= 64rem) {
       min-height: calc(var(--spacing) * 100);
