@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Страница не найдена — Геделикс</title>
+
+	<link rel="preload" href="assets/fonts/Inter-Variable-cyrillic.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+	<script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
+	<script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js" defer></script>
+	<script src="https://unpkg.com/embla-carousel-autoplay@8.6.0/embla-carousel-autoplay.umd.js" defer></script>
+	<script src="assets/js/lazyload.min.js" defer></script>
+	<script src="assets/js/scripts.js" defer></script>
+	<script src="assets/js/sliders.js" defer></script>
+	<script src="assets/js/main.js" defer></script>
+</head>
+
+
+<body>
+	<!-- header -->
+<header class="relative  bg-white ">
+	<div class="py-5 md:py-6">
+		<div class="container-base flex items-center justify-between gap-3 md:gap-10">
+			<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+				Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
+			</a>
+
+			<nav class="max-md:hidden">
+				<ul class="flex items-center gap-x-9.25 flex-wrap justify-center">
+					<li class="group relative">
+						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
+							Препараты
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+							</svg>
+						</button>
+						<ul class="menu-dropdown">
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</li>
+					<li class="group relative">
+						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
+							Инструкция
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+							</svg>
+						</button>
+						<ul class="menu-dropdown">
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="link typography-psm whitespace-nowrap" href="#">Полезно знать</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="flex items-center gap-2.5">
+				<a class="btn btn-white btn-small whitespace-nowrap max-xl:hidden" href="#">Для врачей</a>
+				<a class="btn btn-green btn-small whitespace-nowrap" href="#">
+					Где купить
+					<svg class="size-6 shrink-0">
+						<use href="assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+				</a>
+				<button type="button" class="btn btn-circle btn-small btn-white" data-menu-icon aria-label="Открыть меню">
+					<svg class="size-4.5">
+						<use href="assets/img/svg/sprite.svg#icon-menu"></use>
+					</svg>
+				</button>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- мобильное меню -->
+<!-- TODO: в Figma (node 42022:6489, "М Меню") у меню есть декоративный SVG-фон (Frame 510,
+     тонкие фоновые линии на всю высоту) — пока не добавлен, нужно перенести. -->
+<div class="mobile-menu" data-mobile-menu>
+	<img class="absolute right-0 -z-1 top-0" src="assets/img/svg/mobile-menu-deco.svg" alt="deco">
+
+	<div class="container-base flex items-center justify-between py-5">
+		<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+			Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
+		</a>
+
+		<button type="button" class="btn btn-circle btn-small btn-white" data-menu-close aria-label="Закрыть меню">
+			<svg class="size-4.5">
+				<use href="assets/img/svg/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+	</div>
+
+	<div class="container-base grow overflow-y-auto py-5">
+		<div class="grid gap-2.5" data-spoiler="mobile-menu">
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5">
+				<div data-spoiler-item>
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Препараты</span>
+						<svg class="size-4 text-green" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+						</svg>
+					</button>
+					<div data-spoiler-content>
+						<ul class="grid gap-2.5 pt-5">
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5">
+				<div data-spoiler-item>
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Инструкции</span>
+						<svg class="size-4 text-green" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+						</svg>
+					</button>
+					<div data-spoiler-content>
+						<ul class="grid gap-2.5 pt-5">
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<ul class="grid gap-2.5 px-5 pt-2.5">
+				<li><a class="link typography-psm" href="#">Статьи</a></li>
+				<li><a class="link typography-psm" href="#">Где купить</a></li>
+				<li><a class="link typography-psm" href="#">Частые вопросы</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-base flex shrink-0 items-center gap-2.5 py-5">
+		<a class="btn btn-dark btn-arrow whitespace-nowrap" href="#">
+			Где купить
+			<div>
+				<svg class="size-5">
+					<use href="assets/img/svg/sprite.svg#icon-location"></use>
+				</svg>
+			</div>
+		</a>
+		<a class="btn btn-transparent grow whitespace-nowrap" href="#">Для врачей</a>
+	</div>
+</div>
+</header>
+
+	<main>
+		<!-- breadcrumbs -->
+		<section class="bg-white">
+			<div class="container-base grid gap-5 md:gap-7.5">
+				<nav class="breadcrumbs" aria-label="breadcrumbs">
+					<a href="index.html" class="breadcrumb-item">
+						<svg class="size-5 md:size-6">
+							<use href="assets/img/svg/sprite.svg#icon-home"></use>
+						</svg>
+					</a>
+					<span class="breadcrumb-item">Где купить</span>
+				</nav>
+			</div>
+		</section>
+
+		<section class="pb-20 md:pb-35 pt-5 md:pt-17.5 bg-white">
+			<div class="container-base grid gap-7.5 md:gap-12.5">
+				<div class="pb-7.5 md:pb-10 bottom-deco-line grid md:gap-5 gap-3.75">
+					<h1>Где купить Геделикс®</h1>
+					<p class="typography-large">Советы врачей и актуальная информация о лечении кашля</p>
+				</div>
+
+				<div class="grid gap-5 md:gap-7.5">
+					<div class="grid md:gap-2.5 gap-3.75 lg:grid-cols-2 xl:grid-cols-3">
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-1.avif" alt="Виды кашля: как правильно определить тип и выбрать лечение" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">Виды кашля: как правильно определить тип и выбрать лечение</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Кашель — знакомая проблема, поражающая взрослых и детей, особенно в холодные сезоны.
+								Правильное лечение зависит от определения типа по характеру, продолжительности и
+								интенсивности.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-2.avif" alt="Простые техники для предотвращения приступов ночного кашля у взрослого" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Простые техники для предотвращения приступов ночного кашля у взрослого
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Ночной кашель нарушает сон и снижает качество жизни взрослых. Понимание его причин и
+								методов облегчения помогает вернуть нормальный отдых.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-3.avif" alt="Эффективные методы лечения кашля у ребёнка: советы и рекомендации" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Эффективные методы лечения кашля у ребёнка: советы и рекомендации
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Детский кашель значительно отличается от взрослого по причинам, характеру и подходам
+								к лечению. Понимание этих различий помогает принимать правильные решения.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-2.avif" alt="Простые техники для предотвращения приступов ночного кашля у взрослого" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Простые техники для предотвращения приступов ночного кашля у взрослого
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Ночной кашель нарушает сон и снижает качество жизни взрослых. Понимание его причин и
+								методов облегчения помогает вернуть нормальный отдых.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-3.avif" alt="Эффективные методы лечения кашля у ребёнка: советы и рекомендации" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Эффективные методы лечения кашля у ребёнка: советы и рекомендации
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Детский кашель значительно отличается от взрослого по причинам, характеру и подходам
+								к лечению. Понимание этих различий помогает принимать правильные решения.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-1.avif" alt="Виды кашля: как правильно определить тип и выбрать лечение" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">Виды кашля: как правильно определить тип и выбрать лечение</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Кашель — знакомая проблема, поражающая взрослых и детей, особенно в холодные сезоны.
+								Правильное лечение зависит от определения типа по характеру, продолжительности и
+								интенсивности.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-1.avif" alt="Виды кашля: как правильно определить тип и выбрать лечение" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">Виды кашля: как правильно определить тип и выбрать лечение</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Кашель — знакомая проблема, поражающая взрослых и детей, особенно в холодные сезоны.
+								Правильное лечение зависит от определения типа по характеру, продолжительности и
+								интенсивности.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-2.avif" alt="Простые техники для предотвращения приступов ночного кашля у взрослого" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Простые техники для предотвращения приступов ночного кашля у взрослого
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Ночной кашель нарушает сон и снижает качество жизни взрослых. Понимание его причин и
+								методов облегчения помогает вернуть нормальный отдых.
+							</p>
+						</div>
+
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-3.avif" alt="Эффективные методы лечения кашля у ребёнка: советы и рекомендации" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Эффективные методы лечения кашля у ребёнка: советы и рекомендации
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Детский кашель значительно отличается от взрослого по причинам, характеру и подходам
+								к лечению. Понимание этих различий помогает принимать правильные решения.
+							</p>
+						</div>
+					</div>
+					<div class="flex justify-center">
+						<a class="btn btn-dark btn-arrow mx-auto whitespace-nowrap" href="/where.html">
+							Показать ещё
+							<div>
+								<svg class="size-6">
+									<use href="assets/img/svg/sprite.svg#icon-arrow-down"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="pb-20 md:pb-35 bg-white">
+			<div class="container-base">
+				<div class="relative overflow-hidden rounded-2xl bg-green-lightest md:rounded-[30px] ">
+					<div class="relative z-10 flex lg:min-h-100 max-w-full flex-col p-5 gap-5 lg:max-w-[70%] md:p-12.5">
+						<div class="grid gap-7.5 flex-auto content-start">
+							<p class="typography-h6 text-green">Инструкция</p>
+							<div class="grid gap-5">
+								<h2>Не нашли ответ на свой вопрос?</h2>
+								<p>Ознакомьтесь с официальной инструкцией по применению препарата.</p>
+							</div>
+						</div>
+						<div>
+							<a class="btn btn-transparent" href="#">Инструкция по применению</a>
+						</div>
+					</div>
+					<div class="lg:absolute right-0 bottom-0 h-full lg:w-125">
+						<div class="absolute w-[1578px] h-[1046px] bg-white rounded-[100%] top-[400px] lg:top-[10%] right-[-180px] translate-x-[45%]"></div>
+						<img class="absolute w-[2000px] xl:w-[3417px] xl:top-[-600px] left-[-200px] max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+						<img class="absolute w-[1200px] xl:w-[2333px] xl:top-[-250px] left-[-100px] max-w-none" src="assets/img/svg/deco-3.svg" alt="deco">
+						<img class="size-full object-cover object-top relative lg:translate-x-[-100px]" src="assets/img/content/instruction-banner.avif" width="514" height="575" alt="Женщина читает инструкцию по применению" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="bg-green-lightest relative">
+	<div class="absolute overflow-hidden w-full h-full">
+		<img class="absolute top-1/2 left-1/2 -translate-x-full" src="assets/img/svg/deco-1.svg" alt="deco">
+		<img class="absolute bottom-0 left-0 2xl:left-1/2 2xl:-translate-x-[1000px] w-[410px] md:w-[562px]" src="assets/img/content/footer-plant.avif" alt="footer plant">
+	</div>
+	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start relative">
+		<div class="grid gap-7.5 rounded-2xl bg-white p-5 lg:gap-12.5 lg:rounded-[30px] max-sm:w-full lg:p-8.75 lg:w-[705px]">
+			<div class="grid gap-5 lg:gap-10">
+				<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+					Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
+				</a>
+
+				<ul class="grid gap-2.5 lg:gap-3.75">
+					<li><a class="link link-dotted typography-small-r" href="#">Политика обработки персональных данных</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Согласие на обработку cookie-файлов</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Порядок осущ. субъектом перс.данных прав (ФЗ от 27.07.2006 152-ФЗ)</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Фармаконадзор</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Пользовательское соглашение</a></li>
+				</ul>
+			</div>
+
+			<div class="flex items-center gap-6.25 max-md:flex-col max-md:items-start">
+				<a class="btn btn-dark btn-arrow whitespace-nowrap" href="#">
+					Сообщить о проблеме
+					<div>
+						<svg class="size-6">
+							<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+						</svg>
+					</div>
+				</a>
+				<p class="typography-small-r text-gray">© 2026 Геделикс®. Все права защищены</p>
+			</div>
+		</div>
+
+		<div class="flex gap-y-7.5 gap-x-10 2xl:gap-x-27.5 xl:max-2xl:flex-col max-sm:flex-col">
+			<div class="grid gap-3.75 xl:gap-7.5 content-start">
+				<p class="typography-small-m text-black/50 uppercase">Препараты</p>
+				<ul class="grid gap-3.75 xl:gap-5">
+					<li><a class="link typography-h6" href="#">Геделикс® Сироп 100 мл</a></li>
+					<li><a class="link typography-h6" href="#">Геделикс® Сироп 200 мл</a></li>
+					<li><a class="link typography-h6" href="#">Геделикс® Капли 50 мл</a></li>
+					<li><a class="link typography-h6" href="#">Инструкция — Сироп</a></li>
+					<li><a class="link typography-h6" href="#">Инструкция — Капли</a></li>
+				</ul>
+			</div>
+
+			<div class="grid gap-3.75 xl:gap-7.5 content-start">
+				<p class="typography-small-m text-black/50 uppercase">Информация</p>
+				<ul class="grid gap-3.75 xl:gap-5">
+					<li><a class="link typography-h6" href="#">Статьи</a></li>
+					<li><a class="link typography-h6" href="#">Где купить</a></li>
+					<li><a class="link typography-h6" href="#">Частые вопросы</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-green py-3.75 md:py-6 relative">
+		<div class="container-base">
+			<p class="typography-small-m lg:text-center text-white uppercase xl:tracking-tighter">
+				Геделикс® является лекарственным препаратом. Перед применением ознакомьтесь с инструкцией. Имеются
+				противопоказания. Проконсультируйтесь со специалистом.
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
