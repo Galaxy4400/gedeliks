@@ -1238,6 +1238,16 @@
       aspect-ratio: 17/5;
     }
   }
+  .md\:aspect-531\/357 {
+    @media (width >= 48rem) {
+      aspect-ratio: 531/357;
+    }
+  }
+  .md\:aspect-\[1128\/550\] {
+    @media (width >= 48rem) {
+      aspect-ratio: 1128/550;
+    }
+  }
   .md\:size-6 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 6);
@@ -1293,6 +1303,11 @@
       min-width: 365px;
     }
   }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1301,6 +1316,11 @@
   .md\:grid-cols-8 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+  .md\:items-start {
+    @media (width >= 48rem) {
+      align-items: flex-start;
     }
   }
   .md\:gap-2\.5 {
@@ -1383,6 +1403,11 @@
       gap: 30px;
     }
   }
+  .md\:gap-\[35px\] {
+    @media (width >= 48rem) {
+      gap: 35px;
+    }
+  }
   .md\:gap-\[50px\] {
     @media (width >= 48rem) {
       gap: 50px;
@@ -1416,6 +1441,11 @@
   .md\:p-12\.5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 12.5);
+    }
+  }
+  .md\:p-\[35px\] {
+    @media (width >= 48rem) {
+      padding: 35px;
     }
   }
   .md\:px-7\.5 {
@@ -1518,6 +1548,16 @@
       top: 10%;
     }
   }
+  .lg\:right-0 {
+    @media (width >= 64rem) {
+      right: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:bottom-0 {
+    @media (width >= 64rem) {
+      bottom: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:left-0 {
     @media (width >= 64rem) {
       left: calc(var(--spacing) * 0);
@@ -1537,6 +1577,11 @@
     @media (width >= 64rem) {
       width: 70px;
       height: 70px;
+    }
+  }
+  .lg\:h-full {
+    @media (width >= 64rem) {
+      height: 100%;
     }
   }
   .lg\:max-h-none\! {
@@ -3500,7 +3545,7 @@
     color: var(--black);
     display: flex;
     align-items: center;
-    gap: calc(var(--spacing) * 2);
+    gap: 15px;
   }
   .custom-list-target li::before {
     width: calc(var(--spacing) * 1);
