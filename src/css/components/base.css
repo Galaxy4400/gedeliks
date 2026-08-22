@@ -30,4 +30,8 @@
   a {
     @apply hover:text-green transition-colors;
   }
+
+  mark {
+    @apply text-green bg-transparent;
+  }
 }

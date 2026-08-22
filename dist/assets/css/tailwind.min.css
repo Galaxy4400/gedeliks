@@ -2144,6 +2144,10 @@
       }
     }
   }
+  mark {
+    background-color: transparent;
+    color: var(--green);
+  }
 }
 @layer components {
   .container-base {
