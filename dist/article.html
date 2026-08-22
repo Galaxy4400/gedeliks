@@ -252,73 +252,65 @@
 					</div>
 					<div class="grid gap-10 md:gap-15">
 						<h2>Острый и хронический кашель</h2>
-						<div class="grid gap-2.5" data-spoiler>
-							<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
-								<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
-									<p class="typography-h6 whitespace-nowrap transition-colors">2-4 года</p>
-									<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
-										<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
-									</svg>
-								</button>
-								<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
-									<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
-										<p class="typography-large min-w-[75px]">2,5 мл</p>
-										<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
-											<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-half.avif" loading="lazy" alt="spoon half">
-											<p class="typography-p">Половина мерной ложки</p>
-										</div>
-									</div>
-									<div class="flex items-center gap-2.5 md:gap-3.75">
-										<svg class="size-6 shrink-0 text-green md:size-7">
-											<use href="assets/img/svg/sprite.svg#icon-history"></use>
+						<div class="grid gap-6.25">
+							<div class="hidden lg:flex gap-[15px] px-7.5">
+								<p class="typography-small-m w-[270px] shrink-0 text-gray uppercase">Тип кашля</p>
+								<p class="typography-small-m w-[300px] shrink-0 text-gray uppercase">Продолжительность</p>
+								<p class="typography-small-m flex-1 text-gray uppercase">Возможные причины</p>
+							</div>
+							<div class="grid gap-2.5" data-spoiler>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] lg:px-7.5 lg:py-5 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="true">
+									<button class="lg:w-[270px] lg:shrink-0 flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h5 lg:typography-psm whitespace-nowrap transition-colors">Острый</p>
+										<svg class="size-5 shrink-0 text-green lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
 										</svg>
-										<p class="typography-large whitespace-nowrap">3 раза в день</p>
+									</button>
+									<div class="grid gap-5 lg:flex lg:flex-auto lg:items-center lg:gap-[15px] lg:max-h-none!" data-spoiler-content>
+										<div class="grid gap-1.25 lg:w-[300px] lg:shrink-0 max-lg:pt-7.5">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Продолжительность</p>
+											<p class="typography-psm lg:typography-p">До 3 недель</p>
+										</div>
+										<div class="grid gap-1.25 lg:flex-1">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Возможные причины</p>
+											<p class="typography-psm lg:typography-p">ОРВИ, простуда, острый бронхит</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
-								<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
-									<p class="typography-h6 whitespace-nowrap transition-colors">4–10 лет</p>
-									<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
-										<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
-									</svg>
-								</button>
-								<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
-									<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
-										<p class="typography-large min-w-[75px]">2,5 мл</p>
-										<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
-											<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-half.avif" loading="lazy" alt="spoon half">
-											<p class="typography-p">Половина мерной ложки</p>
-										</div>
-									</div>
-									<div class="flex items-center gap-2.5 md:gap-3.75">
-										<svg class="size-6 shrink-0 text-green md:size-7">
-											<use href="assets/img/svg/sprite.svg#icon-history"></use>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] lg:px-7.5 lg:py-5 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:w-[270px] lg:shrink-0 flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h5 lg:typography-psm whitespace-nowrap transition-colors">Подострый</p>
+										<svg class="size-5 shrink-0 text-green lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
 										</svg>
-										<p class="typography-large whitespace-nowrap">4 раза в день</p>
+									</button>
+									<div class="grid gap-5 lg:flex lg:flex-auto lg:items-center lg:gap-[15px] lg:max-h-none!" data-spoiler-content>
+										<div class="grid gap-1.25 lg:w-[300px] lg:shrink-0 max-lg:pt-7.5">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Продолжительность</p>
+											<p class="typography-psm lg:typography-p">3–8 недель</p>
+										</div>
+										<div class="grid gap-1.25 lg:flex-1">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Возможные причины</p>
+											<p class="typography-psm lg:typography-p">Восстановление после инфекции</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
-								<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
-									<p class="typography-h6 whitespace-nowrap transition-colors">10–18 лет</p>
-									<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
-										<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
-									</svg>
-								</button>
-								<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
-									<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
-										<p class="typography-large min-w-[75px]">5 мл</p>
-										<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
-											<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-full.avif" loading="lazy" alt="spoon full">
-											<p class="typography-p">Целая мерная ложка</p>
-										</div>
-									</div>
-									<div class="flex items-center gap-2.5 md:gap-3.75">
-										<svg class="size-6 shrink-0 text-green md:size-7">
-											<use href="assets/img/svg/sprite.svg#icon-history"></use>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] lg:px-7.5 lg:py-5 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:w-[270px] lg:shrink-0 flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h5 lg:typography-psm whitespace-nowrap transition-colors">Хронический</p>
+										<svg class="size-5 shrink-0 text-green lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
 										</svg>
-										<p class="typography-large whitespace-nowrap">3 раза в день</p>
+									</button>
+									<div class="grid gap-5 lg:flex lg:flex-auto lg:items-center lg:gap-[15px] lg:max-h-none!" data-spoiler-content>
+										<div class="grid gap-1.25 lg:w-[300px] lg:shrink-0 max-lg:pt-7.5">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Продолжительность</p>
+											<p class="typography-psm lg:typography-p">Более 8 недель</p>
+										</div>
+										<div class="grid gap-1.25 lg:flex-1">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Возможные причины</p>
+											<p class="typography-psm lg:typography-p">Аллергия, хронические заболевания дыхательных путей и другие причины</p>
+										</div>
 									</div>
 								</div>
 							</div>

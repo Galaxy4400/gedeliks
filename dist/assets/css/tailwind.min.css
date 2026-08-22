@@ -433,6 +433,12 @@
   .w-\[50px\] {
     width: 50px;
   }
+  .w-\[270px\] {
+    width: 270px;
+  }
+  .w-\[300px\] {
+    width: 300px;
+  }
   .w-\[331px\] {
     width: 331px;
   }
@@ -822,6 +828,9 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .px-7\.5 {
+    padding-inline: calc(var(--spacing) * 7.5);
+  }
   .px-\[15px\] {
     padding-inline: 15px;
   }
@@ -1145,6 +1154,11 @@
   .max-lg\:gap-2\.5 {
     @media (width < 64rem) {
       gap: calc(var(--spacing) * 2.5);
+    }
+  }
+  .max-lg\:pt-7\.5 {
+    @media (width < 64rem) {
+      padding-top: calc(var(--spacing) * 7.5);
     }
   }
   .max-lg\:pt-\[25px\] {
@@ -1568,6 +1582,11 @@
       grid-column: span 2 / span 2;
     }
   }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
@@ -1604,6 +1623,16 @@
       width: calc(var(--spacing) * 125);
     }
   }
+  .lg\:w-\[270px\] {
+    @media (width >= 64rem) {
+      width: 270px;
+    }
+  }
+  .lg\:w-\[300px\] {
+    @media (width >= 64rem) {
+      width: 300px;
+    }
+  }
   .lg\:w-\[705px\] {
     @media (width >= 64rem) {
       width: 705px;
@@ -1627,6 +1656,21 @@
   .lg\:min-w-\[170px\] {
     @media (width >= 64rem) {
       min-width: 170px;
+    }
+  }
+  .lg\:flex-1 {
+    @media (width >= 64rem) {
+      flex: 1;
+    }
+  }
+  .lg\:flex-auto {
+    @media (width >= 64rem) {
+      flex: auto;
+    }
+  }
+  .lg\:shrink-0 {
+    @media (width >= 64rem) {
+      flex-shrink: 0;
     }
   }
   .lg\:translate-x-\[-100px\] {
@@ -1716,6 +1760,16 @@
       padding: calc(var(--spacing) * 8.75);
     }
   }
+  .lg\:px-7\.5 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 7.5);
+    }
+  }
+  .lg\:py-5 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
   .lg\:py-25 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 25);
@@ -1729,6 +1783,20 @@
   .lg\:text-center {
     @media (width >= 64rem) {
       text-align: center;
+    }
+  }
+  .lg\:typography-p {
+    @media (width >= 64rem) {
+      font-size: var(--text-p);
+      line-height: var(--leading-p);
+      font-weight: var(--font-p);
+    }
+  }
+  .lg\:typography-psm {
+    @media (width >= 64rem) {
+      font-size: var(--text-psm);
+      line-height: var(--leading-psm);
+      font-weight: var(--font-psm);
     }
   }
   .xl\:absolute {
