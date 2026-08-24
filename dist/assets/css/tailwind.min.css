@@ -216,6 +216,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -299,6 +302,9 @@
   }
   .z-10 {
     z-index: 10;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .container {
     width: 100%;
@@ -2120,6 +2126,10 @@
     flex-grow: 1;
     flex-direction: column;
     overflow: clip;
+    padding-top: calc(var(--spacing) * 20);
+    @media (width >= 48rem) {
+      padding-top: 103px;
+    }
   }
   picture img {
     position: relative;
