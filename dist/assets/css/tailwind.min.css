@@ -3311,7 +3311,10 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 35px;
+    border-radius: var(--radius-2xl);
+    @media (width >= 48rem) {
+      border-radius: 35px;
+    }
   }
   .video-player-media {
     display: block;

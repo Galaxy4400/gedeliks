@@ -1,6 +1,6 @@
 @layer components {
   .video-player {
-    @apply relative cursor-pointer overflow-hidden rounded-[35px];
+    @apply relative cursor-pointer overflow-hidden rounded-2xl md:rounded-[35px];
   }
 
   .video-player-media {
