@@ -216,6 +216,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -299,6 +302,9 @@
   }
   .z-10 {
     z-index: 10;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .container {
     width: 100%;
@@ -570,6 +576,9 @@
   .translate-y-2 {
     --tw-translate-y: calc(var(--spacing) * 2);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .rotate-0\! {
+    rotate: 0deg !important;
   }
   .rotate-180 {
     rotate: 180deg;
@@ -1154,6 +1163,11 @@
   .max-lg\:gap-2\.5 {
     @media (width < 64rem) {
       gap: calc(var(--spacing) * 2.5);
+    }
+  }
+  .max-lg\:pt-2\.5 {
+    @media (width < 64rem) {
+      padding-top: calc(var(--spacing) * 2.5);
     }
   }
   .max-lg\:pt-7\.5 {
@@ -2117,6 +2131,10 @@
     flex-grow: 1;
     flex-direction: column;
     overflow: clip;
+    padding-top: calc(var(--spacing) * 20);
+    @media (width >= 48rem) {
+      padding-top: 103px;
+    }
   }
   picture img {
     position: relative;
@@ -3308,7 +3326,10 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 35px;
+    border-radius: var(--radius-2xl);
+    @media (width >= 48rem) {
+      border-radius: 35px;
+    }
   }
   .video-player-media {
     display: block;
@@ -3810,6 +3831,15 @@
 }
 [data-spoiler-item][aria-expanded='true'] [data-spoiler-button] svg {
   rotate: 180deg;
+}
+[data-spoiler-item] [data-spoiler-icon-open] {
+  display: none;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-icon-closed] {
+  display: none;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-icon-open] {
+  display: block;
 }
 [data-spoiler-item] [data-spoiler-text-open] {
   display: none;
