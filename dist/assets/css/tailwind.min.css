@@ -571,6 +571,9 @@
     --tw-translate-y: calc(var(--spacing) * 2);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .rotate-0\! {
+    rotate: 0deg !important;
+  }
   .rotate-180 {
     rotate: 180deg;
   }
@@ -3810,6 +3813,15 @@
 }
 [data-spoiler-item][aria-expanded='true'] [data-spoiler-button] svg {
   rotate: 180deg;
+}
+[data-spoiler-item] [data-spoiler-icon-open] {
+  display: none;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-icon-closed] {
+  display: none;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-icon-open] {
+  display: block;
 }
 [data-spoiler-item] [data-spoiler-text-open] {
   display: none;

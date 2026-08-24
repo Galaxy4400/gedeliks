@@ -12,6 +12,17 @@
   @apply rotate-180;
 }
 
+/* иконка кнопки-спойлера: два svg (плюс/минус), показывается один в зависимости от состояния */
+[data-spoiler-item] [data-spoiler-icon-open] {
+  @apply hidden;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-icon-closed] {
+  @apply hidden;
+}
+[data-spoiler-item][aria-expanded='true'] [data-spoiler-icon-open] {
+  @apply block;
+}
+
 /* текст кнопки-спойлера: два спана, показывается один в зависимости от состояния */
 [data-spoiler-item] [data-spoiler-text-open] {
   @apply hidden;

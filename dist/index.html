@@ -945,14 +945,21 @@
 	<div class="container-base grid gap-7.5 md:gap-12.5" data-spoiler-item aria-expanded="false">
 		<button class="pb-7.5 md:pb-10 bottom-deco-line flex justify-between gap-10 text-gray" type="button" data-spoiler-button>
 			<p class="typography-small-m inline-flex gap-2.5 items-center">
-				<svg class="size-6">
+				<svg class="size-6 rotate-0!">
 					<use href="assets/img/svg/sprite.svg#icon-book"></use>
 				</svg>
 				Источники
 			</p>
-			<svg class="size-7">
-				<use href="assets/img/svg/sprite.svg#icon-minus"></use>
-			</svg>
+			<span data-spoiler-icon-closed>
+				<svg class="size-7">
+					<use href="assets/img/svg/sprite.svg#icon-add"></use>
+				</svg>
+			</span>
+			<span data-spoiler-icon-open>
+				<svg class="size-7">
+					<use href="assets/img/svg/sprite.svg#icon-minus"></use>
+				</svg>
+			</span>
 		</button>
 		<div data-spoiler-content>
 			<ol class="grid gap-2.5 md:gap-3.75 text-gray list-decimal list-inside">
