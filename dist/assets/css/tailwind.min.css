@@ -1165,6 +1165,11 @@
       gap: calc(var(--spacing) * 2.5);
     }
   }
+  .max-lg\:pt-2\.5 {
+    @media (width < 64rem) {
+      padding-top: calc(var(--spacing) * 2.5);
+    }
+  }
   .max-lg\:pt-7\.5 {
     @media (width < 64rem) {
       padding-top: calc(var(--spacing) * 7.5);
