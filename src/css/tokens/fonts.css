@@ -107,8 +107,271 @@
   --font-small-m: 500;
 }
 
-/* Desktop */
+/* Промежуточные брейкпойнты (sm, md, lg, xl, 2xl) — в Figma отдельных стилей нет.
+   Размеры — приблизительная линейная интерполяция между Mobile (base) и Desktop (3xl+),
+   диапазон поделён на 6 равных шагов (sm=1/6 … 2xl=5/6 от разницы desktop-mobile). */
+@media (width >= theme(--breakpoint-sm)) {
+  :root {
+    --text-display: 63px;
+    --leading-display: 1.1;
+    --font-display: 700;
+
+    --text-h1: 47px;
+    --leading-h1: 1.1;
+    --font-h1: 700;
+
+    --text-h2: 39px;
+    --leading-h2: 1.1;
+    --font-h2: 600;
+
+    --text-h3: 33px;
+    --leading-h3: 1.1;
+    --font-h3: 600;
+
+    --text-h4: 28px;
+    --leading-h4: 1.1;
+    --font-h4: 600;
+
+    --text-h5: 24px;
+    --leading-h5: 1.2;
+    --font-h5: 500;
+
+    --text-h6: 19px;
+    --leading-h6: 1.2;
+    --font-h6: 500;
+
+    --text-large: 17px;
+    --leading-large: 1.5;
+    --font-large: 400;
+
+    --text-p: 16px;
+    --leading-p: 1.6;
+    --font-p: 400;
+
+    --text-psm: 16px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
+
+    --text-small-r: 14px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
+
+    --text-small-m: 14px;
+    --leading-small-m: 1.5;
+    --font-small-m: 500;
+  }
+}
+
 @media (width >= theme(--breakpoint-md)) {
+  :root {
+    --text-display: 76px;
+    --leading-display: 1.1;
+    --font-display: 700;
+
+    --text-h1: 51px;
+    --leading-h1: 1.1;
+    --font-h1: 700;
+
+    --text-h2: 43px;
+    --leading-h2: 1.1;
+    --font-h2: 600;
+
+    --text-h3: 36px;
+    --leading-h3: 1.1;
+    --font-h3: 600;
+
+    --text-h4: 31px;
+    --leading-h4: 1.1;
+    --font-h4: 600;
+
+    --text-h5: 26px;
+    --leading-h5: 1.2;
+    --font-h5: 500;
+
+    --text-h6: 21px;
+    --leading-h6: 1.2;
+    --font-h6: 500;
+
+    --text-large: 19px;
+    --leading-large: 1.5;
+    --font-large: 400;
+
+    --text-p: 17px;
+    --leading-p: 1.6;
+    --font-p: 400;
+
+    --text-psm: 17px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
+
+    --text-small-r: 15px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
+
+    --text-small-m: 15px;
+    --leading-small-m: 1.5;
+    --font-small-m: 500;
+  }
+}
+
+@media (width >= theme(--breakpoint-lg)) {
+  :root {
+    --text-display: 89px;
+    --leading-display: 1.1;
+    --font-display: 700;
+
+    --text-h1: 56px;
+    --leading-h1: 1.1;
+    --font-h1: 700;
+
+    --text-h2: 48px;
+    --leading-h2: 1.1;
+    --font-h2: 600;
+
+    --text-h3: 40px;
+    --leading-h3: 1.1;
+    --font-h3: 600;
+
+    --text-h4: 34px;
+    --leading-h4: 1.1;
+    --font-h4: 600;
+
+    --text-h5: 28px;
+    --leading-h5: 1.2;
+    --font-h5: 500;
+
+    --text-h6: 22px;
+    --leading-h6: 1.2;
+    --font-h6: 500;
+
+    --text-large: 20px;
+    --leading-large: 1.5;
+    --font-large: 400;
+
+    --text-p: 18px;
+    --leading-p: 1.6;
+    --font-p: 400;
+
+    --text-psm: 18px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
+
+    --text-small-r: 16px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
+
+    --text-small-m: 16px;
+    --leading-small-m: 1.5;
+    --font-small-m: 500;
+  }
+}
+
+@media (width >= theme(--breakpoint-xl)) {
+  :root {
+    --text-display: 102px;
+    --leading-display: 1.1;
+    --font-display: 700;
+
+    --text-h1: 61px;
+    --leading-h1: 1.1;
+    --font-h1: 700;
+
+    --text-h2: 52px;
+    --leading-h2: 1.1;
+    --font-h2: 600;
+
+    --text-h3: 43px;
+    --leading-h3: 1.1;
+    --font-h3: 600;
+
+    --text-h4: 37px;
+    --leading-h4: 1.1;
+    --font-h4: 600;
+
+    --text-h5: 29px;
+    --leading-h5: 1.2;
+    --font-h5: 500;
+
+    --text-h6: 23px;
+    --leading-h6: 1.2;
+    --font-h6: 500;
+
+    --text-large: 21px;
+    --leading-large: 1.5;
+    --font-large: 400;
+
+    --text-p: 18px;
+    --leading-p: 1.6;
+    --font-p: 400;
+
+    --text-psm: 18px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
+
+    --text-small-r: 16px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
+
+    --text-small-m: 16px;
+    --leading-small-m: 1.5;
+    --font-small-m: 500;
+  }
+}
+
+@media (width >= theme(--breakpoint-2xl)) {
+  :root {
+    --text-display: 115px;
+    --leading-display: 1.1;
+    --font-display: 700;
+
+    --text-h1: 65px;
+    --leading-h1: 1.1;
+    --font-h1: 700;
+
+    --text-h2: 56px;
+    --leading-h2: 1.1;
+    --font-h2: 600;
+
+    --text-h3: 47px;
+    --leading-h3: 1.1;
+    --font-h3: 600;
+
+    --text-h4: 40px;
+    --leading-h4: 1.1;
+    --font-h4: 600;
+
+    --text-h5: 31px;
+    --leading-h5: 1.2;
+    --font-h5: 500;
+
+    --text-h6: 25px;
+    --leading-h6: 1.2;
+    --font-h6: 500;
+
+    --text-large: 23px;
+    --leading-large: 1.5;
+    --font-large: 400;
+
+    --text-p: 19px;
+    --leading-p: 1.6;
+    --font-p: 400;
+
+    --text-psm: 19px;
+    --leading-psm: 1.6;
+    --font-psm: 600;
+
+    --text-small-r: 17px;
+    --leading-small-r: 1.5;
+    --font-small-r: 400;
+
+    --text-small-m: 17px;
+    --leading-small-m: 1.5;
+    --font-small-m: 500;
+  }
+}
+
+/* Desktop (исходные значения — теперь применяются от 3xl) */
+@media (width >= theme(--breakpoint-3xl)) {
   :root {
     --text-display: 128px;
     --leading-display: 1.1;
