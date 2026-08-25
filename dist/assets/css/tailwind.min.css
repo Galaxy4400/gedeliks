@@ -1083,11 +1083,6 @@
       display: none;
     }
   }
-  .max-2xl\:hidden {
-    @media (width < 1536px) {
-      display: none;
-    }
-  }
   .max-2xl\:flex-col {
     @media (width < 1536px) {
       flex-direction: column;
@@ -1213,11 +1208,6 @@
       width: 200px;
     }
   }
-  .max-md\:max-w-\[730px\] {
-    @media (width < 768px) {
-      max-width: 730px;
-    }
-  }
   .max-md\:translate-x-\[50px\] {
     @media (width < 768px) {
       --tw-translate-x: 50px;
@@ -1264,11 +1254,6 @@
       bottom: calc(var(--spacing) * 0);
     }
   }
-  .md\:bottom-10 {
-    @media (width >= 768px) {
-      bottom: calc(var(--spacing) * 10);
-    }
-  }
   .md\:-ml-2\.5 {
     @media (width >= 768px) {
       margin-left: calc(var(--spacing) * -2.5);
@@ -1310,12 +1295,6 @@
     @media (width >= 768px) {
       width: calc(var(--spacing) * 8.5);
       height: calc(var(--spacing) * 8.5);
-    }
-  }
-  .md\:size-15 {
-    @media (width >= 768px) {
-      width: calc(var(--spacing) * 15);
-      height: calc(var(--spacing) * 15);
     }
   }
   .md\:size-\[70px\] {
@@ -1682,11 +1661,6 @@
       width: calc(var(--spacing) * 125);
     }
   }
-  .lg\:w-\[40\%\] {
-    @media (width >= 1024px) {
-      width: 40%;
-    }
-  }
   .lg\:w-\[270px\] {
     @media (width >= 1024px) {
       width: 270px;
@@ -1920,11 +1894,6 @@
       top: -250px;
     }
   }
-  .xl\:top-\[-350px\] {
-    @media (width >= 1280px) {
-      top: -350px;
-    }
-  }
   .xl\:top-\[-600px\] {
     @media (width >= 1280px) {
       top: -600px;
@@ -1945,24 +1914,14 @@
       top: 41%;
     }
   }
-  .xl\:top-\[130px\] {
+  .xl\:flex {
     @media (width >= 1280px) {
-      top: 130px;
-    }
-  }
-  .xl\:bottom-\[50px\] {
-    @media (width >= 1280px) {
-      bottom: 50px;
+      display: flex;
     }
   }
   .xl\:hidden {
     @media (width >= 1280px) {
       display: none;
-    }
-  }
-  .xl\:w-\[60\%\] {
-    @media (width >= 1280px) {
-      width: 60%;
     }
   }
   .xl\:w-\[621px\] {
@@ -2019,6 +1978,11 @@
   .xl\:grid-cols-\[414px_1fr\] {
     @media (width >= 1280px) {
       grid-template-columns: 414px 1fr;
+    }
+  }
+  .xl\:justify-end {
+    @media (width >= 1280px) {
+      justify-content: flex-end;
     }
   }
   .xl\:gap-5 {
