@@ -1341,6 +1341,11 @@
       width: 562px;
     }
   }
+  .md\:max-w-\[60\%\] {
+    @media (width >= 768px) {
+      max-width: 60%;
+    }
+  }
   .md\:min-w-\[365px\] {
     @media (width >= 768px) {
       min-width: 365px;
