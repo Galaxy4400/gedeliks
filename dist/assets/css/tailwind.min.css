@@ -20,7 +20,7 @@
     --default-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     --default-mono-font-family: var(--font-mono);
     --color-white: var(--white);
-    --text-display: 50px;
+    --text-display: 42px;
     --leading-display: 1.1;
     --font-display: 700;
     --text-h1: 42px;
