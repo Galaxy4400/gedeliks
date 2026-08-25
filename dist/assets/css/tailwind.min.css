@@ -1770,6 +1770,12 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  .lg\:translate-y-\[50px\] {
+    @media (width >= 1024px) {
+      --tw-translate-y: 50px;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
   .lg\:grid-cols-2 {
     @media (width >= 1024px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2028,11 +2034,6 @@
   .xl\:gap-\[60px\] {
     @media (width >= 1280px) {
       gap: 60px;
-    }
-  }
-  .xl\:py-30 {
-    @media (width >= 1280px) {
-      padding-block: calc(var(--spacing) * 30);
     }
   }
   .xl\:tracking-tighter {
