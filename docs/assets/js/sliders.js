@@ -129,7 +129,8 @@ const initSlider = (sliderTag, options = {}, plugins = []) => {
 const initSliders = () => {
   markupSliders();
 
-  initSlider('main', { loop: true }, [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 10000, stopOnInteraction: false, stopOnMouseEnter: true })]);
+  // initSlider('main', { loop: true }, [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 10000, stopOnInteraction: false, stopOnMouseEnter: true })]);
+  initSlider('main', { loop: true });
 	initSlider('news', { loop: false, align: 'start', slidesToScroll: 'auto', containScroll: 'trimSnaps' });
 	initSlider('prod', { loop: false, slidesToScroll: 1 });
 	initSlider('awards', { loop: false, slidesToScroll: 1, align: 'start' });
