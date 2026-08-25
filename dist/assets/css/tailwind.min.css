@@ -2181,12 +2181,6 @@
     max-width: 1700px;
     padding-inline: var(--spacing-responsive-horizontal);
   }
-  .container-narrow {
-    margin-inline: auto;
-    box-sizing: content-box;
-    max-width: 1194px;
-    padding-inline: var(--spacing-responsive-horizontal);
-  }
 }
 @layer components {
   .btn {
