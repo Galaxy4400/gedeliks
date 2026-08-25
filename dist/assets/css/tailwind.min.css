@@ -812,6 +812,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-bottom {
+    object-position: bottom;
+  }
   .object-top {
     object-position: top;
   }
@@ -1626,6 +1629,11 @@
   .lg\:w-125 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 125);
+    }
+  }
+  .lg\:w-\[40\%\] {
+    @media (width >= 64rem) {
+      width: 40%;
     }
   }
   .lg\:w-\[270px\] {
@@ -3431,7 +3439,7 @@
   border-style: var(--tw-border-style);
   border-width: 2px;
   border-color: var(--white);
-  background-color: var(--green-lightest);
+  background-color: transparent;
   color: var(--green);
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
