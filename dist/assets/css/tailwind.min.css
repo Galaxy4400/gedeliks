@@ -2090,6 +2090,16 @@
       padding: calc(var(--spacing) * 7.5);
     }
   }
+  .\33 xl\:absolute {
+    @media (width >= 1700px) {
+      position: absolute;
+    }
+  }
+  .\33 xl\:bottom-\[50px\] {
+    @media (width >= 1700px) {
+      bottom: 50px;
+    }
+  }
   .\33 xl\:min-h-\[835px\] {
     @media (width >= 1700px) {
       min-height: 835px;
