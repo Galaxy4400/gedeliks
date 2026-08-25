@@ -1671,6 +1671,11 @@
       width: 300px;
     }
   }
+  .lg\:w-\[621px\] {
+    @media (width >= 1024px) {
+      width: 621px;
+    }
+  }
   .lg\:w-\[705px\] {
     @media (width >= 1024px) {
       width: 705px;
@@ -1874,6 +1879,13 @@
       font-weight: var(--font-psm);
     }
   }
+  .lg\:max-xl\:max-w-\[80\%\] {
+    @media (width >= 1024px) {
+      @media (width < 1280px) {
+        max-width: 80%;
+      }
+    }
+  }
   .xl\:absolute {
     @media (width >= 1280px) {
       position: absolute;
@@ -2062,6 +2074,11 @@
   .\33 xl\:bottom-\[50px\] {
     @media (width >= 1700px) {
       bottom: 50px;
+    }
+  }
+  .\33 xl\:min-h-\[730px\] {
+    @media (width >= 1700px) {
+      min-height: 730px;
     }
   }
   .\33 xl\:min-h-\[835px\] {
