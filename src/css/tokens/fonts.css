@@ -112,7 +112,7 @@
    диапазон поделён на 6 равных шагов (sm=1/6 … 2xl=5/6 от разницы desktop-mobile). */
 @media (width >= theme(--breakpoint-sm)) {
   :root {
-    --text-display: 63px;
+    --text-display: 42px;
     --leading-display: 1.1;
     --font-display: 700;
 
