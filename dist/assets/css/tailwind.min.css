@@ -240,9 +240,6 @@
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
-  .top-80 {
-    top: calc(var(--spacing) * 80);
-  }
   .top-\[60\%\] {
     top: 60%;
   }
@@ -1875,6 +1872,13 @@
   .lg\:text-center {
     @media (width >= 1024px) {
       text-align: center;
+    }
+  }
+  .lg\:typography-h6 {
+    @media (width >= 1024px) {
+      font-size: var(--text-h6);
+      line-height: var(--leading-h6);
+      font-weight: var(--font-h6);
     }
   }
   .lg\:typography-p {
