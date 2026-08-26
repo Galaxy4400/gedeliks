@@ -1195,6 +1195,11 @@
       top: calc(var(--spacing) * 0);
     }
   }
+  .max-md\:block {
+    @media (width < 768px) {
+      display: block;
+    }
+  }
   .max-md\:hidden {
     @media (width < 768px) {
       display: none;
@@ -1221,9 +1226,19 @@
       align-items: flex-start;
     }
   }
+  .max-md\:gap-7\.5 {
+    @media (width < 768px) {
+      gap: calc(var(--spacing) * 7.5);
+    }
+  }
   .max-md\:pt-4 {
     @media (width < 768px) {
       padding-top: calc(var(--spacing) * 4);
+    }
+  }
+  .max-md\:pb-0\! {
+    @media (width < 768px) {
+      padding-bottom: calc(var(--spacing) * 0) !important;
     }
   }
   .max-sm\:w-full {
