@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Геделикс</title>
+
+	<link rel="preload" href="assets/fonts/Inter-Variable-cyrillic.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+	<script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
+	<script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js" defer></script>
+	<script src="https://unpkg.com/embla-carousel-autoplay@8.6.0/embla-carousel-autoplay.umd.js" defer></script>
+	<script src="assets/js/lazyload.min.js" defer></script>
+	<script src="assets/js/scripts.js" defer></script>
+	<script src="assets/js/sliders.js" defer></script>
+	<script src="assets/js/main.js" defer></script>
+</head>
+
+
+<body>
+	<!-- header -->
+<header class="fixed w-full z-100   bg-green-lightest ">
+	<div class="py-5 md:py-6">
+		<div class="container-base flex items-center justify-between gap-3 md:gap-10">
+			<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+				Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
+			</a>
+
+			<nav class="max-md:hidden">
+				<ul class="flex items-center gap-x-9.25 flex-wrap justify-center">
+					<li class="group relative">
+						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
+							Препараты
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+							</svg>
+						</button>
+						<ul class="menu-dropdown">
+							<li><a class="link typography-p" href="product.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</li>
+					<li class="group relative">
+						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
+							Инструкция
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+							</svg>
+						</button>
+						<ul class="menu-dropdown">
+							<li><a class="link typography-p" href="instruction.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="link typography-psm whitespace-nowrap" href="#">Полезно знать</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="flex items-center gap-2.5">
+				<a class="btn btn-white btn-small whitespace-nowrap max-xl:hidden" href="#">Для врачей</a>
+				<a class="btn btn-green btn-small whitespace-nowrap" href="where.html">
+					Где купить
+					<svg class="size-6 shrink-0">
+						<use href="assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+				</a>
+				<button type="button" class="btn btn-circle btn-small btn-white" data-menu-icon aria-label="Открыть меню">
+					<svg class="size-4.5">
+						<use href="assets/img/svg/sprite.svg#icon-menu"></use>
+					</svg>
+				</button>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- мобильное меню -->
+<!-- TODO: в Figma (node 42022:6489, "М Меню") у меню есть декоративный SVG-фон (Frame 510,
+     тонкие фоновые линии на всю высоту) — пока не добавлен, нужно перенести. -->
+<div class="mobile-menu" data-mobile-menu>
+	<img class="absolute right-0 -z-1 top-0" src="assets/img/svg/mobile-menu-deco.svg" alt="deco">
+
+	<div class="container-base flex items-center justify-between py-5">
+		<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+			Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
+		</a>
+
+		<button type="button" class="btn btn-circle btn-small btn-white" data-menu-close aria-label="Закрыть меню">
+			<svg class="size-4.5">
+				<use href="assets/img/svg/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+	</div>
+
+	<div class="container-base grow overflow-y-auto py-5">
+		<div class="grid gap-2.5" data-spoiler="mobile-menu">
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5">
+				<div data-spoiler-item>
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Препараты</span>
+						<svg class="size-4 text-green" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+						</svg>
+					</button>
+					<div data-spoiler-content>
+						<ul class="grid gap-2.5 pt-5">
+							<li><a class="link typography-psm" href="product.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5">
+				<div data-spoiler-item>
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Инструкции</span>
+						<svg class="size-4 text-green" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+						</svg>
+					</button>
+					<div data-spoiler-content>
+						<ul class="grid gap-2.5 pt-5">
+							<li><a class="link typography-psm" href="instruction.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<ul class="grid gap-2.5 px-5 pt-2.5">
+				<li><a class="link typography-psm" href="news.html">Статьи</a></li>
+				<li><a class="link typography-psm" href="where.html">Где купить</a></li>
+				<li><a class="link typography-psm" href="index.html#faq">Частые вопросы</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-base flex shrink-0 items-center gap-2.5 py-5">
+		<a class="btn btn-dark btn-arrow whitespace-nowrap" href="where.html">
+			Где купить
+			<div>
+				<svg class="size-5">
+					<use href="assets/img/svg/sprite.svg#icon-location"></use>
+				</svg>
+			</div>
+		</a>
+		<a class="btn btn-transparent grow whitespace-nowrap" href="#">Для врачей</a>
+	</div>
+</div>
+</header>
+
+	<main>
+		<!-- breadcrumbs -->
+		<section>
+			<div class="container-base grid gap-5 md:gap-7.5">
+				<nav class="breadcrumbs" aria-label="breadcrumbs">
+					<a href="index.html" class="breadcrumb-item">
+						<svg class="size-5 md:size-6">
+							<use href="assets/img/svg/sprite.svg#icon-home"></use>
+						</svg>
+					</a>
+					<a href="news.html" class="breadcrumb-item">Статьи</a>
+					<span class="breadcrumb-item">Виды кашля: как правильно определить тип и выбрать лечение</span>
+				</nav>
+			</div>
+		</section>
+
+		<section class="overflow-hidden bg-green-lightest">
+			<div class="container-base py-10 md:pb-35 md:pt-[70px] grid gap-[30px] md:gap-[60px]">
+				<div class="md:rounded-[30px] rounded-2xl overflow-hidden aspect-3/2 md:aspect-17/5">
+					<img class="object-cover size-full" src="assets/img/content/article.avif" alt="article">
+				</div>
+				<div class="grid gap-5 md:gap-7.5">
+					<p class="typography-h6 uppercase text-green">2 минуты</p>
+					<h1>Виды кашля: как правильно определить тип и выбрать лечение</h1>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35 bg-white">
+			<div class="container-base grid gap-10 xl:grid-cols-[414px_1fr]">
+				<aside class="max-xl:hidden">
+					<div class="grid gap-10 content-start sticky top-10">
+						<div class="grid gap-[25px]">
+							<p class="typography-small-m uppercase text-gray">Содержание</p>
+							<nav class="rounded-[35px] border border-stroke-white">
+								<a class="rounded-full text-gray inline-flex w-full items-center min-h-[70px] py-2 px-[25px] typography-psm hover:text-green hover:bg-white bg-transparent hover:shadow-[0_15px_40px_0_rgba(0,0,0,0.05)] transition-all" href="#cough-types">Основные типы по характеру</a>
+								<a class="rounded-full text-gray inline-flex w-full items-center min-h-[70px] py-2 px-[25px] typography-psm hover:text-green hover:bg-white bg-transparent hover:shadow-[0_15px_40px_0_rgba(0,0,0,0.05)] transition-all" href="#children-classification">Классификация кашля у детей</a>
+								<a class="rounded-full text-gray inline-flex w-full items-center min-h-[70px] py-2 px-[25px] typography-psm hover:text-green hover:bg-white bg-transparent hover:shadow-[0_15px_40px_0_rgba(0,0,0,0.05)] transition-all" href="#when-to-use">Когда применяется Геделикс®</a>
+								<a class="rounded-full text-gray inline-flex w-full items-center min-h-[70px] py-2 px-[25px] typography-psm hover:text-green hover:bg-white bg-transparent hover:shadow-[0_15px_40px_0_rgba(0,0,0,0.05)] transition-all" href="#">Производитель</a>
+							</nav>
+						</div>
+						<div class="grid gap-[15px]">
+							<a class="btn btn-green btn-small" href="product.html">О препарате</a>
+						</div>
+						<div class="grid gap-[25px]">
+							<p class="typography-small-m uppercase text-gray">Другие статьи</p>
+							<div class="grid md:gap-[15px]">
+								<div class="bg-white md:rounded-[30px] p-[30px] rounded-2xl grid gap-[15px] shadow-[0_15px_40px_0_rgba(0,0,0,0.05)]">
+									<p class="typography-psm">Простые техники для предотвращения приступов ночного кашля у взрослого</p>
+									<div class="flex">
+										<div class="min-h-7 py-1 px-[15px] rounded-full border border-green-light typography-psm text-gray">2 минуты чтения</div>
+									</div>
+								</div>
+								<div class="bg-white md:rounded-[30px] p-[30px] rounded-2xl grid gap-[15px] shadow-[0_15px_40px_0_rgba(0,0,0,0.05)]">
+									<p class="typography-psm">Эффективные методы лечения кашля у ребёнка: советы и рекомендации</p>
+									<div class="flex">
+										<div class="min-h-7 py-1 px-[15px] rounded-full border border-green-light typography-psm text-gray">2 минуты чтения</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<div class="grid gap-20 lg:gap-[140px] xl:max-w-[1128px] ml-auto">
+					<div class="grid gap-10 md:gap-15">
+						<div class="grid gap-5">
+							<h2 id="cough-types"><mark>Основные типы</mark> по характеру</h2>
+							<p class="text-gray">Сухой кашель не производит мокроты — цель лечения состоит в переводе к продуктивной форме. Влажный кашель сопровождается активным выведением мокроты и очищением дыхательных путей от патогенов и аллергенов. От правильного определения типа зависит выбор препарата.</p>
+						</div>
+						<div class="rounded-2xl md:rounded-[30px] overflow-hidden aspect-3/2 md:aspect-[1128/550]">
+							<img class="object-cover size-full" src="assets/img/content/mom-child-checkup.avif" alt="Мама консультируется с врачом по поводу кашля у ребёнка">
+						</div>
+						<div class="grid gap-7.5 md:gap-12.5">
+							<h3 id="children-classification">Классификация кашля у детей</h3>
+							<div class="flex flex-col gap-2.5 md:items-start md:gap-3.75 rounded-2xl md:rounded-[30px] border border-stroke-white p-5 md:p-[35px]">
+								<h6>Кашель — это симптом, а не самостоятельное заболевание.</h6>
+								<p class="text-gray">Если он сохраняется длительное время, сопровождается высокой температурой, затрудненным дыханием или кровью в мокроте, необходимо обратиться к врачу.</p>
+							</div>
+							<div class="grid gap-3.75 md:gap-[35px]">
+								<h4>Возможные причины</h4>
+								<ul class="custom-list-target">
+									<li class="text-gray">начало вирусной инфекции</li>
+									<li class="text-gray">раздражение слизистой</li>
+									<li class="text-gray">аллергические реакции</li>
+									<li class="text-gray">воздействие холодного воздуха</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="grid gap-10 md:gap-15">
+						<h2>Острый и хронический кашель</h2>
+						<div class="grid gap-6.25">
+							<div class="hidden lg:flex gap-[15px] px-7.5">
+								<p class="typography-small-m w-[270px] shrink-0 text-gray uppercase">Тип кашля</p>
+								<p class="typography-small-m w-[300px] shrink-0 text-gray uppercase">Продолжительность</p>
+								<p class="typography-small-m flex-1 text-gray uppercase">Возможные причины</p>
+							</div>
+							<div class="grid gap-2.5" data-spoiler>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] lg:px-7.5 lg:py-5 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="true">
+									<button class="lg:w-[270px] lg:shrink-0 flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h5 lg:typography-psm whitespace-nowrap transition-colors">Острый</p>
+										<svg class="size-5 shrink-0 text-green lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="grid gap-5 lg:flex lg:flex-auto lg:items-center lg:gap-[15px] lg:max-h-none!" data-spoiler-content>
+										<div class="grid gap-1.25 lg:w-[300px] lg:shrink-0 max-lg:pt-7.5">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Продолжительность</p>
+											<p class="typography-psm lg:typography-p">До 3 недель</p>
+										</div>
+										<div class="grid gap-1.25 lg:flex-1">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Возможные причины</p>
+											<p class="typography-psm lg:typography-p">ОРВИ, простуда, острый бронхит</p>
+										</div>
+									</div>
+								</div>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] lg:px-7.5 lg:py-5 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:w-[270px] lg:shrink-0 flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h5 lg:typography-psm whitespace-nowrap transition-colors">Подострый</p>
+										<svg class="size-5 shrink-0 text-green lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="grid gap-5 lg:flex lg:flex-auto lg:items-center lg:gap-[15px] lg:max-h-none!" data-spoiler-content>
+										<div class="grid gap-1.25 lg:w-[300px] lg:shrink-0 max-lg:pt-7.5">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Продолжительность</p>
+											<p class="typography-psm lg:typography-p">3–8 недель</p>
+										</div>
+										<div class="grid gap-1.25 lg:flex-1">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Возможные причины</p>
+											<p class="typography-psm lg:typography-p">Восстановление после инфекции</p>
+										</div>
+									</div>
+								</div>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] lg:px-7.5 lg:py-5 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:w-[270px] lg:shrink-0 flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h5 lg:typography-psm whitespace-nowrap transition-colors">Хронический</p>
+										<svg class="size-5 shrink-0 text-green lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="grid gap-5 lg:flex lg:flex-auto lg:items-center lg:gap-[15px] lg:max-h-none!" data-spoiler-content>
+										<div class="grid gap-1.25 lg:w-[300px] lg:shrink-0 max-lg:pt-7.5">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Продолжительность</p>
+											<p class="typography-psm lg:typography-p">Более 8 недель</p>
+										</div>
+										<div class="grid gap-1.25 lg:flex-1">
+											<p class="typography-small-m text-gray uppercase lg:hidden">Возможные причины</p>
+											<p class="typography-psm lg:typography-p">Аллергия, хронические заболевания дыхательных путей и другие причины</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid gap-5 md:gap-10 md:grid-cols-2 content-start">
+							<div class="md:rounded-[30px] rounded-2xl overflow-hidden aspect-3/2 md:aspect-531/357">
+								<img class="object-cover size-full" src="assets/img/content/doctor.avif" alt="doctor">
+							</div>
+							<div class="grid gap-[30px] content-start">
+								<p class="typography-h5">Почему важно определить тип кашля</p>
+								<div class="text-gray typography-p grid gap-2.5 md:gap-[15px] content-start">
+									<p>Одинаковый симптом может возникать при различных заболеваниях: простуде, вирусной инфекции, бронхите, аллергии и других состояниях. </p>
+									<ul class="custom-list-target">
+										<li class="text-gray">начало вирусной инфекции</li>
+										<li class="text-gray">раздражение слизистой</li>
+										<li class="text-gray">аллергические реакции</li>
+										<li class="text-gray">воздействие холодного воздуха</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="relative overflow-hidden rounded-2xl bg-green-lightest md:rounded-[30px] ">
+						<div class="relative z-10 flex lg:min-h-100 w-full max-w-[1000px] flex-col p-5 gap-[30px] md:gap-[50px] lg:max-w-[70%] md:p-12.5">
+							<div class="grid gap-7.5 flex-auto content-start">
+								<h4 id="when-to-use"><mark>Геделикс®</mark> <br> при влажном кашле</h4>
+								<div class="grid w-full gap-3.75">
+									<div class="check-item">
+										<svg>
+											<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+										</svg>
+										<p class="typography-p">На основе экстракта листьев плюща</p>
+									</div>
+									<div class="check-item">
+										<svg>
+											<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+										</svg>
+										<p class="typography-p">Можно применять с 2 лет</p>
+									</div>
+									<div class="check-item">
+										<svg>
+											<use href="assets/img/svg/sprite.svg#icon-tick-circle"></use>
+										</svg>
+										<p class="typography-p">Без спирта, сахара и красителей</p>
+									</div>
+								</div>
+							</div>
+							<div>
+								<a class="btn btn-dark btn-arrow" href="product.html">
+									Подробнее
+									<div>
+										<svg>
+											<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="lg:absolute lg:right-0 lg:bottom-0 lg:h-full lg:w-125">
+							<div class="absolute w-[1578px] h-[1046px] bg-white rounded-[100%] top-[400px] lg:top-[10%] right-[-180px] translate-x-[45%]"></div>
+							<img class="absolute w-[2000px] xl:w-[3417px] xl:top-[-600px] left-[-200px] max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+							<img class="absolute w-[1200px] xl:w-[2333px] xl:top-[-250px] left-[-100px] max-w-none" src="assets/img/svg/deco-3.svg" alt="deco">
+							<img class="size-full object-cover object-top relative" src="assets/img/content/product-syrup-200.avif" width="1280" height="1280" loading="lazy" alt="Геделикс® Сироп 200 мл" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35 bg-green-lightest">
+			<div class="container-base grid gap-7.5 md:gap-12.5">
+				<div class="pb-7.5 md:pb-10 bottom-deco-line">
+					<h2>Другие препараты <mark>Геделикс®</mark></h2>
+				</div>
+				<div class="grid md:gap-2.5 gap-3.75 lg:grid-cols-2">
+					<div class="card-product-whide group/card w-full">
+						<div class="flex flex-col self-stretch gap-7.5">
+							<div class="grid gap-10">
+								<div class="w-full max-xl:hidden">
+									<div class="product-tag product-tag-green">
+										<div class="product-tag-icon">
+											<svg class="size-4 text-white md:size-6">
+												<use href="assets/img/svg/sprite.svg#icon-share"></use>
+											</svg>
+										</div>
+										<p>Семейный формат</p>
+									</div>
+								</div>
+
+								<a class="grid w-full transition-colors hover:text-green gap-2.5 md:gap-6.25" href="#">
+									<p class="typography-h4">Геделикс<sup>®</sup> Сироп</p>
+									<p class="typography-h6 text-green">200 МЛ</p>
+								</a>
+							</div>
+
+							<div class="mt-auto">
+								<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-xl:w-full">
+							<div class="w-full xl:hidden">
+								<div class="product-tag product-tag-green">
+									<div class="product-tag-icon">
+										<svg class="size-4 text-white md:size-6">
+											<use href="assets/img/svg/sprite.svg#icon-share"></use>
+										</svg>
+									</div>
+									<p>Семейный формат</p>
+								</div>
+							</div>
+							<a class="max-w-[270px] shrink-0 justify-self-center" href="#">
+								<img class="card-product-image" src="assets/img/content/product-syrup-100.avif" width="1016" height="1280" loading="lazy" alt="Геделикс® Сироп 100 мл" />
+							</a>
+						</div>
+					</div>
+
+					<div class="card-product-whide group/card w-full">
+						<div class="flex flex-col self-stretch gap-7.5">
+							<div class="grid gap-10">
+								<div class="w-full max-xl:hidden">
+									<div class="product-tag product-tag-orange">
+										<div class="product-tag-icon">
+											<svg class="size-4 text-white md:size-6">
+												<use href="assets/img/svg/sprite.svg#icon-suitcase"></use>
+											</svg>
+										</div>
+										<p>Дорожный формат</p>
+									</div>
+								</div>
+
+								<a class="grid w-full transition-colors hover:text-green gap-2.5 md:gap-6.25" href="#">
+									<p class="typography-h4">Геделикс<sup>®</sup> Капли</p>
+									<p class="typography-h6 text-green">50 МЛ</p>
+								</a>
+							</div>
+
+							<div class="mt-auto">
+								<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-xl:w-full">
+							<div class="w-full xl:hidden">
+								<div class="product-tag product-tag-orange">
+									<div class="product-tag-icon">
+										<svg class="size-4 text-white md:size-6">
+											<use href="assets/img/svg/sprite.svg#icon-suitcase"></use>
+										</svg>
+									</div>
+									<p>Дорожный формат</p>
+								</div>
+							</div>
+							<a class="max-w-[270px] shrink-0 justify-self-center" href="#">
+								<img class="card-product-image" src="assets/img/content/product-drops-50.avif" width="1016" height="1280" loading="lazy" alt="Геделикс® Капли 50 мл" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35 bg-white" data-spoiler>
+	<div class="container-base grid gap-7.5 md:gap-12.5" data-spoiler-item aria-expanded="false">
+		<button class="pb-7.5 md:pb-10 bottom-deco-line flex justify-between gap-10 text-gray" type="button" data-spoiler-button>
+			<p class="typography-small-m inline-flex gap-2.5 items-center">
+				<svg class="size-6 rotate-0!">
+					<use href="assets/img/svg/sprite.svg#icon-book"></use>
+				</svg>
+				Источники
+			</p>
+			<span data-spoiler-icon-closed>
+				<svg class="size-7">
+					<use href="assets/img/svg/sprite.svg#icon-add"></use>
+				</svg>
+			</span>
+			<span data-spoiler-icon-open>
+				<svg class="size-7">
+					<use href="assets/img/svg/sprite.svg#icon-minus"></use>
+				</svg>
+			</span>
+		</button>
+		<div data-spoiler-content>
+			<ol class="grid gap-2.5 md:gap-3.75 text-gray list-decimal list-inside">
+				<li><a class="link link-gray" href="#">Геделикс® сироп 100мл является объемообразующим в линейке бренда Геделикс®. Данные АО "Группа ДСМ", Июн'26</a></li>
+				<li><a class="link link-gray" href="#">Большая упаковка Геделикс® СИРОП 200мл выгоднее на 19%* по сравнению с Геделикс® СИРОП 100мл в пересчете на 1мл фактической цены Прайс-листа, Авг’26</a></li>
+				<li><a class="link link-gray" href="#">Согласно листку‑вкладышу (№ (004526)-(РГ‑RU) от 07.02.2024) препарат не содержит сахар, спирт и красители.</a></li>
+				<li><a class="link link-gray" href="#">Компонент экстракт плюща включен в клинические рекомендации — Бронхит — 2024‑2025‑2025 (19.12.2024) для детей — «Острый бронхит» для взрослых 2024 — Утверждены Минздравом РФ</a></li>
+				<li><a class="link link-gray" href="#">Инструкция по медицинскому применению лекарственного препарата Геделикс® (капли для приёма внутрь). ЛП-№(005437)-(РГ-RU). — М., 2024.</a></li>
+			</ol>
+		</div>
+	</div>
+</section>
+
+	</main>
+
+	<footer class="bg-green-lightest relative">
+	<div class="absolute overflow-hidden w-full h-full">
+		<img class="absolute top-1/2 left-1/2 -translate-x-full" src="assets/img/svg/deco-1.svg" alt="deco">
+		<img class="absolute bottom-0 left-0 2xl:left-1/2 2xl:-translate-x-[1000px] w-[410px] md:w-[562px]" src="assets/img/content/footer-plant.avif" alt="footer plant">
+	</div>
+	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start relative">
+		<div class="grid gap-7.5 rounded-2xl bg-white p-5 lg:gap-12.5 lg:rounded-[30px] max-sm:w-full lg:p-8.75 lg:w-[705px]">
+			<div class="grid gap-5 lg:gap-10">
+				<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+					Геделикс<sup class="text-h5 inline-block translate-y-2">®</sup>
+				</a>
+
+				<ul class="grid gap-2.5 lg:gap-3.75">
+					<li><a class="link link-dotted typography-small-r" href="#">Политика обработки персональных данных</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Согласие на обработку cookie-файлов</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Порядок осущ. субъектом перс.данных прав (ФЗ от 27.07.2006 152-ФЗ)</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Фармаконадзор</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Пользовательское соглашение</a></li>
+				</ul>
+			</div>
+
+			<div class="flex items-center gap-6.25 max-md:flex-col max-md:items-start">
+				<a class="btn btn-dark btn-arrow whitespace-nowrap" href="#">
+					Сообщить о проблеме
+					<div>
+						<svg class="size-6">
+							<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+						</svg>
+					</div>
+				</a>
+				<p class="typography-small-r text-gray">© 2026 Геделикс®. Все права защищены</p>
+			</div>
+		</div>
+
+		<div class="flex gap-y-7.5 gap-x-10 2xl:gap-x-27.5 xl:max-2xl:flex-col max-sm:flex-col">
+			<div class="grid gap-3.75 xl:gap-7.5 content-start">
+				<p class="typography-small-m text-black/50 uppercase">Препараты</p>
+				<ul class="grid gap-3.75 xl:gap-5">
+					<li><a class="link typography-h6" href="product.html">Геделикс® Сироп 100 мл</a></li>
+					<li><a class="link typography-h6" href="#">Геделикс® Сироп 200 мл</a></li>
+					<li><a class="link typography-h6" href="#">Геделикс® Капли 50 мл</a></li>
+					<li><a class="link typography-h6" href="instruction.html">Инструкция — Сироп</a></li>
+					<li><a class="link typography-h6" href="#">Инструкция — Капли</a></li>
+				</ul>
+			</div>
+
+			<div class="grid gap-3.75 xl:gap-7.5 content-start">
+				<p class="typography-small-m text-black/50 uppercase">Информация</p>
+				<ul class="grid gap-3.75 xl:gap-5">
+					<li><a class="link typography-h6" href="news.html">Статьи</a></li>
+					<li><a class="link typography-h6" href="where.html">Где купить</a></li>
+					<li><a class="link typography-h6" href="index.html#faq">Частые вопросы</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-green py-3.75 md:py-6 relative">
+		<div class="container-base">
+			<p class="typography-small-m lg:text-center text-white uppercase xl:tracking-tighter">
+				Геделикс® является лекарственным препаратом. Перед применением ознакомьтесь с инструкцией. Имеются
+				противопоказания. Проконсультируйтесь со специалистом.
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
