@@ -1195,6 +1195,11 @@
       top: calc(var(--spacing) * 0);
     }
   }
+  .max-md\:block {
+    @media (width < 768px) {
+      display: block;
+    }
+  }
   .max-md\:hidden {
     @media (width < 768px) {
       display: none;
