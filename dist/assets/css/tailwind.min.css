@@ -336,6 +336,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .-mt-5 {
+    margin-top: calc(var(--spacing) * -5);
+  }
   .mt-auto {
     margin-top: auto;
   }
@@ -1129,16 +1132,6 @@
   .max-xl\:items-center {
     @media (width < 1280px) {
       align-items: center;
-    }
-  }
-  .max-xl\:gap-y-10 {
-    @media (width < 1280px) {
-      row-gap: calc(var(--spacing) * 10);
-    }
-  }
-  .max-xl\:pt-0\! {
-    @media (width < 1280px) {
-      padding-top: calc(var(--spacing) * 0) !important;
     }
   }
   .max-xl\:pt-10\! {
