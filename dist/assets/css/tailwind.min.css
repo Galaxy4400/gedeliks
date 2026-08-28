@@ -3639,6 +3639,9 @@
 @layer components {
   .video-player {
     position: relative;
+    margin-inline: auto;
+    aspect-ratio: 1700/930;
+    max-height: 80vh;
     cursor: pointer;
     overflow: hidden;
     border-radius: var(--radius-2xl);
@@ -3648,7 +3651,6 @@
   }
   .video-player-media {
     display: block;
-    aspect-ratio: 1700/930;
     width: 100%;
     height: 100%;
     object-fit: cover;

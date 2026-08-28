@@ -1,10 +1,10 @@
 @layer components {
   .video-player {
-    @apply relative cursor-pointer overflow-hidden rounded-2xl md:rounded-[35px];
+    @apply relative mx-auto aspect-1700/930 max-h-[80vh] cursor-pointer overflow-hidden rounded-2xl md:rounded-[35px];
   }
 
   .video-player-media {
-    @apply block aspect-1700/930 size-full object-cover;
+    @apply block size-full object-cover;
   }
 
   .video-player-play {
