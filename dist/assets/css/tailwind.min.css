@@ -2065,6 +2065,12 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  .\32 xl\:-translate-x-\[1100px\] {
+    @media (width >= 1536px) {
+      --tw-translate-x: calc(1100px * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
   .\32 xl\:flex-col {
     @media (width >= 1536px) {
       flex-direction: column;
