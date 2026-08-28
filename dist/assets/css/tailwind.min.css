@@ -435,6 +435,9 @@
   .min-h-\[70px\] {
     min-height: 70px;
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
   .w-\[50px\] {
     width: 50px;
   }
