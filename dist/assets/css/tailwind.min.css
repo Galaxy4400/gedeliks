@@ -1206,6 +1206,11 @@
       padding-bottom: calc(var(--spacing) * 0) !important;
     }
   }
+  .max-lg\:pb-20 {
+    @media (width < 1024px) {
+      padding-bottom: calc(var(--spacing) * 20);
+    }
+  }
   .max-md\:top-0 {
     @media (width < 768px) {
       top: calc(var(--spacing) * 0);
