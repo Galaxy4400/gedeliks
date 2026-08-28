@@ -809,6 +809,9 @@
   .bg-\[linear-gradient\(0deg\,\#fff_0\%\,\#fff_2\%\,transparent_100\%\)\] {
     background-image: linear-gradient(0deg,#fff 0%,#fff 2%,transparent 100%);
   }
+  .bg-\[linear-gradient\(0deg\,var\(--green-lightest\)_0\%\,transparent_30\%\)\] {
+    background-image: linear-gradient(0deg,var(--green-lightest) 0%,transparent 30%);
+  }
   .stroke-white {
     stroke: var(--white);
   }
@@ -1123,6 +1126,16 @@
   .max-xl\:items-center {
     @media (width < 1280px) {
       align-items: center;
+    }
+  }
+  .max-xl\:gap-y-10 {
+    @media (width < 1280px) {
+      row-gap: calc(var(--spacing) * 10);
+    }
+  }
+  .max-xl\:pt-0\! {
+    @media (width < 1280px) {
+      padding-top: calc(var(--spacing) * 0) !important;
     }
   }
   .max-xl\:pt-10\! {
