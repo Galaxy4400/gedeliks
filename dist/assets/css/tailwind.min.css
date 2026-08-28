@@ -1576,6 +1576,13 @@
       font-size: 34px;
     }
   }
+  .md\:max-lg\:hidden {
+    @media (width >= 768px) {
+      @media (width < 1024px) {
+        display: none;
+      }
+    }
+  }
   .lg\:pointer-events-none {
     @media (width >= 1024px) {
       pointer-events: none;
