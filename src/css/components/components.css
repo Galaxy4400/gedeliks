@@ -87,6 +87,10 @@
     @apply bg-red/10 text-red;
   }
 
+  .notice-orange {
+    @apply bg-orange/10 text-orange;
+  }
+
   /* Декоративная линия */
   .bottom-deco-line {
     @apply relative;
