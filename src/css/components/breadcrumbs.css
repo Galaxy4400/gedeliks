@@ -6,7 +6,7 @@
   .breadcrumb-item {
     @apply text-green-dark typography-small-r;
     @apply inline-flex items-center;
-    @apply gap-3.5;
+    @apply not-last:gap-3.5;
     @apply not-last:pr-0;
     @apply after:inline-block after:size-4 after:shrink-0 after:bg-current after:content-[''] after:md:size-5;
     @apply after:text-green after:mask-[url(../img/svg/to-right.svg)] after:mask-contain after:mask-center after:mask-no-repeat;

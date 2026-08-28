@@ -2829,7 +2829,9 @@
     color: var(--green-dark);
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--spacing) * 3.5);
+    &:not(*:last-child) {
+      gap: calc(var(--spacing) * 3.5);
+    }
     &:not(*:last-child) {
       padding-right: calc(var(--spacing) * 0);
     }
