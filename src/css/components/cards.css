@@ -34,7 +34,7 @@
   .card-product {
     @apply bg-white shadow-[0_15px_40px_rgba(0,0,0,0.05)] transition-shadow duration-300;
     @apply hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)];
-    @apply flex flex-col items-center gap-7.5 md:gap-10;
+    @apply flex flex-col gap-7.5 md:gap-10;
     @apply rounded-2xl p-5 md:rounded-[30px] md:p-7.5;
   }
 
