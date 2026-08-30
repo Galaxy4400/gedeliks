@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Геделикс</title>
+
+	<link rel="preload" href="assets/fonts/Inter-Variable-cyrillic.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+	<script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
+	<script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js" defer></script>
+	<script src="https://unpkg.com/embla-carousel-autoplay@8.6.0/embla-carousel-autoplay.umd.js" defer></script>
+	<script src="assets/js/lazyload.min.js" defer></script>
+	<script src="assets/js/scripts.js" defer></script>
+	<script src="assets/js/sliders.js" defer></script>
+	<script src="assets/js/main.js" defer></script>
+</head>
+
+
+<body>
+	<!-- header -->
+<header class="fixed w-full z-100   bg-green-lightest ">
+	<div class="py-5 md:py-6">
+		<div class="container-base flex items-center justify-between gap-3 md:gap-10">
+			<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+				Геделикс<sup>®</sup>
+			</a>
+
+			<nav class="max-md:hidden">
+				<ul class="flex items-center gap-x-9.25 flex-wrap justify-center">
+					<li class="group relative">
+						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
+							Препараты
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+							</svg>
+						</button>
+						<ul class="menu-dropdown">
+							<li><a class="link typography-p" href="product.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</li>
+					<li class="group relative">
+						<button type="button" class="link menu-item typography-psm whitespace-nowrap">
+							Инструкция
+							<svg>
+								<use href="assets/img/svg/sprite.svg#icon-chevron-menu"></use>
+							</svg>
+						</button>
+						<ul class="menu-dropdown">
+							<li><a class="link typography-p" href="instruction.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-p" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="link typography-psm whitespace-nowrap" href="#">Полезно знать</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="flex items-center gap-2.5">
+				<a class="btn btn-white btn-small whitespace-nowrap max-xl:hidden" href="#">Для врачей</a>
+				<a class="btn btn-green btn-small whitespace-nowrap" href="where.html">
+					Где купить
+					<svg class="size-6 shrink-0">
+						<use href="assets/img/svg/sprite.svg#icon-location"></use>
+					</svg>
+				</a>
+				<button type="button" class="btn btn-circle btn-small btn-white" data-menu-icon aria-label="Открыть меню">
+					<svg class="size-4.5">
+						<use href="assets/img/svg/sprite.svg#icon-menu"></use>
+					</svg>
+				</button>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- мобильное меню -->
+<!-- TODO: в Figma (node 42022:6489, "М Меню") у меню есть декоративный SVG-фон (Frame 510,
+     тонкие фоновые линии на всю высоту) — пока не добавлен, нужно перенести. -->
+<div class="mobile-menu" data-mobile-menu>
+	<img class="absolute right-0 -z-1 top-0" src="assets/img/svg/mobile-menu-deco.svg" alt="deco">
+
+	<div class="container-base flex items-center justify-between py-5">
+		<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+			Геделикс<sup>®</sup>
+		</a>
+
+		<button type="button" class="btn btn-circle btn-small btn-white" data-menu-close aria-label="Закрыть меню">
+			<svg class="size-4.5">
+				<use href="assets/img/svg/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+	</div>
+
+	<div class="container-base grow overflow-y-auto py-5">
+		<div class="grid gap-2.5" data-spoiler="mobile-menu">
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5">
+				<div data-spoiler-item>
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Препараты</span>
+						<svg class="size-4 text-green" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+						</svg>
+					</button>
+					<div data-spoiler-content>
+						<ul class="grid gap-2.5 pt-5">
+							<li><a class="link typography-psm" href="product.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid gap-1.25 rounded-2xl bg-white p-5">
+				<div data-spoiler-item>
+					<button type="button" class="flex w-full items-center justify-between gap-4" data-spoiler-button>
+						<span class="typography-small-m text-gray uppercase">Инструкции</span>
+						<svg class="size-4 text-green" width="16" height="16">
+							<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+						</svg>
+					</button>
+					<div data-spoiler-content>
+						<ul class="grid gap-2.5 pt-5">
+							<li><a class="link typography-psm" href="instruction.html">Геделикс® Сироп 100 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Сироп 200 мл</a></li>
+							<li><a class="link typography-psm" href="#">Геделикс® Капли 50 мл</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<ul class="grid gap-2.5 px-5 pt-2.5">
+				<li><a class="link typography-psm" href="news.html">Статьи</a></li>
+				<li><a class="link typography-psm" href="where.html">Где купить</a></li>
+				<li><a class="link typography-psm" href="index.html#faq">Частые вопросы</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-base flex shrink-0 items-center gap-2.5 py-5">
+		<a class="btn btn-dark btn-arrow whitespace-nowrap" href="where.html">
+			Где купить
+			<div>
+				<svg class="size-5">
+					<use href="assets/img/svg/sprite.svg#icon-location"></use>
+				</svg>
+			</div>
+		</a>
+		<a class="btn btn-transparent grow whitespace-nowrap" href="#">Для врачей</a>
+	</div>
+</div>
+</header>
+
+	<main>
+		<!-- breadcrumbs -->
+		<section>
+			<div class="container-base grid gap-5 md:gap-7.5">
+				<nav class="breadcrumbs" aria-label="breadcrumbs">
+					<a href="index.html" class="breadcrumb-item">
+						<svg class="size-5 md:size-6">
+							<use href="assets/img/svg/sprite.svg#icon-home"></use>
+						</svg>
+					</a>
+					<a href="index.html" class="breadcrumb-item">Продукты</a>
+					<span class="breadcrumb-item">Геделикс<sup>®</sup> Сироп 100 мл</span>
+				</nav>
+			</div>
+		</section>
+
+		<section class="overflow-hidden">
+			<div class="container-base grid lg:content-center max-lg:pb-0! relative 3xl:min-h-[730px] h-full">
+				<div class="grid gap-6 md:gap-20 lg:max-w-[55%] relative z-1 py-10 md:py-20 lg:pr-4">
+					<div class="w-full">
+						<div class="product-tag product-tag-big product-tag-red">
+							<div class="product-tag-icon product-tag-icon-big">
+								<svg class="size-5 text-white md:size-7">
+									<use href="assets/img/svg/sprite.svg#icon-flame"></use>
+								</svg>
+							</div>
+							<p>Хит продаж<sup>11</sup></p>
+						</div>
+					</div>
+					<div class="grid md:gap-6.5 gap-3.75">
+						<h1>Геделикс<sup>®</sup> Сироп 100 мл</h1>
+						<p class="typography-large">Натуральное отхаркивающее средство. Для взрослых и детей от 2 лет. <br> Без спирта, сахара, красителей.</p>
+					</div>
+					<div class="flex gap-2.5 max-md:pt-4 flex-wrap">
+						<a class="btn btn-dark btn-arrow justify-self-start" href="where.html">
+							Где купить
+							<div>
+								<svg class="size-5 md:size-6">
+									<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+								</svg>
+							</div>
+						</a>
+						<a class="btn btn-transparent btn-icon" href="instruction.html">Инструкция и состав</a>
+					</div>
+				</div>
+				<div class="lg:absolute inset-y-0 right-0 lg:w-[621px]">
+					<div class="absolute w-[1350px] h-[822px] bg-white rounded-[100%] top-[60%] xl:top-[10%] left-[10%]"></div>
+					<img class="absolute w-[2000px] xl:w-[3417px] xl:top-[-70%] left-[40%] max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+					<img class="absolute w-[1200px] xl:w-[2333px] xl:top-[41%] left-[-200%] max-w-none max-xl:hidden" src="assets/img/svg/deco-3.svg" alt="deco">
+					<img class="relative h-full w-full object-contain lg:max-xl:max-w-[80%] ml-auto" src="assets/img/content/product-syrup-100-slide.avif" alt="Геделикс®" loading="lazy" />
+				</div>
+			</div>
+
+
+
+			<!-- <div class="container-base grid gap-10 md:gap-12.5 lg:min-h-165 lg:content-center py-5 relative">
+				<div class="grid gap-6 md:gap-20 max-w-[1000px] relative z-1">
+					<div class="w-full">
+						<div class="product-tag product-tag-big product-tag-red">
+							<div class="product-tag-icon product-tag-icon-big">
+								<svg class="size-5 text-white md:size-7">
+									<use href="assets/img/svg/sprite.svg#icon-flame"></use>
+								</svg>
+							</div>
+							<p>Хит продаж<sup>11</sup></p>
+						</div>
+					</div>
+					<div class="grid md:gap-6.5 gap-3.75">
+						<h1>Геделикс<sup>®</sup> Сироп 100 мл</h1>
+						<p class="typography-large">Натуральное отхаркивающее средство. Для взрослых и детей от 2 лет. Без спирта, сахара, красителей.</p>
+					</div>
+					<div class="flex gap-2.5 max-md:pt-4">
+						<a class="btn btn-dark btn-arrow justify-self-start" href="where.html">
+							Где купить
+							<div>
+								<svg class="size-5 md:size-6">
+									<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+								</svg>
+							</div>
+						</a>
+						<a class="btn btn-transparent btn-icon" href="instruction.html">Инструкция и состав</a>
+					</div>
+				</div>
+				<div class="xl:absolute inset-y-0 right-0 xl:w-[621px]">
+					<div class="absolute w-[1350px] h-[822px] bg-white rounded-[100%] top-[60%] xl:top-[10%] left-[10%]"></div>
+					<img class="absolute w-[2000px] xl:w-[3417px] xl:top-[-70%] left-[40%] max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+					<img class="absolute w-[1200px] xl:w-[2333px] xl:top-[41%] left-[-200%] max-w-none" src="assets/img/svg/deco-3.svg" alt="deco">
+					<img class="relative h-full w-auto object-contain max-xl:max-w-[80%] mx-auto" src="assets/img/content/product-syrup-100-slide.avif" alt="Геделикс®" loading="lazy" />
+				</div>
+			</div> -->
+		</section>
+
+		<section class="py-20 md:py-35 bg-white">
+			<div class="container-base flex max-xl:flex-col items-start justify-between gap-7.5">
+				<div class="mx-auto xl:sticky xl:top-30 basis-1/2">
+					<img class="max-w-[812px] w-full" src="assets/img/content/lungs.avif" alt="lungs">
+				</div>
+				<div class="grid max-lg:gap-2.5 content-start basis-1/2">
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-lungs"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Муколитическое</h5>
+							<p class="typography-p">Разжижает густую мокроту и облегчает её выведение из дыхательных путей.</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-lungs"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Муколитическое</h5>
+							</div>
+						</div>
+					</div>
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-water-drop"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Отхаркивающее</h5>
+							<p class="typography-p">Стимулирует работу мерцательного эпителия — мокрота откашливается легче и ускоряет выведение мокроты.</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-water-drop"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Отхаркивающее</h5>
+							</div>
+						</div>
+					</div>
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-wind"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Бронхо-спазмолитическое</h5>
+							<p class="typography-p">Расширяет бронхи, снимает спазм — дыхание становится свободнее. Это упрощает выведение мокроты.</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-wind"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Бронхо-спазмолитическое</h5>
+							</div>
+						</div>
+					</div>
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-shield-tick"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Антиоксидантное</h5>
+							<p class="typography-p">Защищает клетки организма от разрушения.</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-shield-tick"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Антиоксидантное</h5>
+							</div>
+						</div>
+					</div>
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-target"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Противо-воспалительное</h5>
+							<p class="typography-p">Снижает воспаления в тканях лёгких.</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-target"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Противо-воспалительное</h5>
+							</div>
+						</div>
+					</div>
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-antibacterial"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Антимикробное</h5>
+							<p class="typography-p">Борется с микробами, опасными для дыхательной системы.</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-antibacterial"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Антимикробное</h5>
+							</div>
+						</div>
+					</div>
+					<div class="flex gap-7.5 relative bg-green-lightest md:rounded-[30px] rounded-2xl lg:items-center p-5 md:p-7.5 cursor-pointer group">
+						<div class="icon-spec icon-spec-white shrink-0">
+							<div class="icon-spec-inner">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-virus"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-lg:pt-2.5">
+							<h5 class="lg:hidden">Противовирусное</h5>
+							<p class="typography-p">При применении с осельтамивиром усиливает эффективность противовирусного препарата в отношении гриппа А (H1N1).</p>
+						</div>
+						<div class="max-lg:hidden flex gap-7.5 absolute bg-white md:rounded-[30px] rounded-2xl items-center p-5 md:p-7.5 cursor-pointer inset-0 group-hover:opacity-0 transition-opacity">
+							<div class="icon-spec shrink-0">
+								<div class="icon-spec-inner">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-virus"></use>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<h5>Противовирусное</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="pb-20 md:pb-35 bg-white">
+			<div class="container-base grid gap-7.5 md:gap-12.5">
+				<div class="pb-7.5 md:pb-10 bottom-deco-line">
+					<h2>При разных <mark class="max-md:block">типах кашля</mark></h2>
+				</div>
+				<div class="grid gap-3.75 xl:grid-cols-2">
+					<div class="card-info">
+						<div class="absolute md:bottom-0 right-0 w-[400px] max-md:w-[200px] max-md:top-0 max-md:translate-x-[50px]">
+							<img src="assets/img/content/men.avif" alt="man">
+							<div class="md:hidden pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,#fff_0%,#fff_2%,transparent_100%)]"></div>
+						</div>
+						<div class="grid md:gap-7.5 gap-5 pb-6.25 md:pb-10 border-b border-stroke-white relative">
+							<div class="w-full">
+								<span class="status-tag status-tag-green">Геделикс<sup>®</sup> показан</span>
+							</div>
+							<div class="grid gap-2.5 max-lg:pt-2.5">
+								<p class="typography-h4">Влажный (продуктивный) кашель</p>
+								<p class="typography-p">С отделением мокроты</p>
+							</div>
+						</div>
+						<div class="grid gap-3.75 md:gap-5 relative max-w-[555px]">
+							<div class="typography-p">
+								<p>Мокрота образуется, но трудно отделяется. Важно помочь снизить ее вязкость и вывести из дыхательных путей.</p>
+							</div>
+							<div class="grid gap-2.5 max-lg:pt-2.5">
+								<p class="typography-psm">Возникает при острых респираторных инфекциях:</p>
+								<ul class="custom-list-target">
+									<li>Ларингит</li>
+									<li>Трахеит</li>
+									<li>Бронхит</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card-info">
+						<div class="absolute md:bottom-0 right-0 w-[400px] max-md:w-[200px] max-md:top-0 max-md:translate-x-[50px]">
+							<img src="assets/img/content/women.avif" alt="woman">
+							<div class="md:hidden pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,#fff_0%,#fff_2%,transparent_100%)]"></div>
+						</div>
+
+						<div class="grid md:gap-7.5 gap-5 pb-6.25 md:pb-10 border-b border-stroke-white relative">
+							<div class="w-full">
+								<span class="status-tag status-tag-outline">Нужна консультация</span>
+							</div>
+							<div class="grid gap-2.5 max-lg:pt-2.5">
+								<p class="typography-h4">Сухой (непродуктивный) кашель</p>
+								<p class="typography-p">Мокрота не образуется</p>
+							</div>
+						</div>
+						<div class="grid gap-3.75 md:gap-5 relative max-w-[555px]">
+							<div class="typography-p">
+								<p>Вызывает ощущение першения и царапанья в горле. Может быть вызван аллергенами, бронхиальной астмой, воспалением голосовых связок, неврологическими заболеваниями и требует подбора другого класса препаратов. Если это начало респираторного заболевания, сухой кашель лучше перевести в продуктивный с помощью Геделикс.</p>
+							</div>
+							<div class="notice notice-red">
+								<svg>
+									<use href="assets/img/svg/sprite.svg#icon-info-circle"></use>
+								</svg>
+								<p>При сухом кашле проконсультируйтесь с врачом для уточнения диагноза и выбора препарата.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="overflow-hidden">
+			<div class="container-base grid gap-x-10 md:gap-x-12.5 lg:content-center relative py-20 md:py-35">
+				<div class="grid gap-7.5 xl:gap-[60px] 2xl:gap-[124px] relative z-1">
+					<div class="grid gap-6.25 md:gap-12.5 max-w-[1000px] relative z-1">
+						<div class="w-full">
+							<div class="product-tag product-tag-big product-tag-red">
+								<div class="product-tag-icon product-tag-icon-big">
+									<svg class="size-5 text-white md:size-7">
+										<use href="assets/img/svg/sprite.svg#icon-flame"></use>
+									</svg>
+								</div>
+								<p>Хит продаж<sup>11</sup></p>
+							</div>
+						</div>
+						<div class="grid md:gap-6.5 gap-3.75">
+							<h2>Для <mark>индивидуального приёма</mark></h2>
+							<p class="typography-large">Сироп 100 мл рассчитан ровно на один курс лечения.</p>
+						</div>
+					</div>
+					<div class="xl:hidden relative -mt-5">
+						<img class="relative h-full w-auto object-contain xl:translate-x-[100px]" src="assets/img/content/man-gedeliks.avif" width="2156" height="1980" alt="Геделикс®" loading="lazy" />
+						<div class="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,var(--green-lightest)_0%,transparent_30%)]"></div>
+					</div>
+					<div class="grid lg:grid-cols-2 gap-2.5 md:gap-3.75 max-w-[843px]">
+						<div class="bg-white md:p-8.75 p-5 md:rounded-[30px] rounded-2xl">
+							<h5 class="lg:max-w-[300px]">Входит в клинические рекомендации при бронхите</h5>
+						</div>
+						<div class="bg-white grid gap-2.5 md:gap-4 content-start md:p-8.75 p-5 md:rounded-[30px] rounded-2xl">
+							<h5 class="lg:max-w-[200px]">Без сахара и спирта</h5>
+							<p class="typography-p text-gray">Безопасен для детей, диабетиков и тех, кто избегает алкоголя.</p>
+						</div>
+						<div class="lg:col-span-2 bg-white md:p-8.75 p-5 md:rounded-[30px] rounded-2xl">
+							<h5 class="lg:pl-[90px] relative flex justify-between items-center">
+								Сделано в Германии
+								<img class="lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 size-[50px] lg:size-[70px]" src="assets/img/content/germany.avif" alt="germay">
+							</h5>
+						</div>
+					</div>
+				</div>
+				<div class="xl:absolute inset-y-0 right-0 xl:flex xl:justify-end max-xl:hidden">
+					<div class="absolute w-[1350px] h-[1000px] bg-white rounded-[100%] top-[60%] xl:top-[10%] left-[45%]"></div>
+					<img class="absolute w-[2000px] xl:w-[3417px] top-[60%] xl:top-[-35%] left-[56%] max-w-none" src="assets/img/svg/deco-2.svg" alt="deco">
+					<img class="absolute w-[1200px] xl:w-[2333px] top-[60%] xl:top-[30%] left-[1%] max-w-none" src="assets/img/svg/deco-3.svg" alt="deco">
+					<img class="relative h-full w-auto object-contain xl:translate-x-[100px]" src="assets/img/content/man-gedeliks.avif" width="2156" height="1980" alt="Геделикс®" loading="lazy" />
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35 bg-white pb-0!">
+			<div class="container-base grid gap-7.5 md:gap-12.5">
+				<div class="pb-7.5 md:pb-10 bottom-deco-line">
+					<h2><mark>Режим</mark> дозирования</h2>
+				</div>
+				<div class="flex max-xl:flex-col items-start justify-between gap-7.5">
+					<div class="max-w-[583px] w-full mx-auto">
+						<img class="w-full h-auto" src="assets/img/content/woman-gedeliks.avif" loading="lazy" alt="Геделикс®">
+					</div>
+					<div class="grid xl:max-w-[985px] min-w-0 shrink-0 gap-8.75 md:gap-13.75 w-full">
+						<div class="grid gap-3.75 md:gap-7.5">
+							<h5 class="pl-5 md:pl-7.5">Дети</h5>
+							<div class="grid gap-2.5" data-spoiler>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h6 whitespace-nowrap transition-colors">2-4 года</p>
+										<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
+										<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
+											<p class="typography-large min-w-[75px]">2,5 мл</p>
+											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
+												<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-half.avif" loading="lazy" alt="spoon half">
+												<p class="typography-p">Половина мерной ложки</p>
+											</div>
+										</div>
+										<div class="flex items-center gap-2.5 md:gap-3.75">
+											<svg class="size-6 shrink-0 text-green md:size-7">
+												<use href="assets/img/svg/sprite.svg#icon-history"></use>
+											</svg>
+											<p class="typography-large whitespace-nowrap">3 раза в день</p>
+										</div>
+									</div>
+								</div>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h6 whitespace-nowrap transition-colors">4–10 лет</p>
+										<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
+										<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
+											<p class="typography-large min-w-[75px]">2,5 мл</p>
+											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
+												<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-half.avif" loading="lazy" alt="spoon half">
+												<p class="typography-p">Половина мерной ложки</p>
+											</div>
+										</div>
+										<div class="flex items-center gap-2.5 md:gap-3.75">
+											<svg class="size-6 shrink-0 text-green md:size-7">
+												<use href="assets/img/svg/sprite.svg#icon-history"></use>
+											</svg>
+											<p class="typography-large whitespace-nowrap">4 раза в день</p>
+										</div>
+									</div>
+								</div>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h6 whitespace-nowrap transition-colors">10–18 лет</p>
+										<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
+										<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
+											<p class="typography-large min-w-[75px]">5 мл</p>
+											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
+												<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-full.avif" loading="lazy" alt="spoon full">
+												<p class="typography-p">Целая мерная ложка</p>
+											</div>
+										</div>
+										<div class="flex items-center gap-2.5 md:gap-3.75">
+											<svg class="size-6 shrink-0 text-green md:size-7">
+												<use href="assets/img/svg/sprite.svg#icon-history"></use>
+											</svg>
+											<p class="typography-large whitespace-nowrap">3 раза в день</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid gap-3.75 md:gap-7.5">
+							<h5 class="pl-5 md:pl-7.5">Взрослые</h5>
+							<div class="grid gap-2.5" data-spoiler>
+								<div class="flex max-lg:flex-col bg-green-lightest rounded-2xl p-5 lg:items-center md:rounded-[30px] md:px-7.5 md:py-6.25 lg:gap-[15px] justify-between" data-spoiler-item aria-expanded="false">
+									<button class="lg:min-w-[170px] flex justify-between items-center lg:pointer-events-none gap-[15px]" type="button" data-spoiler-button>
+										<p class="typography-h6 whitespace-nowrap transition-colors">от 18 лет</p>
+										<svg class="size-5 shrink-0 text-green md:size-7 lg:hidden">
+											<use href="assets/img/svg/sprite.svg#icon-chevron-down"></use>
+										</svg>
+									</button>
+									<div class="flex max-lg:flex-col gap-x-[15px] gap-y-5 flex-auto justify-between max-lg:items-start lg:max-h-none!" data-spoiler-content>
+										<div class="flex max-lg:flex-col gap-x-[25px] gap-y-2.5 lg:items-center max-lg:pt-[25px]">
+											<p class="typography-large min-w-[75px]">5 мл</p>
+											<div class="flex bg-white rounded-full overflow-hidden min-h-12 py-1 px-5 pl-0! items-center md:min-w-[365px]">
+												<img class="w-[50px] md:w-[100px]" src="assets/img/content/spoon-full.avif" loading="lazy" alt="spoon full">
+												<p class="typography-p">Целая мерная ложка</p>
+											</div>
+										</div>
+										<div class="flex items-center gap-2.5 md:gap-3.75">
+											<svg class="size-6 shrink-0 text-green md:size-7">
+												<use href="assets/img/svg/sprite.svg#icon-history"></use>
+											</svg>
+											<p class="typography-large whitespace-nowrap">3 раза в день</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="notice notice-orange">
+					<svg class="rotate-180">
+						<use href="assets/img/svg/sprite.svg#icon-info-circle"></use>
+					</svg>
+					<p>Длительность применения препарата зависит от тяжести заболевания, но должна составлять не менее 7 дней. После исчезновения симптомов заболевания рекомендуется продолжить лечение препаратом в течение 2–3 дней (для закрепления терапевтического эффекта)</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35 bg-white" data-spoiler>
+	<div class="container-base grid gap-7.5 md:gap-12.5">
+		<div class="pb-7.5 md:pb-10 bottom-deco-line">
+			<h2><mark>Геделикс®</mark> в аптеках и онлайн</h2>
+		</div>
+
+		<div class="grid gap-7.5">
+			<div class="partners-grid grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-3.75">
+				<div class="partner-card">
+					<img src="assets/img/content/partner-1.avif" alt="ASNA.RU" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-2.avif" alt="Столички Аптеки" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-3.avif" alt="Здрасити.ру" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-4.avif" alt="AptStore" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-5.avif" alt="AptekaMos.ru" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-6.avif" alt="ЗДОРОВ.ру" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-7.avif" alt="Планета Здоровья" />
+				</div>
+				<div class="partner-card">
+					<img src="assets/img/content/partner-8.avif" alt="ВИТА" />
+				</div>
+			</div>
+
+			<div class="grid gap-7.5" data-spoiler-item aria-expanded="false">
+				<div data-spoiler-content>
+					<div class="partners-grid grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-3.75">
+						<div class="partner-card">
+							<img src="assets/img/content/partner-9.avif" alt="ASNA.RU" />
+						</div>
+						<div class="partner-card">
+							<img src="assets/img/content/partner-10.avif" alt="Столички Аптеки" />
+						</div>
+						<div class="partner-card">
+							<img src="assets/img/content/partner-11.avif" alt="Здрасити.ру" />
+						</div>
+						<div class="partner-card">
+							<img src="assets/img/content/partner-12.avif" alt="AptStore" />
+						</div>
+						<div class="partner-card">
+							<img src="assets/img/content/partner-13.avif" alt="AptekaMos.ru" />
+						</div>
+					</div>
+				</div>
+
+				<button class="btn btn-dark btn-arrow mx-auto whitespace-nowrap" type="button" data-spoiler-button>
+					Показать ещё
+					<div>
+						<svg class="size-6">
+							<use href="assets/img/svg/sprite.svg#icon-arrow-down"></use>
+						</svg>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<section class="bg-white">
+	<div class="container-base grid gap-7.5 md:gap-12.5">
+		<div class="pb-7.5 md:pb-10 bottom-deco-line">
+			<h2>Забронировать <mark>Геделикс<sup>®</sup></mark> в ближайшей аптеке прямо сейчас</h2>
+		</div>
+		<div>
+			<img src="assets/img/content/vidget-placeholder.avif" alt="место для виджета">
+		</div>
+</section>
+
+		<section class="py-20 md:py-35 bg-white">
+			<div class="container-base grid gap-7.5 md:gap-12.5">
+				<div class="pb-7.5 md:pb-10 bottom-deco-line">
+					<h2><mark>Частые</mark> вопросы</h2>
+				</div>
+				<div class="flex max-xl:flex-col items-start justify-between gap-7.5">
+					<div class="max-w-[555px] shrink-0 mx-auto xl:sticky xl:top-30">
+						<img class="w-full h-auto" src="assets/img/content/product-syrup-100.avif" loading="lazy" alt="Геделикс®">
+					</div>
+					<div class="grid gap-2.5 md:gap-3.75 xl:max-w-[985px] min-w-0 shrink" data-spoiler data-spoiler-accordion>
+						<div class="faq-item" data-spoiler-item aria-expanded="false">
+							<button type="button" class="faq-item-button" data-spoiler-button>
+								<span class="typography-h6">С какого возраста можно давать Геделикс<sup>®</sup> Сироп?</span>
+								<span class="faq-item-icon">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-add"></use>
+									</svg>
+								</span>
+							</button>
+							<div class="faq-item-content" data-spoiler-content>
+								<p class="faq-item-answer typography-p text-gray">
+									Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно инструкции. Детям до 2 лет препарат не рекомендуется.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item" data-spoiler-item aria-expanded="false">
+							<button type="button" class="faq-item-button" data-spoiler-button>
+								<span class="typography-h6">Можно ли принимать Геделикс<sup>®</sup> при сахарном диабете?</span>
+								<span class="faq-item-icon">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-add"></use>
+									</svg>
+								</span>
+							</button>
+							<div class="faq-item-content" data-spoiler-content>
+								<p class="faq-item-answer typography-p text-gray">
+									Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно инструкции. Детям до 2 лет препарат не рекомендуется.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item" data-spoiler-item aria-expanded="false">
+							<button type="button" class="faq-item-button" data-spoiler-button>
+								<span class="typography-h6">Когда ожидать первых результатов?</span>
+								<span class="faq-item-icon">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-add"></use>
+									</svg>
+								</span>
+							</button>
+							<div class="faq-item-content" data-spoiler-content>
+								<p class="faq-item-answer typography-p text-gray">
+									Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно инструкции. Детям до 2 лет препарат не рекомендуется.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item" data-spoiler-item aria-expanded="false">
+							<button type="button" class="faq-item-button" data-spoiler-button>
+								<span class="typography-h6">Есть ли в Геделикс<sup>®</sup> Сироп спирт?</span>
+								<span class="faq-item-icon">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-add"></use>
+									</svg>
+								</span>
+							</button>
+							<div class="faq-item-content" data-spoiler-content>
+								<p class="faq-item-answer typography-p text-gray">
+									Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно инструкции. Детям до 2 лет препарат не рекомендуется.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item" data-spoiler-item aria-expanded="false">
+							<button type="button" class="faq-item-button" data-spoiler-button>
+								<span class="typography-h6">Можно ли принимать Геделикс<sup>®</sup> во время беременности?</span>
+								<span class="faq-item-icon">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-add"></use>
+									</svg>
+								</span>
+							</button>
+							<div class="faq-item-content" data-spoiler-content>
+								<p class="faq-item-answer typography-p text-gray">
+									Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно инструкции. Детям до 2 лет препарат не рекомендуется.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item" data-spoiler-item aria-expanded="false">
+							<button type="button" class="faq-item-button" data-spoiler-button>
+								<span class="typography-h6">Нужно ли трясти флакон перед применением?</span>
+								<span class="faq-item-icon">
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-add"></use>
+									</svg>
+								</span>
+							</button>
+							<div class="faq-item-content" data-spoiler-content>
+								<p class="faq-item-answer typography-p text-gray">
+									Геделикс® Сироп разрешён детям с 2 лет и взрослым. Дозировка подбирается по возрасту согласно инструкции. Детям до 2 лет препарат не рекомендуется.
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35">
+	<div class="container-base grid gap-7.5 md:gap-12.5">
+		<div class="pb-7.5 md:pb-10 bottom-deco-line flex justify-between items-start max-lg:flex-col gap-3.5">
+			<h2><mark>Статьи</mark> о</span> кашле <br class="md:hidden"> и лечении</h2>
+			<a class="btn btn-green btn-small max-lg:hidden" href="news.html">Смотреть все статьи</a>
+			<a class="link link-icon typography-psm whitespace-nowrap justify-self-start lg:hidden" href="news.html">
+				Все статьи
+				<svg class="text-green size-5">
+					<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="grid gap-7.5 md:gap-10">
+
+			<div class="overflow-hidden -m-10 p-10" data-slider="news">
+				<div class="-ml-3.75 md:-ml-2.5">
+					<div class="w-[331px] min-w-0 shrink-0 pl-2.5 md:w-[560px] md:pl-3.75">
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="article.html">
+									<img src="assets/img/content/news-1.avif" alt="Виды кашля: как правильно определить тип и выбрать лечение" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="article.html">
+									<p class="typography-h6">Виды кашля: как правильно определить тип и выбрать лечение</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Кашель — знакомая проблема, поражающая взрослых и детей, особенно в холодные сезоны.
+								Правильное лечение зависит от определения типа по характеру, продолжительности и
+								интенсивности.
+							</p>
+						</div>
+					</div>
+
+					<div class="w-[331px] min-w-0 shrink-0 pl-2.5 md:w-[560px] md:pl-3.75">
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-2.avif" alt="Простые техники для предотвращения приступов ночного кашля у взрослого" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Простые техники для предотвращения приступов ночного кашля у взрослого
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Ночной кашель нарушает сон и снижает качество жизни взрослых. Понимание его причин и
+								методов облегчения помогает вернуть нормальный отдых.
+							</p>
+						</div>
+					</div>
+
+					<div class="w-[331px] min-w-0 shrink-0 pl-2.5 md:w-[560px] md:pl-3.75">
+						<div class="news-card group/card">
+							<div class="news-card-main">
+								<a class="news-card-image" href="#">
+									<img src="assets/img/content/news-3.avif" alt="Эффективные методы лечения кашля у ребёнка: советы и рекомендации" loading="lazy" />
+									<span class="news-card-badge">2 минуты чтения</span>
+								</a>
+								<a class="news-card-title transition-colors hover:text-green" href="#">
+									<p class="typography-h6">
+										Эффективные методы лечения кашля у ребёнка: советы и рекомендации
+									</p>
+									<svg>
+										<use href="assets/img/svg/sprite.svg#icon-chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+							<p class="news-card-text text-gray">
+								Детский кашель значительно отличается от взрослого по причинам, характеру и подходам
+								к лечению. Понимание этих различий помогает принимать правильные решения.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll justify-center data-[hidden]:hidden" data-paggination="news"></div>
+		</div>
+	</div>
+</section>
+
+		<section class="py-20 md:py-35 bg-white">
+			<div class="container-base grid gap-7.5 md:gap-12.5">
+				<div class="pb-7.5 md:pb-10 bottom-deco-line">
+					<h2>Другие препараты <mark>Геделикс®</mark></h2>
+				</div>
+				<div class="grid md:gap-2.5 gap-3.75 lg:grid-cols-2">
+					<div class="card-product-whide group/card w-full">
+						<div class="flex flex-col self-stretch gap-7.5">
+							<div class="grid gap-10">
+								<div class="w-full max-xl:hidden">
+									<div class="product-tag product-tag-green">
+										<div class="product-tag-icon">
+											<svg class="size-4 text-white md:size-6">
+												<use href="assets/img/svg/sprite.svg#icon-share"></use>
+											</svg>
+										</div>
+										<p>Семейный формат</p>
+									</div>
+								</div>
+
+								<a class="grid w-full transition-colors hover:text-green gap-2.5 md:gap-6.25" href="#">
+									<p class="typography-h4">Геделикс<sup>®</sup> Сироп</p>
+									<p class="typography-h6 text-green">200 МЛ</p>
+								</a>
+							</div>
+
+							<div class="mt-auto">
+								<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-xl:w-full">
+							<div class="w-full xl:hidden">
+								<div class="product-tag product-tag-green">
+									<div class="product-tag-icon">
+										<svg class="size-4 text-white md:size-6">
+											<use href="assets/img/svg/sprite.svg#icon-share"></use>
+										</svg>
+									</div>
+									<p>Семейный формат</p>
+								</div>
+							</div>
+							<a class="max-w-[270px] shrink-0 justify-self-center" href="#">
+								<img class="card-product-image" src="assets/img/content/product-syrup-200.avif" width="1016" height="1280" loading="lazy" alt="Геделикс® Сироп 100 мл" />
+							</a>
+						</div>
+					</div>
+
+					<div class="card-product-whide group/card w-full">
+						<div class="flex flex-col self-stretch gap-7.5">
+							<div class="grid gap-10">
+								<div class="w-full max-xl:hidden">
+									<div class="product-tag product-tag-orange">
+										<div class="product-tag-icon">
+											<svg class="size-4 text-white md:size-6">
+												<use href="assets/img/svg/sprite.svg#icon-suitcase"></use>
+											</svg>
+										</div>
+										<p>Дорожный формат</p>
+									</div>
+								</div>
+
+								<a class="grid w-full transition-colors hover:text-green gap-2.5 md:gap-6.25" href="#">
+									<p class="typography-h4">Геделикс<sup>®</sup> Капли</p>
+									<p class="typography-h6 text-green">50 МЛ</p>
+								</a>
+							</div>
+
+							<div class="mt-auto">
+								<a class="btn btn-transparent flex-1 whitespace-nowrap" href="#">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="grid gap-2.5 max-xl:w-full">
+							<div class="w-full xl:hidden">
+								<div class="product-tag product-tag-orange">
+									<div class="product-tag-icon">
+										<svg class="size-4 text-white md:size-6">
+											<use href="assets/img/svg/sprite.svg#icon-suitcase"></use>
+										</svg>
+									</div>
+									<p>Дорожный формат</p>
+								</div>
+							</div>
+							<a class="max-w-[270px] shrink-0 justify-self-center" href="#">
+								<img class="card-product-image" src="assets/img/content/product-drops-50.avif" width="1016" height="1280" loading="lazy" alt="Геделикс® Капли 50 мл" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-35 bg-white" data-spoiler>
+	<div class="container-base grid gap-7.5 md:gap-12.5" data-spoiler-item aria-expanded="false">
+		<button class="pb-7.5 md:pb-10 bottom-deco-line flex justify-between gap-10 text-gray" type="button" data-spoiler-button>
+			<p class="typography-small-m inline-flex gap-2.5 items-center">
+				<svg class="size-6 rotate-0!">
+					<use href="assets/img/svg/sprite.svg#icon-book"></use>
+				</svg>
+				Источники
+			</p>
+			<span data-spoiler-icon-closed>
+				<svg class="size-7">
+					<use href="assets/img/svg/sprite.svg#icon-add"></use>
+				</svg>
+			</span>
+			<span data-spoiler-icon-open>
+				<svg class="size-7">
+					<use href="assets/img/svg/sprite.svg#icon-minus"></use>
+				</svg>
+			</span>
+		</button>
+		<div data-spoiler-content>
+			<ol class="grid gap-2.5 md:gap-3.75 text-gray list-decimal list-inside">
+				<li><a class="link link-gray" href="#">Геделикс® сироп 100мл является объемообразующим в линейке бренда Геделикс®. Данные АО "Группа ДСМ", Июн'26</a></li>
+				<li><a class="link link-gray" href="#">Большая упаковка Геделикс® СИРОП 200мл выгоднее на 19%* по сравнению с Геделикс® СИРОП 100мл в пересчете на 1мл фактической цены Прайс-листа, Авг’26</a></li>
+				<li><a class="link link-gray" href="#">Согласно листку‑вкладышу (№ (004526)-(РГ‑RU) от 07.02.2024) препарат не содержит сахар, спирт и красители.</a></li>
+				<li><a class="link link-gray" href="#">Компонент экстракт плюща включен в клинические рекомендации — Бронхит — 2024‑2025‑2025 (19.12.2024) для детей — «Острый бронхит» для взрослых 2024 — Утверждены Минздравом РФ</a></li>
+				<li><a class="link link-gray" href="#">Инструкция по медицинскому применению лекарственного препарата Геделикс® (капли для приёма внутрь). ЛП-№(005437)-(РГ-RU). — М., 2024.</a></li>
+			</ol>
+		</div>
+	</div>
+</section>
+
+	</main>
+
+	<footer class="bg-green-lightest relative">
+	<div class="absolute overflow-hidden w-full h-full">
+		<img class="absolute top-1/2 left-1/2 -translate-x-full" src="assets/img/svg/deco-1.svg" alt="deco">
+		<img class="absolute bottom-0 left-0 2xl:left-1/2 2xl:-translate-x-[1100px] w-[410px] md:w-[562px]" src="assets/img/content/footer-plant.avif" alt="footer plant">
+	</div>
+	<div class="container-base flex items-start 2xl:justify-between gap-y-10 gap-x-20 py-12.5 lg:py-25 max-xl:flex-col-reverse max-xl:items-center max-sm:items-start relative max-lg:pb-20">
+		<div class="grid gap-7.5 rounded-2xl bg-white p-5 lg:gap-12.5 lg:rounded-[30px] max-sm:w-full lg:p-8.75 lg:w-[705px]">
+			<div class="grid gap-5 lg:gap-10">
+				<a class="text-green-dark shrink-0 text-[20px] md:text-[34px] font-bold" href="index.html">
+					Геделикс<sup>®</sup>
+				</a>
+
+				<ul class="grid gap-2.5 lg:gap-3.75">
+					<li><a class="link link-dotted typography-small-r" href="#">Политика обработки персональных данных</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Согласие на обработку cookie-файлов</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Порядок осущ. субъектом перс.данных прав (ФЗ от 27.07.2006 152-ФЗ)</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Фармаконадзор</a></li>
+					<li><a class="link link-dotted typography-small-r" href="#">Пользовательское соглашение</a></li>
+				</ul>
+			</div>
+
+			<div class="flex items-center gap-6.25 max-md:flex-col max-md:items-start">
+				<a class="btn btn-dark btn-arrow whitespace-nowrap" href="#">
+					Сообщить о проблеме
+					<div>
+						<svg class="size-6">
+							<use href="assets/img/svg/sprite.svg#icon-arrow-right"></use>
+						</svg>
+					</div>
+				</a>
+				<p class="typography-small-r text-gray">© 2026 Геделикс®. Все права защищены</p>
+			</div>
+		</div>
+
+		<div class="flex gap-y-7.5 gap-x-10 2xl:gap-x-27.5 xl:max-2xl:flex-col max-sm:flex-col">
+			<div class="grid gap-3.75 xl:gap-7.5 content-start">
+				<p class="typography-small-m text-black/50 uppercase">Препараты</p>
+				<ul class="grid gap-3.75 xl:gap-5">
+					<li><a class="link typography-h6" href="product.html">Геделикс® Сироп 100 мл</a></li>
+					<li><a class="link typography-h6" href="#">Геделикс® Сироп 200 мл</a></li>
+					<li><a class="link typography-h6" href="#">Геделикс® Капли 50 мл</a></li>
+					<li><a class="link typography-h6" href="instruction.html">Инструкция — Сироп</a></li>
+					<li><a class="link typography-h6" href="#">Инструкция — Капли</a></li>
+				</ul>
+			</div>
+
+			<div class="grid gap-3.75 xl:gap-7.5 content-start">
+				<p class="typography-small-m text-black/50 uppercase">Информация</p>
+				<ul class="grid gap-3.75 xl:gap-5">
+					<li><a class="link typography-h6" href="news.html">Статьи</a></li>
+					<li><a class="link typography-h6" href="where.html">Где купить</a></li>
+					<li><a class="link typography-h6" href="index.html#faq">Частые вопросы</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-green py-3.75 md:py-6 relative">
+		<div class="container-base">
+			<p class="typography-small-m lg:text-center text-white uppercase xl:tracking-tighter">
+				Геделикс® является лекарственным препаратом. Перед применением ознакомьтесь с инструкцией. Имеются
+				противопоказания. Проконсультируйтесь со специалистом.
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
