@@ -4,6 +4,7 @@
 @@include('../partials/_head.html', {"title": "Страница не найдена — Геделикс"})
 
 <body>
+	@@include('../partials/_sprite.html')
 	@@include('../partials/_header.html', {"white": true})
 
 	<main>
@@ -13,7 +14,7 @@
 				<nav class="breadcrumbs" aria-label="breadcrumbs">
 					<a href="index.html" class="breadcrumb-item">
 						<svg class="size-5 md:size-6">
-							<use href="assets/img/svg/sprite.svg#icon-home"></use>
+							<use href="#icon-home"></use>
 						</svg>
 					</a>
 					<span class="breadcrumb-item">Где купить</span>
