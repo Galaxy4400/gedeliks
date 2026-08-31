@@ -8,7 +8,13 @@
   @apply min-w-0 shrink-0 grow-0;
 }
 
-/* Стрелки переключения слайдов — UI-кит Figma node 14:2830 (Default/Variant2 = idle/hover) */
+[data-slider='main'] [data-slider-container] {
+  @apply max-lg:items-start;
+}
+[data-slider='main'] {
+  @apply max-lg:transition-[height] max-lg:duration-300 max-lg:ease-out;
+}
+
 .slider-arrow {
   @apply inline-flex size-12.5 shrink-0 cursor-pointer items-center justify-center rounded-full md:size-17.5;
   @apply text-green border-2 border-white bg-transparent transition-colors;

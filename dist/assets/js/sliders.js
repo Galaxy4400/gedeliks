@@ -123,13 +123,37 @@ const initSlider = (sliderTag, options = {}, plugins = []) => {
 
   sliderApi.on('destroy', removePrevNextBtnsClickHandlers);
   sliderApi.on('destroy', removeDotBtnsAndClickHandlers);
+
+  return sliderApi;
+};
+
+//===============================================================
+const addAutoHeightBelowLg = (sliderApi, options, basePlugins) => {
+  if (!sliderApi) return;
+
+  const mql = window.matchMedia('(max-width: 1023.98px)');
+
+  const applyForCurrentViewport = () => {
+    const plugins = mql.matches ? [...basePlugins, EmblaCarouselAutoHeight()] : basePlugins;
+    sliderApi.reInit(options, plugins);
+  };
+
+  mql.addEventListener('change', applyForCurrentViewport);
+
+  if (mql.matches) applyForCurrentViewport();
+
+  sliderApi.on('destroy', () => mql.removeEventListener('change', applyForCurrentViewport));
 };
 
 //===============================================================
 const initSliders = () => {
   markupSliders();
 
-  initSlider('main', { loop: true }, [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 10000, stopOnInteraction: false, stopOnMouseEnter: true })]);
+  const mainOptions = { loop: true };
+  const mainPlugins = [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 10000, stopOnInteraction: false, stopOnMouseEnter: true })];
+  const mainSliderApi = initSlider('main', mainOptions, mainPlugins);
+  addAutoHeightBelowLg(mainSliderApi, mainOptions, mainPlugins);
+
 	initSlider('news', { loop: false, align: 'start', slidesToScroll: 'auto', containScroll: 'trimSnaps' });
 	initSlider('prod', { loop: false, slidesToScroll: 1 });
 	initSlider('awards', { loop: false, slidesToScroll: 1, align: 'start' });
