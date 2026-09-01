@@ -154,10 +154,6 @@ const initSliders = () => {
   const mainSliderApi = initSlider('main', mainOptions, mainPlugins);
   addAutoHeightBelowLg(mainSliderApi, mainOptions, mainPlugins);
 
-  // AutoHeight пересчитывает высоту слайда только на init/select, а не на загрузку шрифтов
-  // и картинок. Из-за font-display: swap текст может смениться на Inter уже ПОСЛЕ этого расчёта
-  // и стать выше, а высота слайда останется старой (меньшей) — картинку обрежет overflow-hidden.
-  // Форсируем пересчёт, когда шрифты готовы, и ещё раз — когда догрузятся все ресурсы страницы.
   if (mainSliderApi) {
     const resyncMainSlider = () => mainSliderApi.reInit();
 
