@@ -909,6 +909,9 @@
   .text-center {
     text-align: center;
   }
+  .font-display {
+    font-family: var(--font-display);
+  }
   .typography-display {
     font-size: var(--text-display);
     line-height: var(--leading-display);
@@ -1043,6 +1046,12 @@
       }
     }
   }
+  .before\:absolute {
+    &::before {
+      content: var(--tw-content);
+      position: absolute;
+    }
+  }
   .before\:bottom-full {
     &::before {
       content: var(--tw-content);
@@ -1061,10 +1070,16 @@
       width: 100%;
     }
   }
-  .before\:bg-red {
+  .before\:bg-green-lightest {
     &::before {
       content: var(--tw-content);
-      background-color: var(--red);
+      background-color: var(--green-lightest);
+    }
+  }
+  .before\:bg-white {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--white);
     }
   }
   .before\:content-\[\'\'\] {
