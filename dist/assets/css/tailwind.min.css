@@ -1145,9 +1145,14 @@
       display: none;
     }
   }
-  .max-lg\:w-\[80\%\] {
+  .max-lg\:w-\[60\%\] {
     @media (width < 1024px) {
-      width: 80%;
+      width: 60%;
+    }
+  }
+  .max-lg\:w-\[90\%\] {
+    @media (width < 1024px) {
+      width: 90%;
     }
   }
   .max-lg\:max-w-\[730px\] {
