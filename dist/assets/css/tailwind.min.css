@@ -1135,9 +1135,19 @@
       order: 2;
     }
   }
+  .max-lg\:mx-auto {
+    @media (width < 1024px) {
+      margin-inline: auto;
+    }
+  }
   .max-lg\:hidden {
     @media (width < 1024px) {
       display: none;
+    }
+  }
+  .max-lg\:w-\[80\%\] {
+    @media (width < 1024px) {
+      width: 80%;
     }
   }
   .max-lg\:max-w-\[730px\] {
@@ -1163,6 +1173,11 @@
   .max-lg\:pt-2\.5 {
     @media (width < 1024px) {
       padding-top: calc(var(--spacing) * 2.5);
+    }
+  }
+  .max-lg\:pt-5 {
+    @media (width < 1024px) {
+      padding-top: calc(var(--spacing) * 5);
     }
   }
   .max-lg\:pt-7\.5 {
