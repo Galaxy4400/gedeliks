@@ -1043,6 +1043,36 @@
       }
     }
   }
+  .before\:bottom-full {
+    &::before {
+      content: var(--tw-content);
+      bottom: 100%;
+    }
+  }
+  .before\:h-\[500px\] {
+    &::before {
+      content: var(--tw-content);
+      height: 500px;
+    }
+  }
+  .before\:w-full {
+    &::before {
+      content: var(--tw-content);
+      width: 100%;
+    }
+  }
+  .before\:bg-red {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--red);
+    }
+  }
+  .before\:content-\[\'\'\] {
+    &::before {
+      --tw-content: '';
+      content: var(--tw-content);
+    }
+  }
   .hover\:bg-white {
     &:hover {
       @media (hover: hover) {
