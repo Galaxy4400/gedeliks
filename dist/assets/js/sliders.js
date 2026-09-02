@@ -149,7 +149,7 @@ const addAutoHeightBelowLg = (sliderApi, options, basePlugins) => {
 const initSliders = () => {
   markupSliders();
 
-  const mainOptions = { loop: true };
+  const mainOptions = { loop: true, duration: 40 };
   const mainPlugins = [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })];
   const mainSliderApi = initSlider('main', mainOptions, mainPlugins);
   addAutoHeightBelowLg(mainSliderApi, mainOptions, mainPlugins);
