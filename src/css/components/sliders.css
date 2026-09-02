@@ -11,7 +11,15 @@
 [data-slider='main'] [data-slider-container] {
   @apply max-lg:items-start;
 }
+/* overflow-hidden на viewport — обязательное требование Embla (см. Required Setup в доках):
+   без него слайды переполняют viewport по вертикали и появляется паразитный внутренний скролл
+   вдобавок к обычному скроллу страницы. У других слайдеров (news) он уже есть в разметке. */
 [data-slider='main'] {
+  @apply overflow-hidden;
+}
+/* Transition на высоту включаем только когда JS выставит data-height-ready (см. sliders.js) —
+   иначе анимация ловит скролл пользователя на служебных пересчётах при загрузке страницы */
+[data-slider='main'][data-height-ready] {
   @apply max-lg:transition-[height] max-lg:duration-300 max-lg:ease-out;
 }
 

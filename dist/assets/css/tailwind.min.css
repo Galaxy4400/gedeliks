@@ -3795,6 +3795,9 @@
   }
 }
 [data-slider='main'] {
+  overflow: hidden;
+}
+[data-slider='main'][data-height-ready] {
   @media (width < 1024px) {
     transition-property: height;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
