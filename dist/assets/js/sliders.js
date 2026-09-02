@@ -150,7 +150,7 @@ const initSliders = () => {
   markupSliders();
 
   const mainOptions = { loop: true };
-  const mainPlugins = [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 10000, stopOnInteraction: false, stopOnMouseEnter: true })];
+  const mainPlugins = [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })];
   const mainSliderApi = initSlider('main', mainOptions, mainPlugins);
   addAutoHeightBelowLg(mainSliderApi, mainOptions, mainPlugins);
 
