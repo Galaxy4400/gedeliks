@@ -1251,6 +1251,11 @@
       padding-bottom: calc(var(--spacing) * 0) !important;
     }
   }
+  .max-lg\:pb-10 {
+    @media (width < 1024px) {
+      padding-bottom: calc(var(--spacing) * 10);
+    }
+  }
   .max-lg\:pb-20 {
     @media (width < 1024px) {
       padding-bottom: calc(var(--spacing) * 20);
