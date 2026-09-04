@@ -146,6 +146,57 @@ const addAutoHeightBelowLg = (sliderApi, options, basePlugins) => {
 };
 
 //===============================================================
+// автоплей включается только когда в слайдере видно >= minVisiblePx —
+// без этого браузер сам решает, когда его "не листать" (тротлинг offscreen-элементов),
+// и слайдер листается, ещё будучи скрытым за фиксированным хедером
+const addAutoplayVisibilityControl = (sliderApi, sliderEl, minVisiblePx = 100) => {
+  if (!sliderApi || !sliderEl) return;
+
+  const header = document.querySelector('header');
+
+  // мелкий шаг threshold, чтобы intersectionRect пересчитывался почти на каждый
+  // процент пересечения — иначе IntersectionObserver даёт слишком грубые срабатывания
+  const threshold = Array.from({ length: 101 }, (_, i) => i / 100);
+
+  let observer;
+
+  const handleIntersect = ([entry]) => {
+    const autoplay = sliderApi.plugins().autoplay;
+    if (!autoplay) return;
+
+    const visiblePx = entry.intersectionRect.height;
+
+    if (visiblePx >= minVisiblePx) {
+      if (!autoplay.isPlaying()) autoplay.play();
+    } else if (autoplay.isPlaying()) {
+      autoplay.stop();
+    }
+  };
+
+  // высота хедера "вычитается" сверху из области видимости через rootMargin —
+  // пересоздаём observer при ресайзе, т.к. высота хедера меняется по брейкпоинтам
+  const createObserver = () => {
+    observer?.disconnect();
+
+    const headerHeight = header?.offsetHeight || 0;
+
+    observer = new IntersectionObserver(handleIntersect, {
+      rootMargin: `-${headerHeight}px 0px 0px 0px`,
+      threshold,
+    });
+    observer.observe(sliderEl);
+  };
+
+  createObserver();
+  window.addEventListener('resize', createObserver);
+
+  sliderApi.on('destroy', () => {
+    observer?.disconnect();
+    window.removeEventListener('resize', createObserver);
+  });
+};
+
+//===============================================================
 const initSliders = () => {
   markupSliders();
 
@@ -153,6 +204,10 @@ const initSliders = () => {
   const mainPlugins = [EmblaCarouselFade(), EmblaCarouselAutoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })];
   const mainSliderApi = initSlider('main', mainOptions, mainPlugins);
   addAutoHeightBelowLg(mainSliderApi, mainOptions, mainPlugins);
+
+  if (mainSliderApi) {
+    addAutoplayVisibilityControl(mainSliderApi, document.querySelector('[data-slider="main"]'));
+  }
 
   if (mainSliderApi) {
     const resyncMainSlider = () => mainSliderApi.reInit();

@@ -114,8 +114,46 @@ const initSpoilers = () => {
     if (!open) return;
 
     e.preventDefault();
+
+    const target = document.getElementById(id);
+    // scrollIntoView сам не знает про fixed-хедер — целится в самый верх экрана,
+    // и хедер перекрывает начало открывшегося пункта. Скроллим вручную с отступом
+    // на его высоту + небольшой зазор, чтобы заголовок пункта не прилипал впритык
+    const scrollToTarget = () => {
+      if (!target) return;
+      const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+      const extraGap = 20;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - extraGap;
+      window.scrollTo({ top, behavior: 'smooth' });
+    };
+    const wasOpen = target?.getAttribute('aria-expanded') === 'true';
+
     open();
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // высота уже была той же — max-height не меняется, transitionend не наступит
+    if (wasOpen) {
+      scrollToTarget();
+      return;
+    }
+
+    // content.style.maxHeight анимируется transition-ом (см. tokens/animations.css,
+    // 300ms), а раскрытие аккордеона ещё и схлопывает предыдущий открытый пункт —
+    // скроллим только когда раскладка досчиталась, иначе scrollIntoView целится в
+    // позицию до анимации, и часть открывшегося контента остаётся выше экрана
+    const content = target?.querySelector('[data-spoiler-content]');
+    if (!content) {
+      scrollToTarget();
+      return;
+    }
+
+    let scrolled = false;
+    const scrollOnce = () => {
+      if (scrolled) return;
+      scrolled = true;
+      scrollToTarget();
+    };
+    content.addEventListener('transitionend', scrollOnce, { once: true });
+    setTimeout(scrollOnce, 350); // страховка, если transitionend не сработает
   });
 };
 
